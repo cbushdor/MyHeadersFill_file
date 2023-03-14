@@ -1,0 +1,17 @@
+function CheckFileType()
+	if exists("b:counterCheck") == 0
+		let b:counterCheck = 0
+	endif
+	let b:counterCheck += 1
+	if &filetype == "" && b:counterCheck > 6
+		filetype detect
+	elseif b:counterCheck >= 200 || &filetype != ""
+		autocmd! newFileDetection
+	endif
+endfunction	
+
+augroup newFileDetection
+	autocmd CursorMovedI * call CheckFileType()
+augroup END
+
+autocmd newFileDetection

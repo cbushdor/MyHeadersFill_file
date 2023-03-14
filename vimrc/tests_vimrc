@@ -1,0 +1,12 @@
+function SetTimeOfDayColor()
+	" progressively check higher values... falls out on first "true"
+	" (note addition of zero ... this guarantees return from function is numeric
+	let g:CurrentHour = (strftime("%H") + 0) / 6
+	echo "currentHour is " . g:CurrentHour
+	if g:colors_name !~ g:Favcolorschemes[g:CurrentHour]
+		execute "colorscheme " . g:Favcolorschemes[g:CurrentHour]
+		echo "execute " "colorscheme " . g:Favcolorschemes[g:CurrentHour]
+		redraw
+	endif
+endfunction
+call SetTimeOfDayColor()

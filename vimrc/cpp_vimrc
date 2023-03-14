@@ -1,0 +1,28 @@
+"------------------------------------------------------------------------------------------------
+" CPP programming
+autocmd bufnewfile *.cpp so /Users/sdo/.vim/headers/cpp_header.txt
+autocmd bufnewfile *.cpp exe "1," . 11 . "g/File Name :.*/s//File Name : " .expand("%")
+autocmd Bufwritepre,filewritepre *.cpp exe "1," . 11 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd bufnewfile *.cpp exe "1," . 11 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.cpp execute "normal ma" 
+autocmd Bufwritepre,filewritepre *.cpp exe "1," . 11 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.cpp exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+"autocmd Bufwritepre,filewritepre *.cpp exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.cpp exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost *.cpp execute "normal `a" 
+"------------------------------------------------------------------------------------------------
+
+"------------------------------------------------------------------------------------------------
+" C++ programming
+autocmd bufnewfile *.c++ so /Users/sdo/.vim/headers/cpp_header.txt
+autocmd bufnewfile *.c++ exe "1," . 11 . "g/File Name :.*/s//File Name : " .expand("%")
+autocmd Bufwritepre,filewritepre *.c++ exe "1," . 11 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd bufnewfile *.c++ exe "1," . 11 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.c++ execute "normal ma" 
+autocmd Bufwritepre,filewritepre *.c++ exe "1," . 11 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+"autocmd Bufwritepre,filewritepre *.c++ exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.c++ exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.c++ exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost *.c++ execute "normal `a" 
+"------------------------------------------------------------------------------------------------
+

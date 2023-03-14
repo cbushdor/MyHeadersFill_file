@@ -1,0 +1,75 @@
+" ----------------------------------------------------------------------------------------
+" sh programming
+autocmd bufnewfile *.sh so /Users/sdo/.vim/headers/sh_header.txt
+autocmd Bufwritepre,filewritepre *.sh execute "normal ma" 
+autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/File Name :.*/s/File Name :.*/File Name : " .expand("%")
+autocmd bufnewfile *.sh exe "1," . 14 . "g/Creation Date :.*/s/Creation Date :.*/Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+" autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost *.sh execute "normal `a" 
+autocmd bufwritepost *.sh silent! !chmod +x %
+" ----------------------------------------------------------------------------------------
+
+" ----------------------------------------------------------------------------------------
+" sh programming
+autocmd bufnewfile .myalias so /Users/sdo/.vim/headers/sh_header.txt
+autocmd Bufwritepre,filewritepre .myalias execute "normal ma" 
+autocmd Bufwritepre,filewritepre .myalias exe "1," . 14 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd Bufwritepre,filewritepre .myalias exe "1," . 14 . "g/File Name :.*/s/File Name :.*/File Name : " .expand("%")
+autocmd bufnewfile .myalias exe "1," . 14 . "g/Creation Date :.*/s/Creation Date :.*/Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .myalias exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .myalias exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .myalias exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .myalias exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost .myalias execute "normal `a" 
+autocmd bufwritepost .myalias silent! !chmod +x %
+" ----------------------------------------------------------------------------------------
+
+
+" ----------------------------------------------------------------------------------------
+" sh programming
+autocmd bufnewfile .profile so /Users/sdo/.vim/headers/sh_header.txt
+autocmd Bufwritepre,filewritepre .profile execute "normal ma" 
+autocmd Bufwritepre,filewritepre .profile exe "1," . 14 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd Bufwritepre,filewritepre .profile exe "1," . 14 . "g/File Name :.*/s/File Name :.*/File Name : " .expand("%")
+autocmd bufnewfile .profile exe "1," . 14 . "g/Creation Date :.*/s/Creation Date :.*/Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .profile exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .profile exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .profile exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .profile exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost .profile execute "normal `a" 
+autocmd bufwritepost .profile silent! !chmod +x %
+" ----------------------------------------------------------------------------------------
+
+" ----------------------------------------------------------------------------------------
+" sh programming
+autocmd bufnewfile .bashrc so /Users/sdo/.vim/headers/sh_header.txt
+autocmd Bufwritepre,filewritepre .bashrc execute "normal ma" 
+autocmd Bufwritepre,filewritepre .bashrc exe "1," . 14 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd Bufwritepre,filewritepre .bashrc exe "1," . 14 . "g/File Name :.*/s/File Name :.*/File Name : " .expand("%")
+autocmd bufnewfile .bashrc exe "1," . 14 . "g/Creation Date :.*/s/Creation Date :.*/Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .bashrc exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .bashrc exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .bashrc exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre .bashrc exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost .bashrc execute "normal `a" 
+autocmd bufwritepost .bashrc silent! !chmod +x %
+" ----------------------------------------------------------------------------------------
+
+"" ----------------------------------------------------------------------------------------
+"" sh programming
+"autocmd bufnewfile *.sh so /Users/sdo/.vim/headers/sh_header.txt
+"autocmd Bufwritepre,filewritepre *.sh execute "normal ma" 
+"autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+"autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/File Name :.*/s/File Name :.*/File Name : " .expand("%")
+"autocmd bufnewfile *.sh exe "1," . 14 . "g/Creation Date :.*/s/Creation Date :.*/Creation Date : " .strftime("%F %T")
+"autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+"autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified : " .strftime("%F %T")
+""autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+"autocmd Bufwritepre,filewritepre *.sh exe "1," . 14 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+"autocmd bufwritepost,filewritepost *.sh execute "normal `a" 
+"autocmd bufwritepost *.sh silent! !chmod +x %
+"" ----------------------------------------------------------------------------------------

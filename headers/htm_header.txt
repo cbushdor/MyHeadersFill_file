@@ -1,0 +1,72 @@
+:insert
+<!DOCTYPE html>
+<html>
+<head>
+<title>myproject</title>
+
+<!-- ------------------------------------------------------
+* Created By :  
+* File Name :
+* Creation Date :
+* Last Modified :
+* Email Address :  
+* Version : 0.0.0.0
+* SCHEME:
+* HOST:
+* PORT:
+* PATH:
+* QUERY:
+* External links:
+*     https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js
+*     https://leafletjs.com/examples/quick-start/
+*     https://cdnjs.com/libraries/leaflet-polylinedecorator/1.1.0
+* License:
+* 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
+* 	Unported License, which is available at http: //creativecommons.org/licenses/by- nc/3.0/.
+* Purpose :
+------------------------------------------------------ -->
+
+  <link rel="icon"
+ type="image/png"
+ href="http://dorey.sebastien.free.fr/Project/image/my_lovely_pict.png">
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<!-- Begin online library to use VJS v2.0.3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<!-- End Library to use VJS v2.0.3 -->
+
+<!-- Begin online libraries to use LeafLet v1.7.1 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+<style type="text/css">
+#mapid { height: 180px; }
+</style>
+<!-- End online libraries to use LeafLet v1.7.1 -->
+
+<!-- Begin Online libraries to use LeafLet Polylinedecorator v1.1.0 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-polylinedecorator/1.1.0/leaflet.polylineDecorator.min.js" integrity="sha512-2oK40N5b+8g4Fhp1rfdtmNaroXsh7tFN4OY6++9lB/Hb+uLQWmn0SSAXvnQfbn8BP8qtpri2YQLaFGpyzKUHow==" crossorigin="anonymous"></script>
+<!-- End Libraries to use LeafLet Polylinedecorator v1.1.0 -->
+
+</head>
+<body>
+<div id="my-app">Hello {{ name }}</div>
+<script>
+var vm = new Vue({
+el: '#my-app',
+data: {
+name: "Sebastien",
+}
+});
+</script>
+<!-- built files will be auto injected -->
+</body>
+</html>
+
+.

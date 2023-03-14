@@ -1,0 +1,14 @@
+" ----------------------------------------------------------------------------------------
+" Makefile programming
+autocmd bufnewfile Makefile* so /Users/sdo/.vim/headers/Makefile_header.txt
+autocmd Bufwritepre,filewritepre Makefile execute "normal ma" 
+autocmd Bufwritepre,filewritepre Makefile exe "1," . 13 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+autocmd Bufwritepre,filewritepre Makefile exe "1," . 13 . "g/File Name :.*/s/File Name :.*/File Name : " .expand("%")
+autocmd bufnewfile Makefile exe "1," . 13 . "g/Creation Date :.*/s/Creation Date :.*/Creation Date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre Makefile exe "1," . 13 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+"autocmd Bufwritepre,filewritepre Makefile exe "1," . 14 . "g/Last Modified :.*/s/Last Modified :.*/@modify date " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre Makefile exe "1," . 14 . "g/@modify date.*/s/@modify date.*/Last Modified date : " .strftime("%F %T")
+autocmd Bufwritepre,filewritepre Makefile exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd bufwritepost,filewritepost Makefile execute "normal `a" 
+autocmd bufwritepost Makefile silent! !chmod +x %
+" ----------------------------------------------------------------------------------------
