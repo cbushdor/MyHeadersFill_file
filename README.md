@@ -1,5 +1,5 @@
 # Introduction
-This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a file header according to file extension! 
+This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
 It can be included with a command line witihn the editor too where cursor is (not installed yet).
 
 >***Note***
