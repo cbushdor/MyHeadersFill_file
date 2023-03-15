@@ -1,12 +1,5 @@
 :insert
 package Foo;
-use strict;
-use warnings;
-use Exporter;
-
-use 5.010;
-
-our @ISA= qw( Exporter );
 
 # ------------------------------------------------------
 q##//q#
@@ -23,7 +16,15 @@ q##//q#
 #;
 # ------------------------------------------------------
 
+my $VERSION="0.0.0.0";
 
+use strict;
+use warnings;
+use Exporter;
+
+use 5.010;
+
+our @ISA= qw( Exporter );
 
 # these CAN be exported.
 our @EXPORT_OK = qw( export_me export_me_too );

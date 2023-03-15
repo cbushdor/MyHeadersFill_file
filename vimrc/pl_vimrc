@@ -2,12 +2,8 @@
 ".pl perl 5 programming
 "autocmd *.pl updateVersionNumber
 
-function! Pa()
-	echo g:path_to_header_file
-endfunction
-
-augroup updateVersionNumberP5
-	au! updateVersionNumberP5
+augroup updateVersionNumberPL
+	au! updateVersionNumberPL
 	autocmd Bufwritepre,filewritepre *.pl execute "normal ma" 
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
