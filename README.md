@@ -1,5 +1,5 @@
 # Introduction
-Creates a file header according to file extension! Can be included wih command line (not installed yet).
+Creates a file header according to file extension! Can be included with a command line too where cursor is (not installed yet).
 
 # Instruction to install plugin
 TODO!
