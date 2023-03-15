@@ -1,13 +1,18 @@
 # Introduction
-This is another plugin for [Vim](https://en.wikipedia.org/wiki/Markdown). It creates a file header according to file extension! 
+==============
+This is another plugin for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)). It creates a file header according to file extension! 
 It can be included with a command line witihn the editor too where cursor is (not installed yet).
 
 # Technical requirements
 
-- [Vim](https://en.wikipedia.org/wiki/Markdown): Version 9.0.1050
-- System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68)
+- [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) (text editor): Version 9.0.1050.
+- System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
+- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script).
 
-# Instruction to install plugin
+***NOTE****
+Should be ok as long as Vim Script is supported by the editor.
+
+# Instructions to install plugin
 TODO!
 
 # WATCHOUT
