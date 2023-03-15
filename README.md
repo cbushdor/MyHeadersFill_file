@@ -17,7 +17,7 @@ It can be included with a command line witihn the editor too where cursor is (no
 
 >***Note***
 >
-> Should be ok as long as Vim Script is supported by the editor.
+> Should be ok as long as Vim Script is supported by the editor (since version 8.0).
 
 # Instructions to install plugin
 TODO!
