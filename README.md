@@ -2,4 +2,4 @@
 Creates header according to file extension!
 
 # WATCHOUT
-Plugin under construction! Yest teted with *.pl files.
+Plugin under construction! Yet, already tested with *.pl files.
