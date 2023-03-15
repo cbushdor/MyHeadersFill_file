@@ -1,5 +1,11 @@
 # Introduction
-Creates a file header according to file extension! Can be included with a command line too where cursor is (not installed yet).
+Plugin for Vim. It creates a file header according to file extension! Can be included with a command line too where cursor is (not installed yet).
+
+# Technical requiremrnts
+
+Vim: Version 9.0.1050
+
+System: Mac OS 13.2.1 (22D68)
 
 # Instruction to install plugin
 TODO!
