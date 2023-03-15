@@ -15,7 +15,7 @@ It can be included with a command line witihn the editor too where cursor is (no
 [^1]: About [Vim](https://www.vim.org/about.php).
 [^2]: How to install [Vim plugin](https://linuxhandbook.com/install-vim-plugins/).
 
->***NOTE***
+>***Note***
 >
 > Should be ok as long as Vim Script is supported by the editor.
 
