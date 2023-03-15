@@ -2,6 +2,10 @@
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a file header according to file extension! 
 It can be included with a command line witihn the editor too where cursor is (not installed yet).
 
+>***Note***
+>
+> For your [perusal](https://opensource.com/article/20/2/how-install-vim-plugins) ;-)!
+
 # Technical requirements
 
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1] (text editor): Version 9.0.1050.
@@ -11,8 +15,9 @@ It can be included with a command line witihn the editor too where cursor is (no
 [^1]: About [Vim](https://www.vim.org/about.php).
 [^2]: How to install [Vim plugin](https://linuxhandbook.com/install-vim-plugins/).
 
-***NOTE****
-Should be ok as long as Vim Script is supported by the editor.
+>***NOTE***
+>
+> Should be ok as long as Vim Script is supported by the editor.
 
 # Instructions to install plugin
 TODO!
