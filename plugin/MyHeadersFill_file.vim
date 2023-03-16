@@ -11,7 +11,8 @@ function FileHeading()
 	let s:line=line(".")
 	let $w=expand('%:e')
 	let nu=1
-	let fname="/Users/sdo/.vim/headers/".expand('%:e')."_header.txt"
+	"let fname="/Users/sdo/.vim/headers/".expand('%:e')."_header.txt"
+	let fname=s:path_headers.expand('%:e')."_header.txt"
 	for line in reverse(readfile(fname,''))
 		if match(line,"^:insert$") == 0
 		elseif match(line,"^ \{0,1}$") == 0
