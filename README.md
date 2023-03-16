@@ -44,6 +44,11 @@ All fields are created if file is new and , format supported.
 | Purpose | Why this file was created. |  Can be changed anytime! |
 | Version variable  | Same as Version field. | Incremented at same time as ***Version field*** created. |
 
+# The command line
+
+It is possible to insert where the cursor is a header. Follow the next line:
+> Enter Vim if not so. Go to the line where you want to insert header.
+> Go to insert mode (type *i*) then *Ctrl-h* (*Control key followed by h key at same time*) then return.
 
 # Extensions
 
