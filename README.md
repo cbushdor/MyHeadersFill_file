@@ -50,6 +50,12 @@ It is possible to insert where the cursor is a header. Follow the next line:
 > Enter Vim if not so. Go to the line where you want to insert header.
 > Go to insert mode (type *i*) then *Ctrl-h* (*Control key followed by h key at same time*) then return.
 
+>***Note***
+>
+> It is better to insert the header at the very top (after shebang i.e). 
+> It is working fine if the fields that are updated are in the top 20 first lines of the file!
+> It is not caveat!
+
 # Extensions
 
 Features by extension. A start means implented.
