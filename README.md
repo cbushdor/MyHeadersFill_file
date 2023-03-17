@@ -1,16 +1,12 @@
 # Introduction
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
-It can be included with a command line witihn the editor too where cursor is (not installed yet).
-
->***Note***
->
-> For your [perusal](https://opensource.com/article/20/2/how-install-vim-plugins) ;-)!
 
 # Technical requirements
 
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1] (text editor): Version 9.0.1050.
 - System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
-- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script).
+- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script), [shell sh](https://en.wikipedia.org/wiki/Unix_shell).
+- Vim plugin: [Vim-plug](https://github.com/junegunn/vim-plug).
 
 [^1]: About [Vim](https://www.vim.org/about.php).
 [^2]: How to install [Vim plugin](https://linuxhandbook.com/install-vim-plugins/).
@@ -20,11 +16,21 @@ It can be included with a command line witihn the editor too where cursor is (no
 > Should be ok as long as Vim Script is supported by the editor (since version 8.0).
 
 # Instructions to install plugin
-TODO!
+We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
+
+We configure *~/.vimrc* bellow:
+
+```
+call plug#begin('~/.vim/plugged')
+Plug 'cbushdor/MyHeadersFill_file'
+call plug#end()
+```
+
+and plugin will be installed in *~/.vim/plugged* if everything is well configured. First, go in vim type *:PlugInstall* and look plugin is installing itself.
 
 # WATCHOUT
 Plugin under construction! 
-Yet, already tested with *.pl files.
+Yet, already tested with *.pl files. Online help will be written pretty soon!? ;-)! as a vim command line.
 
 
 
