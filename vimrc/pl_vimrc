@@ -1,6 +1,3 @@
-" ---------------------------------------------------------------------------------------
-".pl perl 5 programming
-"autocmd *.pl updateVersionNumber
 
 augroup updateVersionNumberPL
 	au! updateVersionNumberPL
@@ -8,8 +5,8 @@ augroup updateVersionNumberPL
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
 	echo "**********>".$TMP."<====" .g:path_vimrc 
-	"echo "++++++++++>" . $TMP_VIMRC
 	autocmd BufNewFile *.pl so $TMP
+	"echo "++++++++++>" . $TMP_VIMRC
 	autocmd BufNewFile *.pl exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
 	autocmd BufWritePre,FileWritePre *.pl exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre *.pl exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
@@ -20,4 +17,3 @@ augroup updateVersionNumberPL
 	echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *.pl execute "normal `a" 
 augroup END
-" ----------------------------------------------------------------------------------------
