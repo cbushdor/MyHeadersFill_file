@@ -6,18 +6,23 @@ if s:file_extension == '_vimrc'
 else
 	let s:file_extension = expand("%:e")
 endif
-
-echo "s:file_extension :".s:file_extension
-let s:localFileHeaderVimrc=g:path_vimrc . s:file_extension."_vimrc"
-echo "=====>".s:localFileHeaderVimrc
-let localFileHeaderTmp=substitute(s:localFileHeaderVimrc,"/vimrc/","/headers/","")
-echo "----->".localFileHeaderTmp
-let s:localFileHeader=substitute(localFileHeaderTmp,"_vimrc","_header.txt","")
-echo "xxxxxxx>".localFileHeaderTmp
-let g:path_to_header_file = s:localFileHeader
-echo "g:path_to_header_file :".g:path_to_header_file
-echo "to launch:" .s:localFileHeaderVimrc
-execute "source ". s:localFileHeaderVimrc
+let s:listing_headers=globpath(s:path_headers, s:file_extension.'_header.txt')
+if s:listing_headers != ""
+	echo "list headers:" . s:listing_headers
+	echo "s:file_extension :".s:file_extension
+	let s:localFileHeaderVimrc=g:path_vimrc . s:file_extension."_vimrc"
+	echo "=====>".s:localFileHeaderVimrc
+	let localFileHeaderTmp=substitute(s:localFileHeaderVimrc,"/vimrc/","/headers/","")
+	echo "----->".localFileHeaderTmp
+	let s:localFileHeader=substitute(localFileHeaderTmp,"_vimrc","_header.txt","")
+	echo "xxxxxxx>".localFileHeaderTmp
+	let g:path_to_header_file = s:localFileHeader
+	echo "g:path_to_header_file :".g:path_to_header_file
+	echo "to launch:" .s:localFileHeaderVimrc
+	execute "source ". s:localFileHeaderVimrc
+else
+	echo "file type ".s:file_extension." not supported yet!"
+endif
 
 function FileHeading()
 	let s:line=line(".") " We get the cursor position
@@ -36,25 +41,25 @@ function FileHeading()
 			call append(s:line,line . strftime("%F %T",getftime(expand("%:t"))))
 		elseif match(line,"------------------------------------------------------") >= 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"#`") == 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"# -") == 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"q##//q#") == 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"#;") == 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"]") == 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"//") == 0 
 			call append(s:line,line)
-			" nu+=1
+		" nu+=1
 		elseif match(line,"*") == 0 
 			call append(s:line,line)
 		elseif match(line,"\"") == 0 
