@@ -1,5 +1,8 @@
 :insert
+<<<<<<< HEAD
 
+=======
+>>>>>>> 743da8b (ok)
 " ------------------------------------------------------
 " Created By :  
 " File Name :
@@ -12,5 +15,8 @@
 " 	Unported License, which is available at http: //creativecommons.org/licenses/by- nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
+<<<<<<< HEAD
 
+=======
+>>>>>>> 743da8b (ok)
 .
