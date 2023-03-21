@@ -7,16 +7,16 @@ augroup updateVersionNumberVIMRC
 	autocmd Bufwritepre,filewritepre *_vimrc execute "normal ma" 
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
-	echo "**********>".$TMP."<====" .g:path_vimrc 
-	"echo "++++++++++>" . $TMP_VIMRC
+	echo "\$TMP **********>".$TMP."<====" .g:path_vimrc 
+	echo "\$TMP_VIMRC ++++++++++>" . $TMP_VIMRC
 	autocmd BufNewFile *_vimrc so $TMP
 	autocmd BufNewFile *_vimrc exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	autocmd BufWritePost *_vimrc exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
-	autocmd BufWritePost *_vimrc exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
-	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 15 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+"	autocmd BufWritePost *_vimrc exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
+	autocmd BufWritePost *_vimrc exe "1," . 12 . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
+	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . line("$") . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
 	echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *_vimrc execute "normal `a" 
 augroup END

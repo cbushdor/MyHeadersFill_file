@@ -1,15 +1,20 @@
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/"
+echo "g:path_vimrc :".g:path_vimrc 
 let s:path_headers = expand('<sfile>:p:h')."/../headers/"
+echo "s:path_headers :".s:path_headers 
 let s:file_extension = matchstr(expand('%'),'_vimrc')
+echo "s:file_extension :".s:file_extension 
 if s:file_extension == '_vimrc'
 	let s:file_extension = 'vimrc'
-else
+elseif expand("%:e") != ""
 	let s:file_extension = expand("%:e")
+else
+	let s:file_extension = expand("%")
 endif
 let s:listing_headers=globpath(s:path_headers, s:file_extension.'_header.txt')
+echo "list headers:" . s:listing_headers
+echo "s:file_extension :".s:file_extension
 if s:listing_headers != ""
-	echo "list headers:" . s:listing_headers
-	echo "s:file_extension :".s:file_extension
 	let s:localFileHeaderVimrc=g:path_vimrc . s:file_extension."_vimrc"
 	echo "=====>".s:localFileHeaderVimrc
 	let localFileHeaderTmp=substitute(s:localFileHeaderVimrc,"/vimrc/","/headers/","")
