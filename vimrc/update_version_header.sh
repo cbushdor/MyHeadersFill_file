@@ -14,18 +14,25 @@
 # ----------------------------------------------------------------------
 
 option="${1}"
-mydates=`grep --text 'my \+$VERSION' $2 | sed 's/my[[:blank:]]\{1,\}\$VERSION[[:blank:]]\{0,\}=[[:blank:]]\{0,\}"\(.*\)".*/\1/'`
 
 case ${option} in
-	PRINTNUM) echo "$mydates"
+	HINC)
+		mydates=`grep '^.\ Version\ \:\ ' $2 |cut -d' ' -f4`
+		IFS=',.' read -r -a array <<< "$mydates"
+			let length="$((${#array[@]} - 1 ))"
+			echo "${array[0]}.${array[1]}.${array[2]}.$((${array[$length]} + 1 ))"
 			;;
-	INCREASENUM) IFS=',.' read -r -a array <<< "$mydates"
+	PRINTNUM)
+		mydates=`grep --text 'my \+$VERSION' $2 | sed 's/my[[:blank:]]\{1,\}\$VERSION[[:blank:]]\{0,\}=[[:blank:]]\{0,\}"\(.*\)".*/\1/'`
+		echo "$mydates"
+		;;
+	INCREASENUM)
+		mydates=`grep --text 'my \+$VERSION' $2 | sed 's/my[[:blank:]]\{1,\}\$VERSION[[:blank:]]\{0,\}=[[:blank:]]\{0,\}"\(.*\)".*/\1/'`
+		IFS=',.' read -r -a array <<< "$mydates"
 			let length="$((${#array[@]} - 1 ))"
 			echo "${array[0]}.${array[1]}.${array[2]}.$((${array[$length]} + 1 ))\";"
-		;;
-	*) echo "Option not recognised."
+			;;
+		*) echo "Option not recognised."
 		exit
 		;;
 esac
-
-
