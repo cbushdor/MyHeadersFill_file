@@ -107,7 +107,6 @@ MyHeadersFill_file
 │   ├── htm_header.txt
 │   ├── html_header.txt
 │   ├── js_header.txt
-│   ├── myconf_header.txt
 │   ├── p6_header.txt
 │   ├── php_header.txt
 │   ├── pl6_header.txt
@@ -117,7 +116,6 @@ MyHeadersFill_file
 │   ├── raku_header.txt
 │   ├── sh_header.txt
 │   ├── t_header.txt
-│   ├── vimrc_header.txt
 │   ├── xml_header.txt
 │   └── xsl_header.txt
 ├── plugin
@@ -131,7 +129,6 @@ MyHeadersFill_file
     ├── h_vimrc
     ├── html_vimrc
     ├── js_vimrc
-    ├── myconf_vimrc
     ├── p6_vimrc
     ├── php_vimrc
     ├── pl_vimrc
@@ -140,14 +137,11 @@ MyHeadersFill_file
     ├── sh_vimrc
     ├── testFileType_vimrc
     ├── tests_vimrc
-    ├── tutu.pl
     ├── update_version_header.sh
-    ├── update_version_header.sh.ok
-    ├── vimrc_vimrc
     ├── xml_vimrc
     └── xsl_vimrc
 
-3 directories, 48 files
+3 directories, 42 files
 ```
 </p>
 </details>
