@@ -1,7 +1,17 @@
-" ---------------------------------------------------------------------------------------
-"_vimrc perl 5 programming
-"autocmd _vimrc updateVersionNumber
+" ------------------------------------------------------
+" Created By : sdo
+" File Name : vimrc_vimrc
+" Creation Date :2023-03-23 02:14:59
+" Last Modified : 2023-03-23 02:20:38
+" Email Address : sdo@dorseb.ddns.net
+" Version : 0.0.0.6
+" License:
+" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
+" 	Unported License, which is available at http: //creativecommons.org/licenses/by- nc/3.0/.
+" Purpose :
+" ------------------------------------------------------
 
+" ---------------------------------------------------------------------------------------
 augroup updateVersionNumberVIMRC
 	au! updateVersionNumberVIMRC
 	autocmd Bufwritepre,filewritepre *_vimrc execute "normal ma" 
@@ -15,9 +25,8 @@ augroup updateVersionNumberVIMRC
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
 	autocmd BufWritePost *_vimrc exe "1," . 12 . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh HINC ".expand('%:t'))|:write
-	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . line("$") . "g/\"\ Email Address : sdo@dorseb.ddns.net
-	autocmd Bufwritepre,filewritepre *_vimrc exe "1," . 13 . "g/^\"\ Email Address :.*/s/^\"\ Email Address :.*/\"\ Email Address : " .$EMAIL
-	echo "CGI header scipt loaded!!!"
+	autocmd Bufwritepre,filewritepre *_vimrc exe "1," . line("$") . "g/^\"\ Email Address :.*/s/^\"\ Email Address :.*/\"\ Email Address : " .$EMAIL
+	echo "VIMRC header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *_vimrc execute "normal `a" 
 augroup END
 " ----------------------------------------------------------------------------------------
