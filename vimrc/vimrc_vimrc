@@ -15,7 +15,8 @@ augroup updateVersionNumberVIMRC
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
 	autocmd BufWritePost *_vimrc exe "1," . 12 . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh HINC ".expand('%:t'))|:write
-	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . line("$") . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+	autocmd BufWritePre,FileWritePre *_vimrc exe "1," . line("$") . "g/\"\ Email Address : sdo@dorseb.ddns.net
+	autocmd Bufwritepre,filewritepre *_vimrc exe "1," . 13 . "g/^\"\ Email Address :.*/s/^\"\ Email Address :.*/\"\ Email Address : " .$EMAIL
 	echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *_vimrc execute "normal `a" 
 augroup END
