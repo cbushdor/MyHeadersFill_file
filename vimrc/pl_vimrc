@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : pl_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2023-03-22 03:03:06
+" Last Modified : 2023-03-23 01:46:16
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.2
+" Version : 0.0.0.7
 " License:
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http: //creativecommons.org/licenses/by- nc/3.0/.
@@ -23,11 +23,9 @@ augroup updateVersionNumberPL
 	autocmd BufWritePre,FileWritePre *.pl exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre *.pl exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre *.pl exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	"autocmd BufWritePost *.pl exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))." NUMVER"|:write
 	autocmd BufWritePost *.pl exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
-	"autocmd BufWritePost *.pl exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))." NUM"|:write
 	autocmd BufWritePost *.pl exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
-	autocmd BufWritePre,FileWritePre *.pl exe "1," . 15 . "g/Email Address : sdo@dorseb.ddns.net
+autocmd Bufwritepre,filewritepre *.pl exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
 	"echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *.pl execute "normal `a" 
 augroup END
