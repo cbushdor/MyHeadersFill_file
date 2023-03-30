@@ -1,0 +1,44 @@
+vim: filetype=help : scrolloff=6
+
+*********
+** dog **
+*********
+
+|dog| is a *four* legged animal
+barks a lot
+
+when you include it in your script, it is better
+to define green somewhere because they like
+running about
+
+*********
+** cat **
+*********
+
+|cat| is very cute, four legged
+
+they like milk
+if you have a cat in your script
+make sure you have milk around
+
+	cat was wondering around 
+	there was nobody about
+	so it started having a wash
+	he noticed there was milk in he place
+
+**********
+** bird **
+**********
+
+|bird| is a funny thing
+it can *fly*
+there are several things to bear in mind when using bird
+
+first there are to be *trees*
+because |birds| like to have trees around
+
+	Exemple()
+	bird was flying around 
+	it was getting tired 
+	so it noticed some trees
+	and it was able to park a bit

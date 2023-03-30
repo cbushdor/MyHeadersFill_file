@@ -1,0 +1,14 @@
+*introScene.cute.txt* functionality for the introScene.cute programming language
+tags=cuteTags
+
+there was a cat called eddy
+
+	cat was wondering around  the bird
+	there was nobody about
+	so it started having a wash
+	he noticed there was milk in he place
+
+he was going down the road
+
+there he met wulfie the dog 
+he was standing next to a bit of green
