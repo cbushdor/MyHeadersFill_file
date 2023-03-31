@@ -2,20 +2,20 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-01 01:18:53
+" Last Modified : 2023-04-01 01:30:12
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.2
+" Version : 0.0.0.3
 " License:
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
 
-let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/"
+let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
 echo "g:path_vimrc :".g:path_vimrc 
-let s:path_headers = expand('<sfile>:p:h')."/../headers/"
+let s:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
 echo "s:path_headers :".s:path_headers 
-let s:file_extension = matchstr(expand('%'),'_vimrc$')
+let s:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
 echo "s:file_extension :".s:file_extension 
 if s:file_extension == '_vimrc'
 	let s:file_extension = 'vimrc'
