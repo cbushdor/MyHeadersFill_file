@@ -1,8 +1,21 @@
+" ------------------------------------------------------
+" Created By : sdo
+" File Name : MyHeadersFill_file.vim
+" Creation Date :2023-03-30 01:35:19
+" Last Modified : 2023-04-01 01:18:53
+" Email Address : sdo@dorseb.ddns.net
+" Version : 0.0.0.2
+" License:
+" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
+" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+" Purpose :
+" ------------------------------------------------------
+
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/"
 echo "g:path_vimrc :".g:path_vimrc 
 let s:path_headers = expand('<sfile>:p:h')."/../headers/"
 echo "s:path_headers :".s:path_headers 
-let s:file_extension = matchstr(expand('%'),'_vimrc')
+let s:file_extension = matchstr(expand('%'),'_vimrc$')
 echo "s:file_extension :".s:file_extension 
 if s:file_extension == '_vimrc'
 	let s:file_extension = 'vimrc'
