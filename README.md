@@ -1,6 +1,10 @@
 # Introduction
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
 
+# Licence
+
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://directory.fsf.org/wiki/License:Artistic-2.0)
+
 # Technical requirements
 
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1] (text editor): Version 9.0.1050.
