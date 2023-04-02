@@ -1,3 +1,15 @@
+:function! s:printsHello(first,flicen,fname)
+:	let mylist=[] " Final list that will be returned
+":	let rfil= readfile("\/Users\/sdo\/.vim\/plugged\/MyHeadersFill_file\/headers\/license.txt", '', 10) " Read file 
+:	let rfil= readfile(a:fname, '', 10) " Read file 
+: call add(mylist,a:first..a:flicen) " Add to final list
+:	for line in rfil 
+:		let lin="\t"..line
+: 	call add(mylist,a:first..lin) " Add to final list
+:	endfor
+:	return mylist " Final list returned
+:endfunction
+
 :insert
 #!/usr/local/bin/perl
 
@@ -10,11 +22,14 @@ q##//q#
 * Email Address :  
 * Version : 0.0.0.0
 * License:
-* 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
-* 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 * Purpose :
 #;
 # ------------------------------------------------------
 
 my $VERSION="0.0.0.0";
 .
+
+:1
+g/License/s/^\(.\ \)\(License:\)/\= s:printsHello(submatch(1),submatch(2),"\/Users\/sdo\/.vim\/plugged\/MyHeadersFill_file\/headers\/license.txt")/
+echo ":::::::>"..line(".")
+s/^\n//
