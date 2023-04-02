@@ -79,6 +79,12 @@ Features by extension. A start means implented.
 | Purpose | * | * |
 | Version variable  | * | * |
 
+## Configuration
+
+Some fields can be configured in a seperated file and loaded if file does not exists. This feature is not available if file already exists, either for the variable that contains version of script.
+
+For instance in the directory header we set a file called *license.txt* and is loaded.
+
 # Directories
 
 
