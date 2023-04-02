@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-01 01:30:12
+" Last Modified : 2023-04-03 01:23:56
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.3
+" Version : 0.0.0.12
 " License:
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -15,6 +15,7 @@ let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that conta
 echo "g:path_vimrc :".g:path_vimrc 
 let s:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
 echo "s:path_headers :".s:path_headers 
+let g:path_to_licences_file = s:path_headers.."/license.txt"
 let s:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
 echo "s:file_extension :".s:file_extension 
 if s:file_extension == '_vimrc'
@@ -86,6 +87,23 @@ function FileHeading()
 		endif
 	endfor
 	unlet s:line
+endfunction
+
+:function! s:printsHello(first,flicen,fname)
+:	let mylist=[] " Final list that will be returned
+:	let rfil= readfile(a:fname, '', 10) " Read file 
+: call add(mylist,a:first..a:flicen) " Add to final list
+:	for line in rfil 
+:		let lin="\t"..line " We add a tab
+: 	call add(mylist,a:first..lin) " Add to final list
+:	endfor
+:	return mylist " Final list returned
+:endfunction
+
+function InsertHeader()
+	:1
+	g/License/s/^\(.\ \)\(License:\)/\= s:printsHello(submatch(1),submatch(2),g:path_to_licences_file)/
+	s/^\n//
 endfunction
 
 " insert mode type ctrl + h then enter
