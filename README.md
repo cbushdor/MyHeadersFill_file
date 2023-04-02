@@ -163,6 +163,6 @@ Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 
 <!--
 If several files are opened in the same vim, headers might not be updated properly when file are saved.
-
-It is the same when *:x* command is used.
 -->
+
+If a file is closed with *:x* command fields are not updated properly.
