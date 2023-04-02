@@ -16,7 +16,7 @@ augroup updateVersionNumberPL
 	autocmd Bufwritepre,filewritepre *.pl execute "normal ma" 
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
-	"echo "**********>".$TMP."<====" .g:path_vimrc 
+	echo "**********>".$TMP."<====" .g:path_vimrc 
 	autocmd BufNewFile *.pl so $TMP
 	"echo "TMP_VIMRC++++++++++>" . $TMP_VIMRC
 	autocmd BufNewFile *.pl exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
