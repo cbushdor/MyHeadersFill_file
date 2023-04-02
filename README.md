@@ -159,3 +159,10 @@ Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 * 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
  	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 
+# CAVEATS
+
+<!--
+If several files are opened in the same vim, headers might not be updated properly when file are saved.
+
+It is the same when *:x* command is used.
+-->
