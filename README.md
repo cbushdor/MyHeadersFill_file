@@ -20,7 +20,7 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 # Instructions to install plugin
 We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
 
-We configure *~/.vimrc* bellow:
+We configure *~/.vimrc* below:
 
 ```
 call plug#begin('~/.vim/plugged')
