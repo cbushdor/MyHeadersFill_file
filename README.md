@@ -166,3 +166,8 @@ If several files are opened in the same vim, headers might not be updated proper
 -->
 
 If a file is closed with *:x* command fields are not updated properly.
+
+
+# TODO
+
+Help commands need to be written.
