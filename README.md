@@ -1,19 +1,17 @@
 # Introduction
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
 
-# Source
-
-This was based on [Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File Automatically](https://www.thegeekstuff.com/2008/12/vi-and-vim-autocommand-3-steps-to-add-custom-header-to-your-file/).
 
 # Technical requirements
 
-- [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1] (text editor): Version 9.0.1050.
+- [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1][^3] (text editor): Version 9.0.1050.
 - System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
 - Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script), [shell sh](https://en.wikipedia.org/wiki/Unix_shell).
 - Vim plugin: [Vim-plug](https://github.com/junegunn/vim-plug).
 
 [^1]: About [Vim](https://www.vim.org/about.php).
 [^2]: How to install [Vim plugin](https://linuxhandbook.com/install-vim-plugins/).
+[^3]: This code was based on [Vi and Vim Autocommand](https://www.thegeekstuff.com/2008/12/vi-and-vim-autocommand-3-steps-to-add-custom-header-to-your-file/).
 
 >***Note***
 >
