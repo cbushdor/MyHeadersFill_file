@@ -1,6 +1,9 @@
 # Introduction
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
 
+# Source
+
+This was based on this [tut](https://www.thegeekstuff.com/2008/12/vi-and-vim-autocommand-3-steps-to-add-custom-header-to-your-file/).
 
 # Technical requirements
 
