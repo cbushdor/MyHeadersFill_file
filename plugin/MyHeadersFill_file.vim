@@ -11,6 +11,11 @@
 " Purpose :
 " ------------------------------------------------------
 
+if !exists("g:myEmail")
+	echom "Need to set g:myEmail in ~/.vimrc"
+	exit 0
+endif
+
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
 echo "g:path_vimrc :".g:path_vimrc 
 let s:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
