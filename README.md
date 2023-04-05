@@ -172,4 +172,6 @@ If a file is closed with *:x* command fields are not updated properly.
 
 # TODO
 
-Help commands need to be written.
+* Help commands need to be written.
+
+* Testing
