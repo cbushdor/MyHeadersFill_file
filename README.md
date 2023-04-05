@@ -1,8 +1,25 @@
-# Introduction
+# Table of Contents
+1. [Introduction](#Introduction)
+2. [Technical requirements](#Technical-requirements)
+3. [Instructions to install plugin](#Instructions-to-install-pluginexample)
+4. [WATCHOUT](#WATCHOUT)
+5. [Fields and their use](#Fields-and-their-use)
+6. [The command line](#The-command-line)
+7. [Extensions](#Extensions)
+    1. [Configuration](#Configuration)
+8. [Directories](#Directories)
+    1. [HEADERS](#HEADERS)
+    2. [PLUGIN](#PLUGIN)
+    3. [VIMRC](#VIMRC)
+9. [License](#License)
+10. [CAVEATS](#CAVEATS)
+11. [TODO](#TODO)
+
+# Introduction <a name="Introduction"></a>
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
 
 
-# Technical requirements
+# Technical requirements <a name="Technical-requirements"></a>
 
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1][^3] (text editor): Version 9.0.1050.
 - System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
@@ -18,7 +35,7 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 >
 > Should be ok as long as Vim Script is supported by the editor (since version 8.0).
 
-# Instructions to install plugin
+# Instructions to install plugin <a name="Instructions-to-install"></a>
 We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
 
 We configure *~/.vimrc* below:
@@ -31,13 +48,13 @@ call plug#end()
 
 and plugin will be installed in *~/.vim/plugged* if everything is well configured. First, go in vim type *:PlugInstall* and look plugin is installing itself.
 
-# WATCHOUT
+# WATCHOUT <a name="WATCHOUT"></a>
 Plugin under construction! 
 Yet, already tested with *.pl files. Online help will be written pretty soon!? ;-)! as a vim command line.
 
 
 
-# Fields and their use
+# Fields and their use  <a name="Fields-and-their-use"></a>
 
 All fields are created if file is new and , format supported.
 
@@ -53,7 +70,7 @@ All fields are created if file is new and , format supported.
 | Purpose | Why this file was created. |  Can be changed anytime! |
 | Version variable  | Same as Version field. | Incremented at same time as ***Version field*** created. |
 
-# The command line
+# The command line <a name="The-command-line"></a>
 
 It is possible to insert where the cursor is a header. Follow the next line:
 > Enter Vim if not so. Go to the line where you want to insert header.
@@ -65,7 +82,7 @@ It is possible to insert where the cursor is a header. Follow the next line:
 > It is working fine if the fields that are updated are in the top 20 first lines of the file!
 > It is not caveat!
 
-# Extensions
+# Extensions <a name="Extensions"></a>
 
 Features by extension. A start means implented.
 
@@ -81,22 +98,22 @@ Features by extension. A start means implented.
 | Purpose | * | * |
 | Version variable  | * | * |
 
-## Configuration
+## Configuration <a name="Configuration"></a>
 
 Some fields can be configured in a seperated file and loaded if file does not exists. This feature is not available if file already exists, either for the variable that contains version of script.
 
 For instance in the directory header we set a file called *license.txt* and is loaded.
 
-# Directories
+# Directories <a name="Directories"></a>
 
 
-## HEADERS
+## HEADERS <a name="HEADERS"></a>
 Contains the templates of the headers for each file type.
 
-## PLUGIN
+## PLUGIN <a name="PLUGIN"></a>
 Contains the file that is read by default.
 
-## VIMRC
+## VIMRC <a name="VIMRC"></a>
 Contains the scripts that modified the headers.  
 
 <details><summary>CLICK ME</summary>
@@ -155,22 +172,18 @@ MyHeadersFill_file
 </p>
 </details>
 
-# Licence
+# License <a name="License"></a>
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 * 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
  	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 
-# CAVEATS
-
-<!--
-If several files are opened in the same vim, headers might not be updated properly when file are saved.
--->
+# CAVEATS <a name="CAVEATS"></a>
 
 If a file is closed with *:x* command fields are not updated properly.
 
 
-# TODO
+# TODO <a name="TODO"></a>
 
 * Help commands need to be written.
 
