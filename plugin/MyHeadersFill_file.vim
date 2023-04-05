@@ -17,35 +17,40 @@ if !exists("g:myEmail")
 endif
 
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
-echo "g:path_vimrc :".g:path_vimrc 
+"echo "g:path_vimrc :".g:path_vimrc 
 let s:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
-echo "s:path_headers :".s:path_headers 
+"echo "s:path_headers :".s:path_headers 
 let g:path_to_licences_file = s:path_headers.."/license.txt"
-let s:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
-echo "s:file_extension :".s:file_extension 
-if s:file_extension == '_vimrc'
-	let s:file_extension = 'vimrc'
+let g:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
+"echo "g:file_extension :".g:file_extension 
+if g:file_extension == '_vimrc'
+	let g:file_extension = 'vimrc'
+	let g:filter = "*_vimrc"
 elseif expand("%:e") != ""
-	let s:file_extension = expand("%:e")
+	let g:file_extension = expand("%:e")
+	let g:filter = "*."..g:file_extension
 else
-	let s:file_extension = expand("%")
+	let g:file_extension = expand("%")
+	let g:filter = "*"..g:file_extension
 endif
-let s:listing_headers=globpath(s:path_headers, s:file_extension.'_header.txt')
-echo "list headers:" . s:listing_headers
-echo "s:file_extension :".s:file_extension
+	"echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
+let s:listing_headers=globpath(s:path_headers, g:file_extension.'_header.txt')
+"echo "list headers:" . s:listing_headers
+"echo "+++++++>g:file_extension :".g:file_extension
 if s:listing_headers != ""
-	let s:localFileHeaderVimrc=g:path_vimrc . s:file_extension."_vimrc"
-	echo "=====>".s:localFileHeaderVimrc
+	let s:localFileHeaderVimrc=g:path_vimrc . g:file_extension."_vimrc"
+	"echo "=====>".s:localFileHeaderVimrc
 	let localFileHeaderTmp=substitute(s:localFileHeaderVimrc,"/vimrc/","/headers/","")
-	echo "----->".localFileHeaderTmp
+	"echo "----->".localFileHeaderTmp
 	let s:localFileHeader=substitute(localFileHeaderTmp,"_vimrc","_header.txt","")
-	echo "xxxxxxx>".localFileHeaderTmp
+	"echo "xxxxxxx>".localFileHeaderTmp
 	let g:path_to_header_file = s:localFileHeader
-	echo "g:path_to_header_file :".g:path_to_header_file
-	echo "to launch:" .s:localFileHeaderVimrc
-	execute "source ". s:localFileHeaderVimrc
+	"echo "g:path_to_header_file :".g:path_to_header_file
+	"echo "ooooo> to launch:" .s:localFileHeaderVimrc
+	execute "source ".. g:path_vimrc .."/start_header_vimrc"
+	"s:localFileHeaderVimrc
 else
-	echo "file type ".s:file_extension." not supported yet!"
+	echo "file type ".g:file_extension." not supported yet!"
 endif
 
 function FileHeading()
