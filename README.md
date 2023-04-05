@@ -1,3 +1,4 @@
+<!--
 # Table of Contents
 1. [Introduction](#Introduction)
 2. [Technical requirements](#Technical-requirements)
@@ -14,6 +15,7 @@
 9. [License](#License)
 10. [CAVEATS](#CAVEATS)
 11. [TODO](#TODO)
+-->
 
 # Introduction <a name="Introduction"></a>
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
