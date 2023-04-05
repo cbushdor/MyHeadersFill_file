@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : pm_vimrc
 " Creation Date :2023-03-18 00:15:27
-" Last Modified : 2023-04-01 01:36:13
+" Last Modified : 2023-04-05 03:23:35
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.8
+" Version : 0.0.0.10
 " License:
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -17,18 +17,16 @@ augroup updateVersionNumberPM
 	autocmd Bufwritepre,filewritepre *.pm execute "normal ma" 
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
-	"echo "**********>".$TMP."<====" .g:path_vimrc 
+	echo "**********>".$TMP."<====" .g:path_vimrc 
 	autocmd BufNewFile *.pm so $TMP
 	"echo "TMP_VIMRC++++++++++>" . $TMP_VIMRC
 	autocmd BufNewFile *.pm exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
 	autocmd BufWritePre,FileWritePre *.pm exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre *.pm exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre *.pm exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	"autocmd BufWritePost *.pm exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))." NUMVER"|:write
 	autocmd BufWritePost *.pm exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
-	"autocmd BufWritePost *.pm exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))." NUM"|:write
 	autocmd BufWritePost *.pm exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
-	autocmd Bufwritepre,filewritepre *.pm exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .$EMAIL
+autocmd Bufwritepre,filewritepre *.pm exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
 	"echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *.pm execute "normal `a" 
 augroup END
