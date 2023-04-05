@@ -2,15 +2,16 @@
 " Created By : sdo
 " File Name : pl_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2023-04-01 01:35:48
+" Last Modified : 2023-04-05 03:24:03
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.9
+" Version : 0.0.0.12
 " License:
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
 
+" ----------------------------------------------------------------------------------------
 augroup updateVersionNumberPL
 	au! updateVersionNumberPL
 	autocmd Bufwritepre,filewritepre *.pl execute "normal ma" 
@@ -29,3 +30,4 @@ autocmd Bufwritepre,filewritepre *.pl exe "1," . 13 . "g/Email Address :.*/s/Ema
 	"echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost *.pl execute "normal `a" 
 augroup END
+" ----------------------------------------------------------------------------------------
