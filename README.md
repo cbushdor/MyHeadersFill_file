@@ -1,27 +1,8 @@
-<!--
-# Table of Contents
-1. [Introduction](#Introduction)
-2. [Technical requirements](#Technical-requirements)
-3. [Instructions to install plugin](#Instructions-to-install-pluginexample)
-4. [WATCHOUT](#WATCHOUT)
-5. [Fields and their use](#Fields-and-their-use)
-6. [The command line](#The-command-line)
-7. [Extensions](#Extensions)
-    1. [Configuration](#Configuration)
-8. [Directories](#Directories)
-    1. [HEADERS](#HEADERS)
-    2. [PLUGIN](#PLUGIN)
-    3. [VIMRC](#VIMRC)
-9. [License](#License)
-10. [CAVEATS](#CAVEATS)
-11. [TODO](#TODO)
--->
-
-# Introduction <a name="Introduction"></a>
+# Introduction
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension! 
 
 
-# Technical requirements <a name="Technical-requirements"></a>
+# Technical requirements
 
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1][^3] (text editor): Version 9.0.1050.
 - System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
@@ -56,7 +37,7 @@ Yet, already tested with *.pl files. Online help will be written pretty soon!? ;
 
 
 
-# Fields and their use  <a name="Fields-and-their-use"></a>
+# Fields and their use
 
 All fields are created if file is new and , format supported.
 
@@ -84,7 +65,7 @@ It is possible to insert where the cursor is a header. Follow the next line:
 > It is working fine if the fields that are updated are in the top 20 first lines of the file!
 > It is not caveat!
 
-# Extensions <a name="Extensions"></a>
+# Extensions
 
 Features by extension. A start means implented.
 
@@ -100,22 +81,22 @@ Features by extension. A start means implented.
 | Purpose | * | * |
 | Version variable  | * | * |
 
-## Configuration <a name="Configuration"></a>
+## Configuration
 
 Some fields can be configured in a seperated file and loaded if file does not exists. This feature is not available if file already exists, either for the variable that contains version of script.
 
 For instance in the directory header we set a file called *license.txt* and is loaded.
 
-# Directories <a name="Directories"></a>
+# Directories
 
 
-## HEADERS <a name="HEADERS"></a>
+## HEADERS
 Contains the templates of the headers for each file type.
 
-## PLUGIN <a name="PLUGIN"></a>
+## PLUGIN
 Contains the file that is read by default.
 
-## VIMRC <a name="VIMRC"></a>
+## VIMRC
 Contains the scripts that modified the headers.  
 
 <details><summary>CLICK ME</summary>
@@ -174,18 +155,18 @@ MyHeadersFill_file
 </p>
 </details>
 
-# License <a name="License"></a>
+# License
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 * 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
  	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 
-# CAVEATS <a name="CAVEATS"></a>
+# CAVEATS
 
 If a file is closed with *:x* command fields are not updated properly.
 
 
-# TODO <a name="TODO"></a>
+# TODO
 
 * Help commands need to be written.
 
