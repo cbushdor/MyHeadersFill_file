@@ -15,6 +15,9 @@
 
 option="${1}"
 
+
+echo "--->${option}<===$2"
+
 case ${option} in
 	HINC)
 		mydates=`grep '^.\ Version\ \:\ ' $2 |cut -d' ' -f4`
