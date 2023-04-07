@@ -2,10 +2,10 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-07 02:28:56
+" Last Modified : 2023-04-07 23:51:13
 " Email Address : sdo@dorseb.ddns.net
-" Version : --->PRINTNUM<===MyHeadersFill_file.vim
-" License:
+" Version : 0.0.0.4 
+" License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
@@ -66,8 +66,8 @@ endif
 
 function InsertsHeader()
 	:1
-	g/License/s/^\(.\ \)\(License:\)/\= s:printsLicence(submatch(1),submatch(2),g:path_to_licences_file)/
-	g/^\n\(.\ Purpose\)/s/^\n\(.\ Purpose\)/\= submatch(1)/
+	g/License/s/^\(.\{1,2\}\ \)\(License:\)/\= s:printsLicence(submatch(1),submatch(2),g:path_to_licences_file)/
+	g/^\n\(.\{1,2\}\ Purpose\)/s/^\n\(.\{1,2\}\ Purpose\)/\= submatch(1)/
 endfunction
 
 :function!  s:updatesReleaseNumber(ff,iv)
@@ -78,9 +78,6 @@ endfunction
 
 function UpdatesReleaseNumber()
 	:1
-	"g/Version/s/^\(.\ Version\ \:\)/submatch(1)sdsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsfs/
-	" g/Version/s/^\(.\ Version\ \:\ \)\(\[0-9]\+\.\[0-9]\+.\[0-9]\+\)\(\[0-9]\+\)/\= s:updatesReleaseNumber(submatch(1),submatch(2),submatch(3))/
-	"g/Version/s/^\(.\ Version\ \:\ \)/sefzerzerzerzerzerzerze/ "\= s:updatesReleaseNumber(submatch(1))/
 	g/Version/s/\(Version\ \:\ [0-9]\+.[0-9]\+.[0-9]\+.\)\([0-9]\+\)/\= s:updatesReleaseNumber(submatch(1),submatch(2))/
 endfunction
 
