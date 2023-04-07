@@ -15,7 +15,9 @@
 augroup updateVersionNumberPL
 	au! updateVersionNumberPL
 	let $TR_SOURCE = g:filter
+	let s:str="$TMP_VIMRC/update_version_header.sh PRINTNUM "
 	autocmd Bufwritepre,filewritepre $TR_SOURCE execute "normal ma" 
+	autocmd Bufwritepre,filewritepre $TR_SOURCE :call InsertsHeader()
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
 	"echo "**********>".$TMP."<====" .g:path_vimrc 
@@ -25,10 +27,11 @@ augroup updateVersionNumberPL
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
-	autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
-autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
+	"autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
+	"autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
+	autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . line("$") . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
 	"echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost $TR_SOURCE execute "normal `a" 
+	autocmd Bufwritepre,filewritepre $TR_SOURCE :call UpdatesReleaseNumber()
 augroup END
 " ----------------------------------------------------------------------------------------
