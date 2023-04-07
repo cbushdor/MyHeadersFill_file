@@ -7,7 +7,7 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1][^3] (text editor): Version 9.0.1050.
 - System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
 - System [Fedora](https://getfedora.org/), [mag](https://fedoramagazine.org/): Version 38beta (Should work on other linux [distros](https://en.wikipedia.org/wiki/List_of_Linux_distributions) too).
-- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script).
+- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script), [shell sh](https://en.wikipedia.org/wiki/Unix_shell).
 - Vim plugin: [Vim-plug](https://github.com/junegunn/vim-plug).
 
 [^1]: About [Vim](https://www.vim.org/about.php).
@@ -98,62 +98,6 @@ Contains the file that is read by default.
 
 ## VIMRC
 Contains the scripts that modified the headers.  
-
-<details><summary>CLICK ME</summary>
-<p>
-
-```
-MyHeadersFill_file
-├── README.md
-├── headers
-│   ├── Makefile_header.txt
-│   ├── c++_header.txt
-│   ├── c_header.txt
-│   ├── cgi_header.txt
-│   ├── cpp_header.txt
-│   ├── css_header.txt
-│   ├── h_header.txt
-│   ├── htm_header.txt
-│   ├── html_header.txt
-│   ├── js_header.txt
-│   ├── p6_header.txt
-│   ├── php_header.txt
-│   ├── pl6_header.txt
-│   ├── pl_header.txt
-│   ├── pm6_header.txt
-│   ├── pm_header.txt
-│   ├── raku_header.txt
-│   ├── sh_header.txt
-│   ├── t_header.txt
-│   ├── xml_header.txt
-│   └── xsl_header.txt
-├── plugin
-│   └── MyHeadersFill_file.vim
-└── vimrc
-    ├── Makefile_vimrc
-    ├── c_vimrc
-    ├── cgi_vimrc
-    ├── cpp_vimrc
-    ├── css_vimrc
-    ├── h_vimrc
-    ├── html_vimrc
-    ├── js_vimrc
-    ├── p6_vimrc
-    ├── php_vimrc
-    ├── pl_vimrc
-    ├── pl_vimrc.old
-    ├── pm_vimrc
-    ├── sh_vimrc
-    ├── testFileType_vimrc
-    ├── tests_vimrc
-    ├── update_version_header.sh
-    ├── xml_vimrc
-    └── xsl_vimrc
-
-3 directories, 42 files
-```
-</p>
-</details>
 
 # Licence
 
