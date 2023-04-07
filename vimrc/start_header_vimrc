@@ -2,10 +2,13 @@
 " Created By : sdo
 " File Name : start_header_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2023-04-05 23:11:21
+" Last Modified : 2023-04-07 03:52:22
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.15
-" License:
+" Version : 0.0.0.16
+" Licence : 
+" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
+" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
@@ -15,7 +18,7 @@
 augroup updateVersionNumberPL
 	au! updateVersionNumberPL
 	let $TR_SOURCE = g:filter
-	let s:str="$TMP_VIMRC/update_version_header.sh PRINTNUM "
+	"let s:str="$TMP_VIMRC/update_version_header.sh PRINTNUM "
 	autocmd Bufwritepre,filewritepre $TR_SOURCE execute "normal ma" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE :call InsertsHeader()
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
@@ -29,7 +32,9 @@ augroup updateVersionNumberPL
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
 	"autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
 	"autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
-	autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . line("$") . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
+	"autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . line("$") . "g/Email Address : sdo@dorseb.ddns.net
+	"autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . 13 . "g/Email Address : sdo@dorseb.ddns.net
+	autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
 	"echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost $TR_SOURCE execute "normal `a" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE :call UpdatesReleaseNumber()
