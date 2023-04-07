@@ -2,14 +2,11 @@
 " Created By : sdo
 " File Name : start_header_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2023-04-07 03:52:22
+" Last Modified : 2023-04-07 04:04:11
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.16
+" Version : 0.0.0.19
 " Licence : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
-" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
-
-" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
@@ -18,24 +15,16 @@
 augroup updateVersionNumberPL
 	au! updateVersionNumberPL
 	let $TR_SOURCE = g:filter
-	"let s:str="$TMP_VIMRC/update_version_header.sh PRINTNUM "
 	autocmd Bufwritepre,filewritepre $TR_SOURCE execute "normal ma" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE :call InsertsHeader()
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
 	let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
-	"echo "**********>".$TMP."<====" .g:path_vimrc 
 	autocmd BufNewFile $TR_SOURCE so $TMP
-	"echo "TMP_VIMRC++++++++++>" . $TMP_VIMRC
 	autocmd BufNewFile $TR_SOURCE exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	"autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/\^my \$VERSION=\".*/s/my \$VERSION=\".*/my \$VERSION=\"".system($TMP_VIMRC."/update_version_header.sh INCREASENUM ".expand('%:t'))|:write
-	"autocmd BufWritePost $TR_SOURCE exe "1," . line("$") . "g/Version :.*/s/Version :.*/Version : " .system($TMP_VIMRC."/update_version_header.sh PRINTNUM ".expand('%:t'))|:write
-	"autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . line("$") . "g/Email Address : sdo@dorseb.ddns.net
-	"autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . 13 . "g/Email Address : sdo@dorseb.ddns.net
 	autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . 13 . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
-	"echo "CGI header scipt loaded!!!"
 	autocmd bufwritepost,filewritepost $TR_SOURCE execute "normal `a" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE :call UpdatesReleaseNumber()
 augroup END
