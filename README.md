@@ -89,6 +89,25 @@ For instance in the directory header we set a file called *license.txt* and is l
 
 # Directories
 
+```
+% ls -R MyHeadersFill_file 
+README.md	headers/	vimrc/		plugin/		doc/
+
+MyHeadersFill_file/headers:
+vimrc_header.txt	cpp_header.txt		c++_header.txt		htm_header.txt		xml_header.txt		pl6_header.txt		license.txt
+t_header.txt		myconf_header.txt	css_header.txt		c_header.txt		html_header.txt		pm6_header.txt
+php_header.txt		sh_header.txt*		xsl_header.txt		h_header.txt		cgi_header.txt		pm_header.txt
+Makefile_header.txt	js_header.txt		raku_header.txt		vim_header.txt		p6_header.txt		pl_header.txt
+
+MyHeadersFill_file/vimrc:
+start_header_vimrc		update_version_header.sh*	update_version_header.sh.old*
+
+MyHeadersFill_file/plugin:
+MyHeadersFill_file.vim			MyHeadersFill_file_command_line.vim
+
+MyHeadersFill_file/doc:
+tags			introScene.cute.txt	MyHeadersFill_file.txt	cuteHelp.txt		typecorr.txt
+```
 
 ## HEADERS
 Contains the templates of the headers for each file type.
