@@ -7,7 +7,7 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 - [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1][^3] (text editor): Version 9.0.1050.
 - System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
 - System [Fedora](https://getfedora.org/), [mag](https://fedoramagazine.org/): Version 38beta (Should work on other linux [distros](https://en.wikipedia.org/wiki/List_of_Linux_distributions) too).
-- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script), [shell sh](https://en.wikipedia.org/wiki/Unix_shell).
+- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script).
 - Vim plugin: [Vim-plug](https://github.com/junegunn/vim-plug).
 
 [^1]: About [Vim](https://www.vim.org/about.php).
@@ -18,7 +18,7 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 >
 > Should be ok as long as Vim Script is supported by the editor (since version 8.0).
 
-# Instructions to install plugin <a name="Instructions-to-install"></a>
+# Instructions to install plugin
 We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
 
 We configure *~/.vimrc* below:
@@ -31,7 +31,7 @@ call plug#end()
 
 and plugin will be installed in *~/.vim/plugged* if everything is well configured. First, go in vim type *:PlugInstall* and look plugin is installing itself.
 
-# WATCHOUT <a name="WATCHOUT"></a>
+# WATCHOUT
 Plugin under construction! 
 Yet, already tested with *.pl files. Online help will be written pretty soon!? ;-)! as a vim command line.
 
@@ -53,7 +53,7 @@ All fields are created if file is new and , format supported.
 | Purpose | Why this file was created. |  Can be changed anytime! |
 | Version variable  | Same as Version field. | Incremented at same time as ***Version field*** created. |
 
-# The command line <a name="The-command-line"></a>
+# The command line
 
 It is possible to insert where the cursor is a header. Follow the next line:
 > Enter Vim if not so. Go to the line where you want to insert header.
@@ -155,7 +155,7 @@ MyHeadersFill_file
 </p>
 </details>
 
-# License
+# Licence
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 * 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
@@ -163,11 +163,13 @@ Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 
 # CAVEATS
 
+<!--
+If several files are opened in the same vim, headers might not be updated properly when file are saved.
+-->
+
 If a file is closed with *:x* command fields are not updated properly.
 
 
 # TODO
 
-* Help commands need to be written.
-
-* Testing
+Help commands need to be written.
