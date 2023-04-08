@@ -67,7 +67,7 @@ It is possible to insert where the cursor is a header. Follow the next line:
 
 # Extensions
 
-Features by extension. A o means implented.
+Features by extension. A &#10003; means implented.
 
 |      | pl      |pm |
 | --- | --- | --- |
