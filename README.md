@@ -67,19 +67,19 @@ It is possible to insert where the cursor is a header. Follow the next line:
 
 # Extensions
 
-Features by extension. A start means implented.
+Features by extension. A o means implented.
 
 |      | pl      |pm |
 | --- | --- | --- |
-| Created By | * | * |
-| File Name | * | * |
-| Creation Date | * | * |
-| Last Modified | * | * |
-| Email Address | * | * |
-| Version | * | * |
-| License | * | * |
-| Purpose | * | * |
-| Version variable  | * | * |
+| Created By | &#10003; | o |
+| File Name | o | o |
+| Creation Date | o | o |
+| Last Modified | o | o |
+| Email Address | o | o |
+| Version | o | o |
+| License | o | o |
+| Purpose | o | o |
+| Version variable  | o | o |
 
 ## Configuration
 
