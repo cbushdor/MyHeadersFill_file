@@ -123,9 +123,8 @@ Contains the scripts that modified the headers.
 ![output20523](https://user-images.githubusercontent.com/20154269/230741365-b08ab86d-16ce-44f6-8bd2-6fa09cb6bb43.gif)
 <!--
 ![](https://github.com/cbushdor/MyHeadersFill_file/output8573.gif)
--->
 [Go to demo](https://i.imgur.com/VKyFIqp.gifv)
-
+-->
 # License
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
