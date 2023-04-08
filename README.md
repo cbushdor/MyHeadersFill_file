@@ -71,15 +71,15 @@ Features by extension. A o means implented.
 
 |      | pl      |pm |
 | --- | --- | --- |
-| Created By | &#10003; | o |
-| File Name | o | o |
-| Creation Date | o | o |
-| Last Modified | o | o |
-| Email Address | o | o |
-| Version | o | o |
-| License | o | o |
-| Purpose | o | o |
-| Version variable  | o | o |
+| Created By | &#10003; | &#10003; |
+| File Name | &#10003; | &#10003; |
+| Creation Date | &#10003; | &#10003; |
+| Last Modified | &#10003; | &#10003; |
+| Email Address | &#10003; | &#10003; |
+| Version | &#10003; | &#10003; |
+| License | &#10003; | &#10003; |
+| Purpose | &#10003; | &#10003; |
+| Version variable  | &#10003; | &#10003; |
 
 ## Configuration
 
