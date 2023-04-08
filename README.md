@@ -120,10 +120,7 @@ Contains the scripts that modified the headers.
 
 # DEMO
 
-<!--
-![Alt Text](https://i.imgur.com/VKyFIqp.gif)
--->
-[Go to demo](https://i.imgur.com/VKyFIqp.gifv)
+<img src="https://i.imgur.com/VKyFIqp.gif" align="left"/>
 
 # License
 
