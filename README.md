@@ -120,7 +120,10 @@ Contains the scripts that modified the headers.
 
 # DEMO
 
-<img src="https://i.imgur.com/VKyFIqp.gif" align="left"/>
+![](https://github.com/cbushdor/MyHeadersFill_file/output8573.gif)
+<!--
+-->
+[Go to demo](https://i.imgur.com/VKyFIqp.gifv)
 
 # License
 
