@@ -16,11 +16,11 @@
 * PORT:
 * PATH:
 * QUERY:
-* License:
 * External links:
 *     https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js
 *     https://leafletjs.com/examples/quick-start/
 *     https://cdnjs.com/libraries/leaflet-polylinedecorator/1.1.0
+* License:
 * Purpose :
 ------------------------------------------------------ -->
 

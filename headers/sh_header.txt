@@ -6,7 +6,7 @@
 # Last Modified : 
 # Email Address :
 # Version : 0.0.0.0
-# Licene:
+# License:
 # Purpose :
 #
 # ----------------------------------------------------------------------

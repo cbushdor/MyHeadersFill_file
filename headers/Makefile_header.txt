@@ -6,7 +6,7 @@
 # Last Modified : Fri Sep  7 22:42:52 2018
 # Email Address : sdo@macbook-pro-de-sdo.home
 # Version : 0.0.0.0
-# Licene:
+# License:
 # Purpose :
 # ----------------------------------------------------------------------
 #

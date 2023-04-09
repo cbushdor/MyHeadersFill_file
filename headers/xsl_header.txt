@@ -2,16 +2,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-*****************************************************
-* Created By :   
-* File Name : 
-* Creation Date : 
-* Last Modified : 
-* Email Address :   
-* Version : 0.0.0.0 
-* License: 
-* Purpose : 
-******************************************************
+* Created By :  
+* File Name :
+* Creation Date :
+* Last Modified :
+* Email Address :  
+* Version : 0.0.0.0
+* License:
+* Purpose :
 -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
