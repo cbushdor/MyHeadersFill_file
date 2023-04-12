@@ -2,10 +2,13 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-07 02:28:56
+" Last Modified : 2023-04-13 00:18:25
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.0 
-" License:
+" Version : 0.0.0.1 
+" License : 
+" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
+" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
@@ -18,9 +21,9 @@ endif
 
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
 "echo "g:path_vimrc :".g:path_vimrc 
-let s:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
-"echo "s:path_headers :".s:path_headers 
-let g:path_to_licences_file = s:path_headers.."/license.txt"
+let g:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
+"echo "g:path_headers :".g:path_headers 
+let g:path_to_licences_file = g:path_headers.."/license.txt"
 let g:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
 "echo "g:file_extension :".g:file_extension 
 if g:file_extension == '_vimrc'
@@ -34,7 +37,7 @@ else
 	let g:filter = "*"..g:file_extension
 endif
 	"echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
-let s:listing_headers=globpath(s:path_headers, g:file_extension.'_header.txt')
+let s:listing_headers=globpath(g:path_headers, g:file_extension.'_header.txt')
 "echo "list headers:" . s:listing_headers
 "echo "+++++++>g:file_extension :".g:file_extension
 if s:listing_headers != ""
