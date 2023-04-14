@@ -2,21 +2,31 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-14 23:17:12
+" Last Modified : 2023-04-15 00:21:50
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.20 
+" Version : 0.0.0.21 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
 
-let g:folding = true
+if !exists("g:true")
+  echom "g:true does not exist. Define it in ~/.vimrc for instance"
+  exit 0
+endif
+
+if !exists("g:false")
+  echom "g:false does not exist. Define it in ~/.vimrc for instance"
+  exit 0
+endif
 
 if !exists("g:myEmail")
-	echom "Need to set g:myEmail in ~/.vimrc"
-	exit 0
+  echom "Need to set g:myEmail in ~/.vimrc"
+  exit 0
 endif
+let g:folding = true " Used for folding
+
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
 "echo "g:path_vimrc :".g:path_vimrc 
 let g:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
