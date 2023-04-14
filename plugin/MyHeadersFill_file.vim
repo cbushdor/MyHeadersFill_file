@@ -2,23 +2,21 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-13 00:18:25
+" Last Modified : 2023-04-14 23:17:12
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.1 
+" Version : 0.0.0.20 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
-
-" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 
-" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
+
+let g:folding = true
 
 if !exists("g:myEmail")
 	echom "Need to set g:myEmail in ~/.vimrc"
 	exit 0
 endif
-
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
 "echo "g:path_vimrc :".g:path_vimrc 
 let g:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
@@ -36,7 +34,17 @@ else
 	let g:file_extension = expand("%")
 	let g:filter = "*"..g:file_extension
 endif
-	"echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
+
+"echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
+"echo "uuuuuuuuuuuuuuuuuuuuuuuuuuu>"..expand("%")
+if g:folding == true
+	let $MY_FILTER_PLUS_EXT=g:filter
+	" The folds will need to be saved in the directory .vim/views, and that directory may need to be created.
+	" Placing these lines in your .vimrc file will save the folds  in the .vim/views directory:
+	autocmd BufWinLeave $MY_FILTER_PLUS_EXT  mkview 
+	autocmd BufWinEnter $MY_FILTER_PLUS_EXT  silent loadview  
+endif
+
 let s:listing_headers=globpath(g:path_headers, g:file_extension.'_header.txt')
 "echo "list headers:" . s:listing_headers
 "echo "+++++++>g:file_extension :".g:file_extension
