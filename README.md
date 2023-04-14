@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2023-04-10 18:12:13
+* Last Modified : 2023-04-14 23:13:30
 * Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.128
+* Version : 0.0.0.132
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -138,6 +138,22 @@ Contains the scripts that modified the headers.
 # DEMO
 
 ![output20523](https://user-images.githubusercontent.com/20154269/230741365-b08ab86d-16ce-44f6-8bd2-6fa09cb6bb43.gif)
+
+# OPTIONS
+
+If we define in $HOME/.vimrc these two values:
+
+```
+let g:true = 0
+let g:false =!true
+```
+
+and we set in *MyHeadersFill_file.vim * the following variable to true:
+```
+let g:folding = true
+```
+
+we can use folding commands (Read *:help usr_28*).
 
 # License
 
