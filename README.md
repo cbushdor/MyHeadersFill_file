@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2023-04-14 23:13:30
+* Last Modified : 2023-04-15 00:27:29
 * Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.132
+* Version : 0.0.0.136
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -37,7 +37,9 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 # Instructions to install plugin
 We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
 
-We configure *~/.vimrc* below:
+We configure *~/.vimrc* below (~[^4]):
+
+[^4]: The ~ is equivalatent to $HOME which represent the home directory.
 
 ```
 call plug#begin('~/.vim/plugged')
@@ -141,7 +143,13 @@ Contains the scripts that modified the headers.
 
 # OPTIONS
 
-If we define in $HOME/.vimrc these two values:
+We can define email ~/.vimrc s.a:
+
+```
+let g:myEmail='sdo@dorseb.ddns.net'
+```
+
+If we define in ~/.vimrc these two values:
 
 ```
 let g:true = 0
