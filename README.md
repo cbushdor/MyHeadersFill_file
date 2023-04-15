@@ -143,7 +143,7 @@ Contains the scripts that modified the headers.
 
 # OPTIONS
 
-We can define email ~/.vimrc s.a:
+We can define email in ~/.vimrc s.a:
 
 ```
 let g:myEmail='sdo@dorseb.ddns.net'
