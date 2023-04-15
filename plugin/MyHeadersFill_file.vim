@@ -2,19 +2,14 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-16 01:19:46
+" Last Modified : 2023-04-16 01:28:29
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.30 
+" Version : 0.0.0.34 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
-" Add headers according to extensions.
-" Exemple of extra config thatt can be included in ~/.vimrc or in this file.
-" 	We define bolean values
-"				let g:true = 0 				" We define true
-"				let g:false = !true 	" We define false
-"				let g:folding = true 	" Used for folding
+" 	Add headers according to extensions.
 " ------------------------------------------------------
 
 
@@ -43,25 +38,6 @@ endif
 
 "echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
 "echo "uuuuuuuuuuuuuuuuuuuuuuuuuuu>"..expand("%")
-if exists("folding")
-	if !exists("true")
-		echom "true does not exist. Define it in ~/.vimrc for instance"
-		exit 0
-	endif
-
-	if !exists("false")
-		echom "false does not exist. Define it in ~/.vimrc for instance"
-		exit 0
-	endif
-
-	if folding == true
-		let $MY_FILTER_PLUS_EXT=filter
-		" The folds will need to be saved in the directory .vim/views, and that directory may need to be created.
-		" Placing these lines in your .vimrc file will save the folds  in the .vim/views directory:
-		autocmd BufWinLeave $MY_FILTER_PLUS_EXT  mkview 
-		autocmd BufWinEnter $MY_FILTER_PLUS_EXT  silent loadview  
-	endif
-endif
 
 let s:listing_headers=globpath(g:path_headers, g:file_extension.'_header.txt')
 "echo "list headers:" . s:listing_headers
