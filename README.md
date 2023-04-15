@@ -149,20 +149,6 @@ We can define email ~/.vimrc s.a:
 let g:myEmail='sdo@dorseb.ddns.net'
 ```
 
-If we define in ~/.vimrc these two values:
-
-```
-let g:true = 0
-let g:false =!true
-```
-
-and we set in *MyHeadersFill_file.vim * the following variable to true:
-```
-let g:folding = true
-```
-
-we can use folding commands (Read *:help usr_28*).
-
 # License
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
