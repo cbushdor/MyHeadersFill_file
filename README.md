@@ -146,7 +146,7 @@ Contains the scripts that modified the headers.
 We can define email in ~/.vimrc s.a:
 
 ```
-let g:myEmail='sdo@dorseb.ddns.net'
+let g:myEmail='my.email@my_email.net'
 ```
 
 # License
