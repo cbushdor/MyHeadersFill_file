@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2023-04-22 04:14:49
+* Last Modified : 2023-04-22 04:16:00
 * Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.145
+* Version : 0.0.0.146
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -85,7 +85,7 @@ It is possible to insert where the cursor is a header. Follow the next line:
 
 # Extensions
 
-Features by extension. A ok means implented.
+Features by extension. A *ok* means implented.
 
 |      | pl      | pm  | xml | xsl | sh   | Makefile | html | htm | css | h   | c   | c++ | cpp | vimrc | t   | php | myconf | js  | raku | vim | cgi | p6  | pl6 | pm6 |
 | ---  | ---     | --- | --- | --- | ---  | ---      | ---  | --- | --- | --- | --- | --- | --- | ---   | --- | --- | ---    | --- | ---  | --- | --- | --- | --- | --- |
