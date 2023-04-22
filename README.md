@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2023-04-15 00:27:29
+* Last Modified : 2023-04-22 04:07:25
 * Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.136
+* Version : 0.0.0.143
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -28,7 +28,7 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 
 [^1]: About [Vim](https://www.vim.org/about.php).
 [^2]: How to install [Vim plugin](https://linuxhandbook.com/install-vim-plugins/).
-[^3]: This code was based on [Vi and Vim Autocommand](https://www.thegeekstuff.com/2008/12/vi-and-vim-autocommand-3-steps-to-add-custom-header-to-your-file/).
+[^3]: This code was based on [Vim documentation](https://vimdoc.sourceforge.net/).
 
 >***Note***
 >
