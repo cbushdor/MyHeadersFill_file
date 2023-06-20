@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-16 01:28:29
+" Last Modified : 2023-06-21 00:51:46
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.34 
+" Version : 0.0.0.46 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -14,8 +14,8 @@
 
 
 if !exists("g:myEmail")
-  echom "Need to set g:myEmail in ~/.vimrc"
-  exit 0
+	echom "Need to set g:myEmail in ~/.vimrc"
+	exit 0
 endif
 
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
@@ -23,11 +23,18 @@ let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that conta
 let g:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that contains files
 "echo "g:path_headers :".g:path_headers 
 let g:path_to_licences_file = g:path_headers.."/license.txt"
-let g:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
-"echo "g:file_extension :".g:file_extension 
+if expand('%') =~ '_vimrc$'
+	let g:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
+else
+	let g:file_extension = matchstr(expand('%'),'_txt$') " We check if the file extension is *_txt
+endif
+
 if g:file_extension == '_vimrc'
 	let g:file_extension = 'vimrc'
 	let g:filter = "*_vimrc"
+elseif g:file_extension == '_txt'
+	let g:file_extension = 'txt'
+	let g:filter = "*_txt"
 elseif expand("%:e") != ""
 	let g:file_extension = expand("%:e")
 	let g:filter = "*."..g:file_extension
@@ -59,14 +66,14 @@ else
 endif
 
 :function! s:printsLicence(first,flicen,fname)
-:	let mylist=[] " Final list that will be returned
-:	let rfil= readfile(a:fname, '', 10) " Read file 
-: call add(mylist,a:first.."License : ") "a:flicen) " Add to final list
-:	for line in rfil 
-:		let lin="\t"..line " We add a tab
-: 	call add(mylist,a:first..lin) " Add to final list
-:	endfor
-:	return mylist " Final list returned
+	:	let mylist=[] " Final list that will be returned
+	:	let rfil= readfile(a:fname, '', 10) " Read file 
+	: call add(mylist,a:first.."License : ") "a:flicen) " Add to final list
+	:	for line in rfil 
+	:		let lin="\t"..line " We add a tab
+	: 	call add(mylist,a:first..lin) " Add to final list
+	:	endfor
+	:	return mylist " Final list returned
 :endfunction
 
 function InsertsHeader()
