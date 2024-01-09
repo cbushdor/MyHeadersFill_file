@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-07 05:31:47
+* Last Modified : 2024-01-09 22:45:26
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.158
+* Version : 0.0.0.159
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -53,7 +53,7 @@ and plugin will be installed in *~/.vim/plugged* if everything is well configure
 To make the plugin works, you need to put a variable in ~/.vimrc.
 For instance you can write at the commans line:
 
-        echo "let g:myEmail='my.email@address.com'" >>~/.vimrc
+        echo "let g:myEmail='my.ema@myaddr.com'" >>~/.vimrc
 
 or wirhin ~/.vimrc file:
 
