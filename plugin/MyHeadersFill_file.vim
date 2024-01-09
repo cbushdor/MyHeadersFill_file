@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-01-07 00:26:58
+" Last Modified : 2024-01-09 22:47:59
 " Email Address : cbushdor@laposte.net
-" Version : 0.0.0.49 
+" Version : 0.0.0.50 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -14,7 +14,7 @@
 
 
 if !exists("g:myEmail")
-	echom "Need to set g:myEmail in ~/.vimrc s.a: echo \"let g:myEmail='myEmail@myemail.com'\" >> ~/.vimrc"
+	echom "Need to set g:myEmail in ~/.vimrc s.a: echo \"let g:myEmail='let g:myEmail='let g:myEmail='my.ema@myaddr.com'\" >> ~/.vimrc"
 	exit 0
 endif
 
