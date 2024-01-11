@@ -2,20 +2,15 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-11 18:50:51
+* Last Modified : 2024-01-11 18:52:49
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.178
+* Version : 0.0.0.179
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 * Purpose :
 *   It is README.md that introduce in brief how to use plugin!
 ------------------------------------------------------ -->
-
-    Why did we use these specific parameters during the calculation of the fingerprints?
-<p style="font-family: times, serif; font-size:11pt; font-style:italic">
-    Why did we use these specific parameters during the calculation of the fingerprints?
-</p>
 
 [![License: CC BY-NC 3.0](https://img.shields.io/badge/License-CC_BY--NC_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/3.0/)
 
