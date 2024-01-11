@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-09 22:45:26
+* Last Modified : 2024-01-11 01:19:37
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.159
+* Version : 0.0.0.160
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -57,7 +57,7 @@ For instance you can write at the commans line:
 
 or wirhin ~/.vimrc file:
 
-        let g:myEmail='my.email@address.com'
+        let g:myEmail='my.ema@myaddr.com'
 
 # WATCHOUT
 Plugin under construction! 
