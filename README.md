@@ -2,21 +2,25 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-11 18:52:49
+* Last Modified : 2024-01-11 18:55:14
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.179
+* Version : 0.0.0.180
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 * Purpose :
 *   It is README.md that introduce in brief how to use plugin!
 ------------------------------------------------------ -->
+<style>
+red { color: red }
+yellow { color: yellow }
+</style>
 
 [![License: CC BY-NC 3.0](https://img.shields.io/badge/License-CC_BY--NC_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/3.0/)
 
 # In brief
 
-This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension!
+This <Red>is another</Red> plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension!
 
 # Technical requirements
 
