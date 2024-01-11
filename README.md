@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-11 18:22:18
+* Last Modified : 2024-01-11 18:25:03
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.170
+* Version : 0.0.0.171
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -15,6 +15,7 @@
 [![License: CC BY-NC 3.0](https://img.shields.io/badge/License-CC_BY--NC_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/3.0/)
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Roman">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Babas">
 
 A aaaa <span style="font-family:Papirus; font-size:4em;">Atatatt</span>
 
@@ -183,4 +184,5 @@ If a file is closed with *:x* command, fields are not updated properly.
 # TODO
 
 Help commands need to be written.
+
 
