@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MY PROJECT</title>
+<title>Myproject</title>
 
 <!-- ------------------------------------------------------
 * Created By : sdo
 * File Name : htm_header.txt
 * Creation Date :
-* Last Modified : 2024-01-11 00:43:38
+* Last Modified : 2024-01-11 00:35:19
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.4
+* Version : 0.0.0.1
 * SCHEME:
 * HOST:
 * PORT:
@@ -26,7 +26,9 @@
 * Purpose :
 ------------------------------------------------------ -->
 
-  <link rel="icon" type="image/png" href="http://dorey.sebastien.free.fr/Project/image/my_lovely_pict.png">
+  <link rel="icon"
+ type="image/png"
+ href="http://dorey.sebastien.free.fr/Project/image/my_lovely_pict.png">
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />

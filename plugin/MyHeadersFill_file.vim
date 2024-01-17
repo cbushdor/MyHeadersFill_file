@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-01-11 01:06:07
+" Last Modified : 2024-01-17 19:33:56
 " Email Address : cbushdor@laposte.net
-" Version : 0.0.0.55 
+" Version : 0.0.0.63 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -14,8 +14,7 @@
 
 
 if !exists("g:myEmail")
-	echo "Need to set g:myEmail in ~/.vimrc. Configure as follow!"
-	echo "echo \"let g:myEmail='my.ema@myaddr.com'\" >> ~/.vimrc"
+	echom "Need to set g:myEmail in ~/.vimrc s.a: echo \"let g:myEmail='myEmail@myemail.com'\" >> ~/.vimrc"
 	exit 0
 endif
 
@@ -26,13 +25,20 @@ let g:path_headers = expand('<sfile>:p:h')."/../headers/" " path to headers that
 let g:path_to_licences_file = g:path_headers.."/license.txt"
 if expand('%') =~ '_vimrc$'
 	let g:file_extension = matchstr(expand('%'),'_vimrc$') " We check if the file extension is *_vimrc
+elseif expand('%') =~ '.vimrc$'
+	let g:file_extension = matchstr(expand('%'),'.vimrc$') " We check if the file extension is *_vimrc
 else
 	let g:file_extension = matchstr(expand('%'),'_txt$') " We check if the file extension is *_txt
 endif
 
+" echo "========>g:file_extension :".g:file_extension
+
 if g:file_extension == '_vimrc'
 	let g:file_extension = 'vimrc'
 	let g:filter = "*_vimrc"
+elseif g:file_extension == '.vimrc'
+	let g:file_extension = 'vimrc'
+	let g:filter = "*.vimrc"
 elseif g:file_extension == '_txt'
 	let g:file_extension = 'txt'
 	let g:filter = "*_txt"
@@ -44,12 +50,13 @@ else
 	let g:filter = "*"..g:file_extension
 endif
 
-"echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
-"echo "uuuuuuuuuuuuuuuuuuuuuuuuuuu>"..expand("%")
+" echo "oooooooooooooooooooooooooooooo>g:filter : " .. g:filter
+" echo "uuuuuuuuuuuuuuuuuuuuuuuuuuu>"..expand("%")
+" echo "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy>"..expand("%:e")
 
 let s:listing_headers=globpath(g:path_headers, g:file_extension.'_header.txt')
-"echo "list headers:" . s:listing_headers
-"echo "+++++++>g:file_extension :".g:file_extension
+" echo "list headers:" . s:listing_headers
+" echo "+++++++>g:file_extension :".g:file_extension
 if s:listing_headers != ""
 	let s:localFileHeaderVimrc=g:path_vimrc . g:file_extension."_vimrc"
 	"echo "=====>".s:localFileHeaderVimrc

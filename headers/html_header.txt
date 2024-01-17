@@ -5,12 +5,12 @@
 <title>myproject</title>
 
 <!-- ------------------------------------------------------
-* Created By : sdo
-* File Name : html_header.txt
+* Created By :  
+* File Name :
 * Creation Date :
-* Last Modified : 2024-01-08 00:24:12
-* Email Address : cbushdor@laposte.net
-* Version : 0.0.0.1
+* Last Modified :
+* Email Address :  
+* Version : 0.0.0.0
 * SCHEME:
 * HOST:
 * PORT:
@@ -20,13 +20,13 @@
 *     https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js
 *     https://leafletjs.com/examples/quick-start/
 *     https://cdnjs.com/libraries/leaflet-polylinedecorator/1.1.0
-* License :
-* 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
-* 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+* License:
 * Purpose :
 ------------------------------------------------------ -->
 
-<link rel="icon" type="image/png" href="http://dorey.sebastien.free.fr/Project/image/my_lovely_pict.png">
+<link rel="icon"
+type="image/png"
+href="http://dorey.sebastien.free.fr/Project/image/my_lovely_pict.png">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />

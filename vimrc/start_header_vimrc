@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : start_header_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2023-04-07 04:31:34
+" Last Modified : 2024-01-17 20:32:02
 " Email Address : sdo@dorseb.ddns.net
-" Version : 0.0.0.20
+" Version : 0.0.0.35
 " Licence : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -15,6 +15,7 @@
 augroup updateVersionNumberPL
 	au! updateVersionNumberPL
 	let $TR_SOURCE = g:filter
+"	echo "-------->>>>>".$TR_SOURCE."<<<<<-------------------".expand('%:e')
 	autocmd Bufwritepre,filewritepre $TR_SOURCE execute "normal ma" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE :call InsertsHeader()
 	let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
@@ -24,7 +25,7 @@ augroup updateVersionNumberPL
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . line("$") . "g/Email Address :.*/s/Email Address :.*/Email Address : " .g:myEmail
+	autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . line("$") . "g/Email Address : sdo@dorseb.ddns.net
 	autocmd bufwritepost,filewritepost $TR_SOURCE execute "normal `a" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE :call UpdatesReleaseNumber()
 augroup END
