@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-11 19:00:22
-* Email Address : cbushdor@laposte.net
-* Version : 0.0.0.181
+* Last Modified : 2023-05-11 03:58:26
+* Email Address : sdo@dorseb.ddns.net
+* Version : 0.0.0.147
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -15,8 +15,8 @@
 [![License: CC BY-NC 3.0](https://img.shields.io/badge/License-CC_BY--NC_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/3.0/)
 
 # In brief
-
 This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension!
+
 
 # Technical requirements
 
@@ -48,16 +48,6 @@ call plug#end()
 ```
 
 and plugin will be installed in *~/.vim/plugged* if everything is well configured. First, go in vim type *:PlugInstall* and look plugin is installing itself.
-
-# CONFIGURATION
-To make the plugin works, you need to put a variable in ~/.vimrc.
-For instance you can write at the commans line:
-
-        echo "let g:myEmail='my.ema@myaddr.com'" >>~/.vimrc
-
-or wirhin ~/.vimrc file:
-
-        let g:myEmail='my.ema@myaddr.com'
 
 # WATCHOUT
 Plugin under construction! 
@@ -177,3 +167,4 @@ If a file is closed with *:x* command, fields are not updated properly.
 # TODO
 
 Help commands need to be written.
+
