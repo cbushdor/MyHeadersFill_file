@@ -1,4 +1,4 @@
 *MyHeadersFill_file.txt* functionality for the MyHeadersFill_file programming language
 
 
-This is all about cat and dog.
+Don't extend header fields over line 19, otherwise header fields shouldn't be updated automaticaly when file is saved (to do that, follow the next key sequence ESC :w Enter)!
