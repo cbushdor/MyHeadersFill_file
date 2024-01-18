@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-18 00:51:14
+* Last Modified : 2024-01-18 00:57:29
 * Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.201
+* Version : 0.0.0.206
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -160,7 +160,7 @@ This is an example of header within the code for vim (script is _~/.vim/plugged/
      4	" Creation Date :2023-03-22 02:32:13
      5	" Last Modified : 2024-01-17 21:54:14
      6	" Email Address : sdo@dorseb.ddns.net
-     7	" Version : 0.0.0.92
+     7	" Version : 0.0.0.97
      8	" Licence :
      9	" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
     10	" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -174,7 +174,7 @@ The script that perform that is:
     15	augroup updateVersionNumberPL
     16		au! updateVersionNumberPL
     17		let $TR_SOURCE = g:filter
-    18	"	echo "-------->>>>>".$TR_SOURCE."<<<<<-------------------".expand('%:e')
+    ...
     19		autocmd Bufwritepre,filewritepre $TR_SOURCE execute "normal ma"
     20		autocmd Bufwritepre,filewritepre $TR_SOURCE :call InsertsHeader()
     21		let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
@@ -190,7 +190,7 @@ The script that perform that is:
     31	augroup END
 ```
 
-Don't extend header field over line 19, otherwise  headers fields won't be updated automaticaly when file is saved (key sequence to execute _ESC_ _:w_ _Enter_)! 
+Don't extend header fields over line 19, otherwise  header fields shouldn't be updated automaticaly when file is saved (to do that, follow the next key sequence _ESC_ _:w_ _Enter_)! 
 
 The important fields are:
 
