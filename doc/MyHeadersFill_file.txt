@@ -56,7 +56,10 @@ sequence ESC :w Enter)!
 ==============================================================================
 Section 6: Contributing                      *MyHeadersFill_file_Contributing*
 
-Created by Sébastien Dorey - SDO
+- GitHub:  https://github.com/cbushdor/MyHeadersFill_file
+- Vim: https://www.vim.org/
+- System macOS: Version 13.2.1 (22D68).
+- System Fedora: Version 38beta (Should work on other linux distros too).
 
 ==============================================================================
 Section 7: Changelog                            *MyHeadersFill_file_Changelog*
