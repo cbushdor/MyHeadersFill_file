@@ -16,7 +16,8 @@
     Section 1: Introduction                      MyHeadersFill_file_Introduction
 
     When a file is created with a specific extension (see list below under
-    construction) this plugin creates an appropriate header. 
+    construction) this plugin creates an appropriate header.
+
 
          1 " ------------------------------------------------------
          2 " Created By : sdo
@@ -24,12 +25,13 @@
          4 " Creation Date :2023-03-22 02:32:13
          5 " Last Modified : 2024-01-17 21:54:14
          6 " Email Address : sdo@dorseb.ddns.net
-         7 " Version : 0.0.0.117
+         7 " Version : 0.0.0.118
          8 " Licence :
          9 " ...  Attribution-NonCommercial 3.0 ...
         10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
         11 " Purpose :
         12 " ------------------------------------------------------
+
 
     ==============================================================================
     Section 2: Mapping                                MyHeadersFill_file_Mapping
