@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-17 20:51:30
+* Last Modified : 2024-01-27 04:50:34
 * Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.148
+* Version : 0.0.0.214
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -149,6 +149,65 @@ We can define email in ~/.vimrc s.a:
 let g:myEmail='my.email@my_email.net'
 ```
 
+# ISSUES
+
+This is an example of header within the code for vim (script is _~/.vim/plugged/MyHeadersFill_file/vimrc/start_header_vimrc_ and we have line number with _:set nu_):
+
+```
+     1	" ------------------------------------------------------
+     2	" Created By : sdo
+     3	" File Name : start_header_vimrc
+     4	" Creation Date :2023-03-22 02:32:13
+     5	" Last Modified : 2024-01-17 21:54:14
+     6	" Email Address : sdo@dorseb.ddns.net
+     7	" Version : 0.0.0.105
+     8	" Licence :
+     9	" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
+    10	" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+    11	" Purpose :
+    12	" ------------------------------------------------------
+```
+
+The script that perform that is:
+
+```
+    15	augroup updateVersionNumberPL
+    16		au! updateVersionNumberPL
+    17		let $TR_SOURCE = g:filter
+    ...
+    19		autocmd Bufwritepre,filewritepre $TR_SOURCE execute "normal ma"
+    20		autocmd Bufwritepre,filewritepre $TR_SOURCE :call InsertsHeader()
+    21		let $TMP=substitute(system("echo ".g:path_to_header_file),"\n","","")
+    22		let $TMP_VIMRC=substitute(system("echo ".g:path_vimrc),"\n","","")
+    23		autocmd BufNewFile $TR_SOURCE so $TMP
+    24		autocmd BufNewFile $TR_SOURCE exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%F %T")
+    25		autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
+    26		autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
+    27		autocmd BufWritePre,FileWritePre $TR_SOURCE exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
+    28		autocmd Bufwritepre,filewritepre $TR_SOURCE exe "1," . 19 . "g/Email Address :.*/s/Email Address :.*/Email Address : ".g:myEmail
+    29		autocmd bufwritepost,filewritepost $TR_SOURCE execute "normal `a"
+    30		autocmd Bufwritepre,filewritepre $TR_SOURCE :call UpdatesReleaseNumber()
+    31	augroup END
+```
+
+Don't extend header fields over line 19, otherwise  header fields shouldn't be updated automaticaly when file is saved (to do that, follow the next key sequence _ESC_ _:w_ _Enter_)! 
+
+The important fields are:
+
+| Line number | Field name | Field updated | Field updated|
+|--- |--- |--- |--- |
+|          2  | Created By | sdo| Always|
+|     3	| File Name | start_header_vimrc| Always|
+|     4	| Creation Date |2023-03-22 02:32:13| Creation |
+|     5	| Last Modified | 2024-01-17 21:54:14| Always|
+|     6	| Email Address | sdo@dorseb.ddns.net| Always|
+|     7	| Version | 0.0.0.52| Always|
+|     8	| Licence  | Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0 Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/. | Always |
+|    11	| Purpose | Free to fill |
+
+
+
+
 # License
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
@@ -161,10 +220,12 @@ Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 If several files are opened in the same vim, headers might not be updated properly when file are saved.
 -->
 
-If a file is closed with *:x* command, fields are not updated properly.
+If a file is closed with *:x* command, fields are not updated properly. 
+
+If header does not exist in the file, when file is saved we have error messages that are printed.
 
 
 # TODO
 
-Help commands need to be written.
+Help commands need to be written. If you insist you can type _**:help** MyHeadersFill_file.txt_ or this very simple [help](https://github.com/cbushdor/MyHeadersFill_file/tree/main/doc/MyHeadersFill_file.md).
 
