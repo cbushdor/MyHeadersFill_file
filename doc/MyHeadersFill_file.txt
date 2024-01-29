@@ -21,13 +21,28 @@ construction) this plugin creates an appropriate header. In ˜.vimrc the set nu
 option is defined to show line numer.
 
 >
+  1 " ------------------------------------------------------
+  2 " Created By :
+  3 " File Name :
+  4 " Creation Date : 2024-01-29 09:35:31
+  5 " Last Modified :
+  6 " Email Address :
+  7 " Version :      0.0.0.0
+  8 " License:
+  9 " Purpose :
+ 10 " ------------------------------------------------------
+<
+
+After saving :w
+
+>
      1 " ------------------------------------------------------
      2 " Created By : foo
      3 " File Name : file.txt
-     4 " Creation Date :2024-01-29 08:38:13
-     5 " Last Modified : 2024-01-17 21:54:14
+     4 " Creation Date : 2024-01-29 09:35:31
+     5 " Last Modified : 2024-01-29 09:36:14
      6 " Email Address : my.email@my_email.net
-     7 " Version : 0.0.0.7
+     7 " Version :  0.0.0.1
      8 " Licence :
      9 " ...  Attribution-NonCommercial 3.0 ...
     10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
