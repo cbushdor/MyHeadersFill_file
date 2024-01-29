@@ -56,7 +56,8 @@ Section 2: USAGE INSTRUCTIONS                *MyHeadersFill_file_Instructions*
 Don't forget to add in the configuration file:
 
 >
-let g:myEmail='my.email@my_email.net' <
+  let g:myEmail='my.email@my_email.net'
+<
 
 *Todo In the near future this will be prompted during install session. For the time being it can be considered as a caveat :-( !!!!!!
 
