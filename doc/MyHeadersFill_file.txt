@@ -3,34 +3,33 @@
 ==============================================================================
 CONTENTS                                                  *MyHeadersFill_file*
 
-      1. Introduction............. |MyHeadersFill_file_Introduction|
-      2. Usage Instructions....... |MyHeadersFill_file_Instructions|
-      2.1 How to Install Plugin... |MyHeadersFill_file_Install|
-      3. Mapping.................. |MyHeadersFill_file_Mapping|
-      4. Caveats.................. |MyHeadersFill_file_Caveats|
-      5. Contributing............. |MyHeadersFill_file_Contributing|
-      6. Changelog................ |MyHeadersFill_file_Changelog|
-      7. License.................. |MyHeadersFill_file_License|
-      8. Credits.................. |MyHeadersFill_file_Credits|
+  1. Introduction............. |MyHeadersFill_file_Introduction|
+  2. How to Install Plugin.... |MyHeadersFill_file_Install|
+  3. Mapping.................. |MyHeadersFill_file_Mapping|
+  4. Caveats.................. |MyHeadersFill_file_Caveats|
+  5. Contributing............. |MyHeadersFill_file_Contributing|
+  6. Changelog................ |MyHeadersFill_file_Changelog|
+  7. License.................. |MyHeadersFill_file_License|
+  8. Credits.................. |MyHeadersFill_file_Credits|
 
 ==============================================================================
 Section 1: Introduction                      *MyHeadersFill_file_Introduction*
 
 When a file is created with a specific extension (see list below under
-construction) this plugin creates an appropriate header. In ˜.vimrc the set nu
-option is defined to show line numer.
+construction) this plugin creates an appropriate header. In ˜/.vimrc the set
+nu option is defined to show line numer.
 
 >
-  1 " ------------------------------------------------------
-  2 " Created By :
-  3 " File Name :
-  4 " Creation Date : 2024-01-29 09:35:31
-  5 " Last Modified :
-  6 " Email Address :
-  7 " Version :      0.0.0.0
-  8 " License:
-  9 " Purpose :
- 10 " ------------------------------------------------------
+    1 " ------------------------------------------------------
+    2 " Created By :
+    3 " File Name :
+    4 " Creation Date : 2024-01-29 09:35:31
+    5 " Last Modified :
+    6 " Email Address :
+    7 " Version :      0.0.0.0
+    8 " License:
+    9 " Purpose :
+   10 " ------------------------------------------------------
 <
 
 After saving :w
@@ -51,82 +50,81 @@ After saving :w
 <
 
 ==============================================================================
-Section 2: USAGE INSTRUCTIONS                *MyHeadersFill_file_Instructions*
+Section 2: How to Install Plugin                  *MyHeadersFill_file_Install*
 
-Don't forget to add in the configuration file:
+Technical requirements
+
+    * Vim (text editor): Version 9.0.1050.
+    * System macOS: Version 13.2.1 (22D68).
+    * System Fedora: Version 38beta (Should work on other linux distros too).
+    * Scripts: Markdown, Vim Script, shell sh.
+    * Vim plugin: Vim-plug.
+
+    Note
+      Should be ok as long as Vim Script is supported by the editor (since
+      version 8.0).
+
+
+How to start
+  We admit that Vim-plugin is already installed. If not so, go to
+  https://github.com/junegunn/vim-plug and follow instructions.
+
+  We configure ~/.vimrc below (~ means home directory):
 
 >
-  let g:myEmail='my.email@my_email.net'
+     call plug#begin('~/.vim/plugged')
+     Plug 'cbushdor/MyHeadersFill_file'
+     call plug#end()
 <
 
-*Todo In the near future this will be prompted during install session. For the time being it can be considered as a caveat :-( !!!!!!
-
-Don't extend header fields over line 19, otherwise header fields shouldn't be
-updated automaticaly when file is saved (to do that, follow the next key
-sequence ESC :w Enter)!
-
-==============================================================================
-Section 2.1: How to Install Plugin                *MyHeadersFill_file_Install*
-
-We admit that Vim-plugin is already installed. If not so, go to
-https://github.com/junegunn/vim-plug and follow instructions.
-
-We configure ~/.vimrc below (~ means home directory):
+  and plugin will be installed in ~/.vim/plugged if everything is well
+  configured.  Then type :wq to save and, :source ~/.vimrc to relaunch.
+  Then, type :PlugInstall and, look if plugin is installing itself.
+  Don't forget to set in ˜/.vimrc the variable:
 
 >
-	call plug#begin('~/.vim/plugged')
-	Plug 'cbushdor/MyHeadersFill_file'
-	call plug#end()
+     let g:myEmail='my.email@my_email.net'
 <
 
-and plugin will be installed in ~/.vim/plugged if everything is well
-configured.  Then type :wq to save and, :source ~/.vimrc to relaunch.
-Then, type :PlugInstall and, look if plugin is installing itself.
-Don't forget to set in ˜/.vimrc the variable:
+  in the near future it will be automated during install!
 
+  The final test is to create a text file in a specific directory s.a
+  ˜/Downloads .
 >
-	let g:myEmail='my.email@my_email.net'
+      % cd ˜/Downloads
+      % vim file.txt
 <
 
-in the near future it will be automated during install!
-
-The final test is to create a text file in a specific directory s.a
-˜/Downloads .
- >
-	 cd ˜/Downloads
-	 vim file.txt
- <
-
- you should have the following (if :set nu is set):
+   you should have the following (if :set nu is set):
 
 >
-  1 " ------------------------------------------------------
-  2 " Created By :
-  3 " File Name :
-  4 " Creation Date : 2024-01-29 09:35:31
-  5 " Last Modified :
-  6 " Email Address :
-  7 " Version :      0.0.0.0
-  8 " License:
-  9 " Purpose :
- 10 " ------------------------------------------------------
+    1 " ------------------------------------------------------
+    2 " Created By :
+    3 " File Name :
+    4 " Creation Date : 2024-01-29 09:35:31
+    5 " Last Modified :
+    6 " Email Address :
+    7 " Version :      0.0.0.0
+    8 " License:
+    9 " Purpose :
+   10 " ------------------------------------------------------
 <
 
-After saving :w
+  After saving :w
 
 >
-     1 " ------------------------------------------------------
-     2 " Created By : foo
-     3 " File Name : file.txt
-     4 " Creation Date : 2024-01-29 09:35:31
-     5 " Last Modified : 2024-01-29 09:36:14
-     6 " Email Address : my.email@my_email.net
-     7 " Version :  0.0.0.1
-     8 " Licence :
-     9 " ...  Attribution-NonCommercial 3.0 ...
-    10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
-    11 " Purpose :
-    12 " ------------------------------------------------------
+       1 " ------------------------------------------------------
+       2 " Created By : foo
+       3 " File Name : file.txt
+       4 " Creation Date : 2024-01-29 09:35:31
+       5 " Last Modified : 2024-01-29 09:36:14
+       6 " Email Address : my.email@my_email.net
+       7 " Version :  0.0.0.1
+       8 " Licence :
+       9 " ...  Attribution-NonCommercial 3.0 ...
+      10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
+      11 " Purpose :
+      12 " ------------------------------------------------------
 <
 
 ==============================================================================
