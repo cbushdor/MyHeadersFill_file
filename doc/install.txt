@@ -1,0 +1,51 @@
+*install.txt* How to install plugin
+
+==============================================================================
+INSTRUCTIONS                                      *MyHeadersFill_file_Install*
+
+We admit that Vim-plugin is already installed. If not so, go to
+https://github.com/junegunn/vim-plug and follow instructions.
+
+We configure ~/.vimrc below (~ means home directory):
+
+>
+	call plug#begin('~/.vim/plugged')
+	Plug 'cbushdor/MyHeadersFill_file'
+	call plug#end()
+<
+
+and plugin will be installed in ~/.vim/plugged if everything is well
+configured.  Then type :wq to save and, :source ~/.vimrc to relaunch.
+Then, type :PlugInstall and, look if plugin is installing itself.
+Don't forget to set in ˜/.vimrc the variable:
+
+>
+	let g:myEmail='my.email@my_email.net'
+<
+
+in the near future it will be automated during install!
+
+The final test is to create a text file in a specific directory s.a
+˜/Downloads .
+ >
+	 cd ˜/Downloads
+	 vim file.txt
+ <
+
+ you should have the following (if :set nu is set):
+
+>
+     1 " ------------------------------------------------------
+     2 " Created By : foo
+     3 " File Name : file.txt
+     4 " Creation Date :2024-01-29 08:38:13
+     5 " Last Modified : 2024-01-17 21:54:14
+     6 " Email Address : my.email@my_email.net
+     7 " Version : 0.0.0.8
+     8 " Licence :
+     9 " ...  Attribution-NonCommercial 3.0 ...
+    10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
+    11 " Purpose :
+    12 " ------------------------------------------------------
+<
+==============================================================================

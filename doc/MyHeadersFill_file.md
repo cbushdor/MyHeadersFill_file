@@ -4,34 +4,50 @@
     CONTENTS                                                  MyHeadersFill_file
 
           1. Introduction............. MyHeadersFill_file_Introduction
-          2. Mapping.................. MyHeadersFill_file_Mapping
-          3. License.................. MyHeadersFill_file_License
+          2. Usage Instructions....... MyHeadersFill_file_Instructions
+          2.1 How to Install Plugin... MyHeadersFill_file_Install
+          3. Mapping.................. MyHeadersFill_file_Mapping
           4. Caveats.................. MyHeadersFill_file_Caveats
-          5. Usage Instructions....... MyHeadersFill_file_Instructions
-          6. Contributing............. MyHeadersFill_file_Contributing
-          7. Changelog................ MyHeadersFill_file_Changelog
+          5. Contributing............. MyHeadersFill_file_Contributing
+          6. Changelog................ MyHeadersFill_file_Changelog
+          7. License.................. MyHeadersFill_file_License
           8. Credits.................. MyHeadersFill_file_Credits
 
     ==============================================================================
     Section 1: Introduction                      MyHeadersFill_file_Introduction
 
     When a file is created with a specific extension (see list below under
-    construction) this plugin creates an appropriate header.
+    construction) this plugin creates an appropriate header. In ˜.vimrc the set nu
+    option is defined to show line numer.
 
 
          1 " ------------------------------------------------------
-         2 " Created By : sdo
-         3 " File Name : start_header_vimrc
-         4 " Creation Date :2023-03-22 02:32:13
+         2 " Created By : foo
+         3 " File Name : file.txt
+         4 " Creation Date :2024-01-29 08:38:13
          5 " Last Modified : 2024-01-17 21:54:14
-         6 " Email Address : sdo@dorseb.ddns.net
-         7 " Version : 0.0.0.119
+         6 " Email Address : my.email@my_email.net
+         7 " Version : 0.0.0.7
          8 " Licence :
          9 " ...  Attribution-NonCommercial 3.0 ...
         10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
         11 " Purpose :
         12 " ------------------------------------------------------
 
+
+    ==============================================================================
+    Section 2: USAGE INSTRUCTIONS                MyHeadersFill_file_Instructions
+
+    Don't forget to add in the configuration file:
+
+
+    let g:myEmail='my.email@my_email.net' <
+
+    *Todo In the near future this will be prompted during install session. For the time being it can be considered as a caveat :-( !!!!!!
+
+    Don't extend header fields over line 19, otherwise header fields shouldn't be
+    updated automaticaly when file is saved (to do that, follow the next key
+    sequence ESC :w Enter)!
 
     ==============================================================================
     Section 2: Mapping                                MyHeadersFill_file_Mapping
@@ -52,13 +68,6 @@
 
     - If header does not exist in the file, when file is saved we have error
     messages that are printed.
-
-    ==============================================================================
-    Section 5: USAGE INSTRUCTIONS                MyHeadersFill_file_Instructions
-
-    Don't extend header fields over line 19, otherwise header fields shouldn't be
-    updated automaticaly when file is saved (to do that, follow the next key
-    sequence ESC :w Enter)!
 
     ==============================================================================
     Section 6: Contributing                      MyHeadersFill_file_Contributing
