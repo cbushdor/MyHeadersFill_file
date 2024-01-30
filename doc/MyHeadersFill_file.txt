@@ -1,5 +1,12 @@
 *MyHeadersFill_file.txt* Integrates headers in files accord to extensions
 
+Created By : sdo
+File Name : MyHeadersFill_file.txt
+Creation Date :2024-01-30 00:20:50
+Last Modified : 2024-01-30 01:14:37
+Email Address : sdo@dorseb.ddns.net
+Version : 0.0.0.10
+
 ==============================================================================
 CONTENTS                                                  *MyHeadersFill_file*
 
@@ -164,4 +171,4 @@ Section 8: Credits                                *MyHeadersFill_file_Credits*
 Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
 Automatically".
 
-vim:tw=78:ts=3:ft=help:norl:
+vim:tw=78:ts=10:ft=help:norl:
