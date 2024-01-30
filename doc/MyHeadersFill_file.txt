@@ -1,26 +1,31 @@
 *MyHeadersFill_file.txt* Integrates headers in files accord to extensions
 
-Created By : sdo
-File Name : MyHeadersFill_file.txt
-Creation Date :2024-01-30 00:20:50
-Last Modified : 2024-01-30 01:14:37
-Email Address : sdo@dorseb.ddns.net
-Version : 0.0.0.10
+==============================================================================
+Changelog                                       *MyHeadersFill_file_Changelog*
+
+>
+  Created By : sdo
+  File Name : MyHeadersFill_file.txt
+  Creation Date :2024-01-30 00:20:50
+  Last Modified : 2024-01-30 01:53:57
+  Email Address : sdo@dorseb.ddns.net
+  Version : 0.0.0.22
+<
 
 ==============================================================================
 CONTENTS                                                  *MyHeadersFill_file*
 
-  1. Introduction............. |MyHeadersFill_file_Introduction|
-  2. How to Install Plugin.... |MyHeadersFill_file_Install|
-  3. Mapping.................. |MyHeadersFill_file_Mapping|
-  4. Caveats.................. |MyHeadersFill_file_Caveats|
-  5. Contributing............. |MyHeadersFill_file_Contributing|
-  6. Changelog................ |MyHeadersFill_file_Changelog|
-  7. License.................. |MyHeadersFill_file_License|
-  8. Credits.................. |MyHeadersFill_file_Credits|
+  * Introduction............. |MyHeadersFill_file_Introduction|
+  * How to Install Plugin.... |MyHeadersFill_file_Install|
+  * Mapping.................. |MyHeadersFill_file_Mapping|
+  * Caveats.................. |MyHeadersFill_file_Caveats|
+  * Contributing............. |MyHeadersFill_file_Contributing|
+  * Changelog................ |MyHeadersFill_file_Changelog|
+  * License.................. |MyHeadersFill_file_License|
+  * Credits.................. |MyHeadersFill_file_Credits|
 
 ==============================================================================
-Section 1: Introduction                      *MyHeadersFill_file_Introduction*
+Introduction                                 *MyHeadersFill_file_Introduction*
 
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the set
@@ -57,7 +62,7 @@ After saving :w
 <
 
 ==============================================================================
-Section 2: How to Install Plugin                  *MyHeadersFill_file_Install*
+How to Install Plugin                             *MyHeadersFill_file_Install*
 
 Technical requirements
 
@@ -135,10 +140,10 @@ How to start
 <
 
 ==============================================================================
-Section 2: Mapping                                *MyHeadersFill_file_Mapping*
+Mapping                                           *MyHeadersFill_file_Mapping*
 
 ==============================================================================
-Section 3: LICENSE                                *MyHeadersFill_file_License*
+LICENSE                                           *MyHeadersFill_file_License*
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 
@@ -147,7 +152,7 @@ the terms of the Creative Commons Attribution-NonCommercial 3.0 Unported
 License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 
 ==============================================================================
-Section 4: Caveats                                *MyHeadersFill_file_Caveats*
+Caveats                                           *MyHeadersFill_file_Caveats*
 
 - If a file is closed with :x command, fields are not updated properly.
 
@@ -155,20 +160,18 @@ Section 4: Caveats                                *MyHeadersFill_file_Caveats*
 messages that are printed.
 
 ==============================================================================
-Section 6: Contributing                      *MyHeadersFill_file_Contributing*
+Contributing                                 *MyHeadersFill_file_Contributing*
 
 - GitHub:  https://github.com/cbushdor/MyHeadersFill_file
 - Vim: https://www.vim.org/
 - System macOS: Version 13.2.1 (22D68).
 - System Fedora: Version 38beta (Should work on other linux distros too).
 
-==============================================================================
-Section 7: Changelog                            *MyHeadersFill_file_Changelog*
 
 ==============================================================================
-Section 8: Credits                                *MyHeadersFill_file_Credits*
+Credits                                           *MyHeadersFill_file_Credits*
 
 Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
 Automatically".
 
-vim:tw=78:ts=10:ft=help:norl:
+vim:tw=78:ts=15:ft=help:norl:
