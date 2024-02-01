@@ -59,10 +59,23 @@ let g:myEmail='my.email@my_email.net'
 # Fields and their use
 
 The header is created if file is new and, file type extension supported.
+
 If file already exists, but doesn't have any header, you can create one.
-Follow this: go to insert mode and, place the cursor at the top of the file
-(first line) and type 'ctrl-h' a header will show up according to file type
-extension of your file. Then save it: esc key :w return.
+
+Follow these steps:
+
+      - type esc key
+
+      - position cursor at first line in file
+
+      - go to insert mode type i
+
+      - type 'ctrl-h' a header will show
+        up according to file type extension
+        of your file.
+
+      - Then save it: esc key :w return.
+
 
 | Field name     | Use      | Update time |
 | :--- | :--- | :--- |
