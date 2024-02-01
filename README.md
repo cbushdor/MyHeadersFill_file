@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-01-29 09:59:51
-* Email Address : sdo@dorseb.ddns.net
-* Version : 0.0.0.149
+* Last Modified : 2024-02-01 01:21:34
+* Email Address : sebastien.dorey@laposte.net
+* Version : 0.0.0.156
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -69,15 +69,14 @@ All fields are created if file is new and , format supported.
 
 | Field name     | Use      | Update time |
 | :--- | :--- | :--- |
-| Created By | Date of file creation.| Created at file creation. Cannot be changed. |
-| File Name | File name. | At file creation. Cannot be changed except, if file name itself is changed. Updated automaticaly. |
-| Creation Date | Date when file is created. | At file creation|
+| Created By | User name. | Created at file creation. Cannot be changed. |
+| File Name | File name. | At file creation. Cannot be changed except, if file name itself is changed. Updated automatically. |
+| Creation Date | Date when file is created. | At file creation.|
 | Last Modified | Date when file is Modified. | Updated when file is saved. |
-| Email Address | Email of the user. | Cannot be changed. |
+| Email Address | Email of the user. | Can be changed within ~/.vimrc. |
 | Version | This is the version number. | Only last field incremented when file is saved. |
 | License | Your choice. | Can be changed anytime! |
 | Purpose | Why this file was created. |  Can be changed anytime! |
-| Version variable  | Same as Version field. | Incremented at same time as ***Version field*** created. |
 
 # The command line
 
