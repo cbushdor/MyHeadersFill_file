@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-02-01 02:31:41
+          Last Modified : 2024-02-01 02:34:53
           Email Address : sebastien.dorey@laposte.net
-          Version : 0.0.0.64
+          Version : 0.0.0.65
 <
 
 ==============================================================================
@@ -147,7 +147,7 @@ Follow these steps:
       - Type <esc> key
       - Position cursor at first line in file
       - Go to insert mode type i
-      - Type <ctrl-h> a header will show
+      - Type <ctrl-h> (Control-h) a header will show
         up according to file type extension
         of your file.
       - Then save it: <esc> key, :w <return>.

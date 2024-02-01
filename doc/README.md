@@ -70,7 +70,7 @@ Follow these steps:
 
       - Go to insert mode type i
 
-      - Type <ctrl-h> (control-h) a header will show
+      - Type <ctrl-h> (Control-h) a header will show
         up according to file type extension
         of your file.
 
