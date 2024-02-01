@@ -64,17 +64,17 @@ If file already exists, but doesn't have any header, you can create one.
 
 Follow these steps:
 
-      - type esc key
+      - Type <esc> key
 
-      - position cursor at first line in file
+      - Position cursor at first line in file
 
-      - go to insert mode type i
+      - Go to insert mode type i
 
-      - type 'ctrl-h' a header will show
+      - Type <ctrl-h> (control-h) a header will show
         up according to file type extension
         of your file.
 
-      - Then save it: esc key :w return.
+      - Then save it: <esc> key :w <return>.
 
 
 | Field name     | Use      | Update time |
