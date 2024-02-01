@@ -55,17 +55,14 @@ Don't forget to add in the configuration file:
 let g:myEmail='my.email@my_email.net'
 ```
 
-In the near future this will be prompted during install session. For the time being it can be considered as a caveat :-( !!!!!!
-
-# WATCHOUT
-Plugin under construction! 
-Yet, already tested with *.pl files. Online help will be written pretty soon!? ;-)! as a vim command line.
-
-
 
 # Fields and their use
 
-All fields are created if file is new and , format supported.
+The header is created if file is new and, file type extension supported.
+If file already exists, but doesn't have any header, you can create one.
+Follow this: go to insert mode and, place the cursor at the top of the file
+(first line) and type 'ctrl-h' a header will show up according to file type
+extension of your file. Then save it: esc key :w return.
 
 | Field name     | Use      | Update time |
 | :--- | :--- | :--- |

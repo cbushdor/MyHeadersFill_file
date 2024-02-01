@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-02-01 01:17:11
+          Last Modified : 2024-02-01 01:47:18
           Email Address : sebastien.dorey@laposte.net
-          Version : 0.0.0.50
+          Version : 0.0.0.59
 <
 
 ==============================================================================
@@ -139,30 +139,29 @@ How to start
       12 " ------------------------------------------------------
 <
 
-Meanings of fields
+MEANINGS OF FIELDS
 
-WATCHOUT
-
-Plugin under construction! Yet, already tested with *.pl files. Online help will be written pretty soon!? ;-)! as a vim command line.
-Fields and their use
-
-All fields are created if file is new and , format supported.
+The header is created if file is new and, file type extension supported.
+If file already exists, but doesn't have any header, you can create one.
+Follow this: go to insert mode and, place the cursor at the top of the file
+(first line) and type 'ctrl-h' a header will show up according to file type
+extension of your file. Then save it: esc key :w return.
 
 Field name      Use                             Update time
 ----            ----                            ----
-Created By      User name                       At file creation.
-File Name       File name                       At file creation. Cannot be
+Created By      User name.                      At file creation.
+File Name       File name.                      At file creation. Cannot be
                                                 changed except, if file name
                                                 itself is changed. Updated
                                                 automatically.
-Creation Date   Date when file is created       At file creation.
-Last Modified   Date when file is Modified      Updated when file is saved.
-Email Address   Email of the user               Can be changed within read
+Creation Date   Date when file is created.      At file creation.
+Last Modified   Date when file is Modified.     Updated when file is saved.
+Email Address   Email of the user.              Can be changed within read
                                                 |MyHeadersFill_file_Install|.
-Version         This is the version number      Only last field incremented
+Version         This is the version number.     Only last field incremented
                                                 when file is saved.
-License         Your choice                     Can be changed anytime!
-Purpose         Extra                           Can be changed anytime!
+License         Your choice.                    Can be changed anytime!
+Purpose         Why this file was created.      Can be changed anytime!
 
 
 ==============================================================================
