@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-02-01 02:34:53
-          Email Address : sebastien.dorey@laposte.net
-          Version : 0.0.0.65
+          Last Modified : 2024-02-03 23:57:24
+          Email Address : cbushdor@laposte.net
+          Version : 0.0.0.69
 <
 
 ==============================================================================
@@ -99,6 +99,10 @@ How to start
 <
 
   in the near future it will be automated during install!
+
+  WATCHOUT OUT! After installing the plugin, when you open a file for 
+  the first time, a prompt will ask email and will set it in ~/.vimrc 
+  for you.
 
   The final test is to create a text file in a specific directory s.a
   ˜/Downloads .
