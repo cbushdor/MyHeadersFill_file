@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-01 01:21:34
-* Email Address : sebastien.dorey@laposte.net
-* Version : 0.0.0.156
+* Last Modified : 2024-02-03 23:54:50
+* Email Address : cbushdor@laposte.net
+* Version : 0.0.0.158
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -54,6 +54,8 @@ Don't forget to add in the configuration file:
 ```
 let g:myEmail='my.email@my_email.net'
 ```
+
+Watchout out after installing the plugin, when you open a file for the first time, a prompt will ask email and will set it in ~/.vimrc for you.
 
 
 # Fields and their use
