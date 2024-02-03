@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-03 23:15:34
-" Email Address : myEmail@myemail.com
-" Version : 0.0.0.108 
+" Last Modified : 2024-02-03 23:25:32
+" Email Address : azeazeaz@sdfsdfs.com
+" Version : 0.0.0.113 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -12,24 +12,21 @@
 " 	Add headers according to extensions.
 " ------------------------------------------------------
 
-"autocmd BufNewFile,BufReadPre * exe ":call MyStartMyHeadersFill_file()"
-
 function!MyStartErrorMyHeadersFill_file()
-	if !exists("g:myEmail")
+	if !exists("g:myEmail") " Executed only if this global variable does not exist
 		:hi MyColor  term=bold ctermfg=Red guifg=#80a0ff gui=bold
 		:	echohl MyColor
 		:	echon "Need to set g:myEmail in ~/.vimrc s.a: let g:myEmail='myEmail@myemail.com' >>  ~/.vimrc"
 		:	echohl None
 		:hi MyColor  term=bold ctermfg=Green guifg=#80a0ff gui=bold
 		:	echohl MyColor
+		" We prompt for email
 		:let g:myEmail=input('Enter email (we will do the nasty sheet for you!) :')
 		:	echohl None
-		" let g:myEmail=myEmail
+		" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
 		let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
-		:!echo l:str
+		" :!echo l:str
 		exe l:str
-			" >> "./myfile-".${MYVIMRC}."momom"
-		" exit 0
 	endif
 endfunction
 
