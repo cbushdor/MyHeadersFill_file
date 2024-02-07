@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-04 00:31:11
+* Last Modified : 2024-02-07 23:01:09
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.162
+* Version : 0.0.0.163
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -66,7 +66,7 @@ If file already exists, but doesn't have any header, you can create one.
 
 Follow these steps:
 
-      - Type <esc> key
+      - Type <esc> key to get normal mode
 
       - Position cursor at first line in file
 
@@ -74,7 +74,7 @@ Follow these steps:
 
       - Type <ctrl-h> (Control-h) a header will show
         up according to file type extension
-        of your file.
+        of your file (We can improve this in the near future with mapping).
 
       - Then save it: <esc> key :w <return>.
 
