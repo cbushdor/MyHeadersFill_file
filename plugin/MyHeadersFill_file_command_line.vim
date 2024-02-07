@@ -2,8 +2,8 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2023-04-13 00:15:01
-" Email Address : sdo@dorseb.ddns.net
+" Last Modified : 2024-02-07 23:43:54
+" Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
@@ -62,4 +62,29 @@ endfunction
 " insert mode type ctrl + h then enter
 " header created where the cursor is
 " imap <c-h> <Esc>mz:execute FileHeading()<RET>`zjA
-imap <c-h> <Esc>mz:execute FileHeading()
+imap <c-h> <Esc>mz:execute FileHeading()<cr><esc>:w<cr>
+
+function! IncreaseVF1()
+	:echo "IncreaseVF1()"
+endfunction
+
+function! IncreaseVF2()
+endfunction
+
+function! IncreaseRF1()
+endfunction
+
+function! IncreaseRF2()
+endfunction
+
+
+"nmap <c-v> <c-f>:execute IncreaseVF1()
+nnoremap <ctrl-l> <ctrl-l>:IncreaseVF0()<cr>
+
+
+
+
+
+
+
+
