@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-02-04 00:33:16
+          Last Modified : 2024-02-08 22:28:39
           Email Address : cbushdor@laposte.net
-          Version : 0.0.0.70
+          Version : 0.0.0.71
 <
 
 ==============================================================================
@@ -156,6 +156,10 @@ Follow these steps:
         up according to file type extension
         of your file.
       - Then save it: <esc> key, :w <return>.
+
+Now we have a command line that can do this. We just need to write when in normal mode:
+
+      :MyHeadersFillFileAddHeaderTopFile
 
 Field name      Use                             Update time
 ----            ----                            ----

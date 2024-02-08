@@ -2,7 +2,7 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-08 05:45:27
+" Last Modified : 2024-02-08 22:16:03
 " Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
@@ -13,6 +13,7 @@
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
+
 function FileHeading()
 	let s:line=line(".") " We get the cursor position
 	let $w=expand('%:e') " We check extension
@@ -59,10 +60,23 @@ function FileHeading()
 	unlet s:line
 endfunction
 
+function! SetPosition()
+:1
+:normal! O
+:execute FileHeading()
+:normal! "\<esc>"
+:normal! dd
+:w
+endfunction
+
 " insert mode type ctrl + h then enter
 " header created where the cursor is
 " imap <c-h> <Esc>mz:execute FileHeading()<RET>`zjA
 imap <c-h> <Esc>mz:execute FileHeading()<cr><esc>:w<cr>
+
+command MyHeadersFillFileAddHeaderTopFile  :call SetPosition()
+" command MyHeadersFillFileAddHeaderTopFile  :call FileHeading()
+
 
 function! IncreaseVF1()
 	:echo "===> IncreaseVF1()"
@@ -79,11 +93,6 @@ endfunction
 function! IncreaseRF2()
 	:echo "===> IncreaseRF2()"
 endfunction
-
-
-"nmap <c-v> <c-f>:execute IncreaseVF1()
-"imap <ctrl-v><ctrl-l>	:IncreaseVF0()<cr>
-
 
 map <F1> <Nop>
 map! <F1> <Nop>
