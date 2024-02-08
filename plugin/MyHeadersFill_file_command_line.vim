@@ -2,7 +2,7 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-07 23:43:54
+" Last Modified : 2024-02-08 03:45:09
 " Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
@@ -65,24 +65,30 @@ endfunction
 imap <c-h> <Esc>mz:execute FileHeading()<cr><esc>:w<cr>
 
 function! IncreaseVF1()
-	:echo "IncreaseVF1()"
+	:echo "===> IncreaseVF1()"
 endfunction
 
 function! IncreaseVF2()
+	:echo "===> IncreaseVF2()"
 endfunction
 
 function! IncreaseRF1()
+	:echo "===> IncreaseRF1()"
 endfunction
 
 function! IncreaseRF2()
+	:echo "===> IncreaseRF2()"
 endfunction
 
 
 "nmap <c-v> <c-f>:execute IncreaseVF1()
-nnoremap <ctrl-l> <ctrl-l>:IncreaseVF0()<cr>
+"imap <ctrl-v><ctrl-l>	:IncreaseVF0()<cr>
 
 
-
+nnoremap <F2><F1> :call IncreaseVF1()<cr>
+nnoremap <F2><F2> :call IncreaseVF2()<cr>
+nnoremap <F3><F1> :call IncreaseRF1()<cr>
+" nnoremap <F3><F2> :call IncreaseRF2()<cr>
 
 
 
