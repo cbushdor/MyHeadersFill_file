@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-07 23:01:09
+* Last Modified : 2024-02-08 22:22:22
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.163
+* Version : 0.0.0.165
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -78,6 +78,10 @@ Follow these steps:
 
       - Then save it: <esc> key :w <return>.
 
+Now we have a command line that can do this. We just need to write when in normal mode:
+```
+:MyHeadersFillFileAddHeaderTopFile
+```
 
 | Field name     | Use      | Update time |
 | :--- | :--- | :--- |
