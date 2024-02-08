@@ -2,7 +2,7 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-08 03:45:09
+" Last Modified : 2024-02-08 05:45:27
 " Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
@@ -85,9 +85,12 @@ endfunction
 "imap <ctrl-v><ctrl-l>	:IncreaseVF0()<cr>
 
 
-nnoremap <F2><F1> :call IncreaseVF1()<cr>
-nnoremap <F2><F2> :call IncreaseVF2()<cr>
-nnoremap <F3><F1> :call IncreaseRF1()<cr>
+map <F1> <Nop>
+map! <F1> <Nop>
+
+nnoremap <F1><F1> :call IncreaseVF1()<cr>
+nnoremap <F1><F2> :call IncreaseVF2()<cr>
+nnoremap <F2><F1> :call IncreaseRF1()<cr>
 " nnoremap <F3><F2> :call IncreaseRF2()<cr>
 
 
