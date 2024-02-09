@@ -2,7 +2,7 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-09 22:24:38
+" Last Modified : 2024-02-09 23:49:26
 " Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
@@ -61,21 +61,19 @@ function FileHeading()
 endfunction
 
 function! SetPosition()
-	let my_pos = getpos(".")
 :1
 :normal! O
 :execute FileHeading()
 :normal! "\<esc>"
 :normal! dd
 :w
-	call setpos(".",my_pos)
 endfunction
 
 " insert mode type ctrl + h then enter
 " header created where the cursor is
 " imap <c-h> <Esc>mz:execute FileHeading()<RET>`zjA
 "imap <c-h> <Esc>mz:execute FileHeading()<cr><esc>:w<cr>
-imap <c-h> <Esc>:call SetPosition()<cr><esc>
+imap <c-h> <Esc>mz:call SetPosition()<cr><esc>'z
 
 command MyHeadersFillFileAddHeaderTopFile  :call SetPosition()
 " command MyHeadersFillFileAddHeaderTopFile  :call FileHeading()
