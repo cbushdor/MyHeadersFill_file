@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-08 22:22:22
+* Last Modified : 2024-02-10 00:39:06
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.165
+* Version : 0.0.0.159
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -39,7 +39,7 @@ We admit that Vim-plugin is already installed. If not so, go and install [Vim-pl
 
 We configure *~/.vimrc* below (~[^4]):
 
-[^4]: The ~ is equivalatent to $HOME which represent the home directory but we prefer $MYVIMRC. Check :!echo $MYVIMRC .
+[^4]: The ~ is equivalatent to $HOME which represent the home directory.
 
 ```
 call plug#begin('~/.vim/plugged')
@@ -55,8 +55,6 @@ Don't forget to add in the configuration file:
 let g:myEmail='my.email@my_email.net'
 ```
 
-Watchout out after installing the plugin, when you open a file for the first time, a prompt will ask email and will set it in $MYVIMRC for you.
-
 
 # Fields and their use
 
@@ -64,24 +62,26 @@ The header is created if file is new and, file type extension supported.
 
 If file already exists, but doesn't have any header, you can create one.
 
-Follow these steps:
-
-      - Type <esc> key to get normal mode
-
-      - Position cursor at first line in file
-
-      - Go to insert mode type i
+Follow these steps if you are in insert mode:
 
       - Type <ctrl-h> (Control-h) a header will show
         up according to file type extension
-        of your file (We can improve this in the near future with mapping).
+        of your file. It will be saved and cursor
+        will return to position before <ctrl-h>.
 
-      - Then save it: <esc> key :w <return>.
+        BUG:
+        The state mode not preserved and cursor set at begining of line 
+        column position not saved!
 
-Now we have a command line that can do this. We just need to write when in normal mode:
-```
-:MyHeadersFillFileAddHeaderTopFile
-```
+
+Follow these steps if you are in normal mode:
+
+      - type :MyHeadersFillFileAddHeaderTopFile 
+        followed by carriage return.
+
+        BUG:
+        The state mode not preserved and cursor sdet at begining of line 
+        column position not saved!
 
 | Field name     | Use      | Update time |
 | :--- | :--- | :--- |
@@ -166,7 +166,7 @@ Contains the scripts that modified the headers.
 
 # OPTIONS
 
-We can define email in $MYVIMRC s.a:
+We can define email in ~/.vimrc s.a:
 
 ```
 let g:myEmail='my.email@my_email.net'

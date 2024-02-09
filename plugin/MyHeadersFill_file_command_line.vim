@@ -2,7 +2,7 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-09 23:49:26
+" Last Modified : 2024-02-10 00:33:09
 " Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
@@ -61,12 +61,14 @@ function FileHeading()
 endfunction
 
 function! SetPosition()
+normal! mA
 :1
 :normal! O
 :execute FileHeading()
 :normal! "\<esc>"
 :normal! dd
 :w
+'A
 endfunction
 
 " insert mode type ctrl + h then enter

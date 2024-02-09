@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-02-08 22:28:39
+          Last Modified : 2024-02-10 00:43:47
           Email Address : cbushdor@laposte.net
-          Version : 0.0.0.71
+          Version : 0.0.0.74
 <
 
 ==============================================================================
@@ -148,18 +148,25 @@ MEANINGS OF FIELDS
 
 The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.
-Follow these steps:
-      - Type <esc> key
-      - Position cursor at first line in file
-      - Go to insert mode type i
+Follow these steps if you are in insert mode:
+
       - Type <ctrl-h> (Control-h) a header will show
         up according to file type extension
-        of your file.
-      - Then save it: <esc> key, :w <return>.
+        of your file. It will be saved and cursor
+        will return to position before <ctrl-h>.
 
-Now we have a command line that can do this. We just need to write when in normal mode:
+        BUG:
+        The state mode not preserved and cursor set at begining of line
+        column position not saved!
 
-      :MyHeadersFillFileAddHeaderTopFile
+Follow these steps if you are in normal mode:
+
+      - type :MyHeadersFillFileAddHeaderTopFile
+        followed by carriage return.
+
+        BUG:
+        The state mode not preserved and cursor sdet at begining of line
+        column position not saved!
 
 Field name      Use                             Update time
 ----            ----                            ----
