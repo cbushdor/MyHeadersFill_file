@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-10 00:39:06
+* Last Modified : 2024-02-10 22:21:59
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.159
+* Version : 0.0.0.161
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -37,9 +37,10 @@ This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_edi
 # Instructions to install plugin
 We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
 
-We configure *~/.vimrc* below (~[^4]):
+We configure *~/.vimrc* below (~[^4][^5]):
 
 [^4]: The ~ is equivalatent to $HOME which represent the home directory.
+[^5]: $MYVIMRC is the path to *~/.vimrc* in vim environment.
 
 ```
 call plug#begin('~/.vim/plugged')
@@ -49,11 +50,17 @@ call plug#end()
 
 and plugin will be installed in *~/.vim/plugged* if everything is well configured. First, go in vim type *:PlugInstall* and look plugin is installing itself.
 
-Don't forget to add in the configuration file:
+Don't forget to add in the configuration file. To do so when you open for the first time a file a prompt will ask you to do that. Hence, the  next will be incerted in $MYVIMRC. 
 
 ```
 let g:myEmail='my.email@my_email.net'
 ```
+
+Now it is possible to change email.
+
+Follow these steps if you are in normal mode:
+
+      - type :MyHeadersFillFileChangeEmail
 
 
 # Fields and their use
