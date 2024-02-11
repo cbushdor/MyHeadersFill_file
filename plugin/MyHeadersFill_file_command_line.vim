@@ -2,7 +2,7 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-10 00:33:09
+" Last Modified : 2024-02-10 22:30:35
 " Email Address : cbushdor@laposte.net
 " Version : 
 " License : 
@@ -78,8 +78,7 @@ endfunction
 imap <c-h> <Esc>mz:call SetPosition()<cr><esc>'z
 
 command MyHeadersFillFileAddHeaderTopFile  :call SetPosition()
-" command MyHeadersFillFileAddHeaderTopFile  :call FileHeading()
-
+command MyHeadersFillFileChangeEmail :call MyStartErrorMyHeadersFill_file("1")
 
 function! IncreaseVF1()
 	:echo "===> IncreaseVF1()"

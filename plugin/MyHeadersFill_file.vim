@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-03 23:30:01
-" Email Address : sebastien.dorey@laposte.net
-" Version : 0.0.0.114 
+" Last Modified : 2024-02-10 22:10:41
+" Email Address : cbushdor@laposte.net
+" Version : 0.0.0.115 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -12,8 +12,11 @@
 " 	Add headers according to extensions.
 " ------------------------------------------------------
 
-function!MyStartErrorMyHeadersFill_file()
-	if !exists("g:myEmail") " Executed only if this global variable does not exist
+function! MyPrint(p)
+	return a:p
+endfunction
+
+function!MyStartErrorMyHeadersFill_file(...)
 		:hi MyColor  term=bold ctermfg=Red guifg=#80a0ff gui=bold
 		:	echohl MyColor
 		:	echon "Need to set g:myEmail in ~/.vimrc s.a: let g:myEmail='myEmail@myemail.com' >>  ~/.vimrc"
@@ -21,13 +24,23 @@ function!MyStartErrorMyHeadersFill_file()
 		:hi MyColor  term=bold ctermfg=Green guifg=#80a0ff gui=bold
 		:	echohl MyColor
 		" We prompt for email
-		:let g:myEmail=input('Enter email (we will do the nasty sheet for you!) :')
+		:let $MYE=input('Enter email (we will do the nasty sheet for you!) :')
 		:	echohl None
-		" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
-		let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
-		" :!echo l:str
-		exe l:str
-	endif
+		if a:0 == 0
+			:let g:myEmail=$MYE
+			" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
+			let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
+			exe l:str
+		else
+			let $MyHeadersFillFileMyfile=expand('%:p')
+			:let g:myEmail=$MYE
+			:e $MYVIMRC
+			:1
+			:%s/\(let g:myEmail='\).*/\=submatch(1) .. MyPrint($MYE) .. "'"/
+			:w
+			:e $MyHeadersFillFileMyfile
+			:w
+		endif
 endfunction
 
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
