@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-10 22:10:41
-" Email Address : cbushdor@laposte.net
-" Version : 0.0.0.115 
+" Last Modified : 2024-02-13 02:01:42
+" Email Address : xxxxxxx@cccc.com
+" Version : 0.0.0.188 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -17,30 +17,60 @@ function! MyPrint(p)
 endfunction
 
 function!MyStartErrorMyHeadersFill_file(...)
-		:hi MyColor  term=bold ctermfg=Red guifg=#80a0ff gui=bold
+	:hi MyColor  term=bold ctermfg=Red guifg=#80a0ff gui=bold
 		:	echohl MyColor
 		:	echon "Need to set g:myEmail in ~/.vimrc s.a: let g:myEmail='myEmail@myemail.com' >>  ~/.vimrc"
 		:	echohl None
-		:hi MyColor  term=bold ctermfg=Green guifg=#80a0ff gui=bold
+	:hi MyColor  term=bold ctermfg=Green guifg=#80a0ff gui=bold
 		:	echohl MyColor
-		" We prompt for email
-		:let $MYE=input('Enter email (we will do the nasty sheet for you!) :')
+	" We prompt for email
+	:let $MYE=input('Enter email (we will do the nasty sheet for you!) :')
 		:	echohl None
-		if a:0 == 0
+	let $MyHeadersFillFileMyfile=expand('%:p')
+	if a:0 == 0
+		try
 			:let g:myEmail=$MYE
 			" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
 			let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
 			exe l:str
-		else
-			let $MyHeadersFillFileMyfile=expand('%:p')
-			:let g:myEmail=$MYE
+			:e $MyHeadersFillFileMyfile
+			:%s/\( Email Address : \).*/\=submatch(1) .. MyPrint($MYE)/
+			:w
+		catch
+			echo "ERROR DETECTED"
+			return
+		endtry
+	else
+		try
+			" let $MyHeadersFillFileMyfile=expand('%:p')
 			:e $MYVIMRC
 			:1
-			:%s/\(let g:myEmail='\).*/\=submatch(1) .. MyPrint($MYE) .. "'"/
-			:w
+			:%s/^\(\s\{0,}let\s\{1,}g:myEmail\s\{0,}=\s\{0,}'\).*/\=submatch(1) .. MyPrint($MYE) .. "'"/
+			:let g:myEmail=$MYE
+		catch
 			:e $MyHeadersFillFileMyfile
+			:hi MyColor  term=bold ctermfg=Cyan guifg=#80a0ff gui=bold
+				:	echohl MyColor
+				:	echo "Error: in file ". $MYVIMRC ." try to find let g:myEmail='".g:myEmail."' but does not exist "
+				:	echohl None
+				: echo "We will set nasty sheet for you!!!!"
+			:let g:myEmail=$MYE
+			" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
+			let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
+			exe l:str
 			:w
-		endif
+			return
+		endtry
+		:w
+		:e $MyHeadersFillFileMyfile
+		:w
+		:echon "[" . g:myEmail . "]"
+		:hi MyColor  term=bold ctermfg=LightYellow guifg=#80a0ff gui=bold
+			:	echohl MyColor
+			: echon " recorded in "
+			:	echohl None
+			: echon $MYVIMRC
+	endif
 endfunction
 
 let g:path_vimrc = expand('<sfile>:p:h')."/../vimrc/" " path to vimrc that contains files
