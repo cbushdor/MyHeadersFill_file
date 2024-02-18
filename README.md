@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-18 01:50:08
+* Last Modified : 2024-02-18 01:51:56
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.163
+* Version : 0.0.0.165
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -40,7 +40,7 @@ We admit that Vim-plugin is already installed. If not so, go and install [Vim-pl
 We configure *~/.vimrc* below (~[^4][^5]):
 
 [^4]: The ~ is equivalatent to $HOME which represent the home directory.
-[^5]: $MYVIMRC is the path to *~/.vimrc* in vim environment.
+[^5]: $MYVIMRC is the path to to file configuration *~/.vimrc* in vim environment.
 
 ```
 call plug#begin('~/.vim/plugged')
