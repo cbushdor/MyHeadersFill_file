@@ -2,9 +2,9 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-10 22:21:59
+* Last Modified : 2024-02-18 01:50:08
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.161
+* Version : 0.0.0.163
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -198,3 +198,10 @@ If a file is closed with *:x* command, fields are not updated properly.
 
 Help commands need to be re-written s.a :help MyHeadersFill_file.
 
+# Credits
+
+[Vim](https://www.vim.org/)
+
+# Contact
+
+Email Address : cbushdor@laposte.net
