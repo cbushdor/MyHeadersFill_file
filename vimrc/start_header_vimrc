@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : start_header_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2024-02-10 22:12:08
-" Email Address : cbushdor@laposte.net
-" Version : 0.0.0.58
+" Last Modified : 2024-02-23 22:36:23
+" Email Address : cbushdor1@laposte.net
+" Version : 0.0.0.62
 " Licence : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -16,7 +16,7 @@ augroup updateVersionNumberPL
 	au! updateVersionNumberPL
 	let $TR_SOURCE = g:filter
   if !exists("g:myEmail") " Executed only if this global variable does not exist
-		autocmd BufNewFile,BufRead $TR_SOURCE execute ":call MyStartErrorMyHeadersFill_file()" 
+		autocmd BufNewFile $TR_SOURCE execute ":call MyStartErrorMyHeadersFill_file()" 
 	endif
 	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! execute "normal ma" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! :call InsertsHeader()

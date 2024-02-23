@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-13 02:01:42
-" Email Address : xxxxxxx@cccc.com
-" Version : 0.0.0.188 
+" Last Modified : 2024-02-23 22:37:48
+" Email Address : 
+" Version : 0.0.0.205 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -16,30 +16,23 @@ function! MyPrint(p)
 	return a:p
 endfunction
 
-function!MyStartErrorMyHeadersFill_file(...)
-	:hi MyColor  term=bold ctermfg=Red guifg=#80a0ff gui=bold
-		:	echohl MyColor
-		:	echon "Need to set g:myEmail in ~/.vimrc s.a: let g:myEmail='myEmail@myemail.com' >>  ~/.vimrc"
-		:	echohl None
-	:hi MyColor  term=bold ctermfg=Green guifg=#80a0ff gui=bold
-		:	echohl MyColor
+function! MyStartErrorMyHeadersFill_file(...)
 	" We prompt for email
 	:let $MYE=input('Enter email (we will do the nasty sheet for you!) :')
-		:	echohl None
 	let $MyHeadersFillFileMyfile=expand('%:p')
 	if a:0 == 0
-		try
-			:let g:myEmail=$MYE
-			" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
-			let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
-			exe l:str
-			:e $MyHeadersFillFileMyfile
-			:%s/\( Email Address : \).*/\=submatch(1) .. MyPrint($MYE)/
-			:w
-		catch
-			echo "ERROR DETECTED"
-			return
-		endtry
+			try
+				:let g:myEmail=$MYE
+				" We create the string that contains g:myEmail value and write it in ${MYVIMRC}
+				let l:str= ":!echo \"let g:myEmail='" .g:myEmail."'\" >> ${MYVIMRC}"
+				exe l:str
+				:e $MyHeadersFillFileMyfile
+				:%s/\( Email Address : \).*/\=submatch(1) .. MyPrint($MYE)/
+				:w
+			catch
+				echo "ERROR DETECTED"
+				return
+			endtry
 	else
 		try
 			" let $MyHeadersFillFileMyfile=expand('%:p')
