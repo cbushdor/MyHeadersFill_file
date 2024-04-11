@@ -2,15 +2,25 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-02-23 22:37:48
-" Email Address : 
-" Version : 0.0.0.205 
+" Last Modified : 2024-04-11 18:46:03
+" Email Address : cbushdor@laposte.net
+" Version : 0.0.0.208 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " 	Add headers according to extensions.
 " ------------------------------------------------------
+" Sanitary fence
+
+let vimScript=GetsVarString(GetsFileWithNoExtension(GetsFileNameFromPath(expand("<script>"))))
+if !IsVarDefined(vimScript)
+    call CreatesGlobalVar(vimScript)
+"    echo "1. We know that it is not set in memory"
+else
+"    echo "1. We know that it is set in memory"
+    finish
+endif
 
 function! MyPrint(p)
 	return a:p
