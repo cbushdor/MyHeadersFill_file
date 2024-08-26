@@ -6,11 +6,11 @@
 
 <!-- ------------------------------------------------------
 * Created By : sdo
-* File Name : htm_header.txt
+* File Name : html_header.txt
 * Creation Date :
-* Last Modified : 2024-08-21 17:50:37
+* Last Modified : 2024-08-26 17:46:40
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.7
+* Version : 0.0.0.1
 * SCHEME:
 * HOST:
 * PORT:

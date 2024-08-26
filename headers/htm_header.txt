@@ -8,9 +8,9 @@
 * Created By : sdo
 * File Name : htm_header.txt
 * Creation Date :
-* Last Modified : 2024-08-21 17:50:37
+* Last Modified : 2024-08-26 17:46:42
 * Email Address : cbushdor@laposte.net
-* Version : 0.0.0.7
+* Version : 0.0.0.2
 * SCHEME:
 * HOST:
 * PORT:
