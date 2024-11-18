@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-11-18 01:19:33
+" Last Modified : 2024-11-18 22:07:24
 " Email Address : cbushdor@laposte.net
-" Version : 0.0.0.34
+" Version : 0.0.0.95
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -69,20 +69,47 @@ function! FileHeading()
 	unlet s:line
 endfunction
 
-function! SetPosition()
-normal! mA
-:normal! O
-:execute FileHeading()
-:normal! "\<esc>"
-:w
-'A
+function! SetPosition(at_cursor_position = v:false)
+"if exists("a:at_cursor_position")
+":    execute(":echo 'exists--->'..a:at_cursor_position")
+"endif
+   
+   if (a:at_cursor_position == v:false)
+      normal! mA
+      :1
+      :normal! O
+      :execute FileHeading()
+      :normal! "\<esc>"
+      :normal! dd
+      :w
+      'A
+   elseif (a:at_cursor_position == v:true)
+      normal! mA
+      :normal! O
+      :execute FileHeading()
+      :normal! "\<esc>"
+      :w
+      'A
+   endif
 endfunction
 
+"function! SetPosition()
+"normal! mA
+":normal! O
+":execute FileHeading()
+":normal! "\<esc>"
+":w
+"'A
+"endfunction
+let AT_CURSOR_POSITION = v:true 
+
 " insert mode type ctrl + h then enter
+" header created first line of file
+imap <c-h> <Esc>mz:call SetPosition(!AT_CURSOR_POSITION)<cr><esc>'z
+
+" insert mode type ctrl + c then enter
 " header created where the cursor is
-" imap <c-h> <Esc>mz:execute FileHeading()<RET>`zjA
-"imap <c-h> <Esc>mz:execute FileHeading()<cr><esc>:w<cr>
-imap <c-h> <Esc>mz:call SetPosition()<cr><esc>'z
+imap <c-c> <Esc>mz:call SetPosition(AT_CURSOR_POSITION)<cr><esc>'z
 
 command MyHeadersFillFileAddHeaderTopFile  :call SetPosition()
 command MyHeadersFillFileChangeEmail :call MyStartErrorMyHeadersFill_file("1")
