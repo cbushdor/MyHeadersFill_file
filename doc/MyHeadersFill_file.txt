@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-02-11 01:39:33
+          Last Modified : 2024-11-18 22:13:02
           Email Address : cbushdor@laposte.net
-          Version : 0.0.0.79
+          Version : 0.0.0.80
 <
 
 ==============================================================================
@@ -153,13 +153,21 @@ If file already exists, but doesn't have any header, you can create one.
 Follow these steps if you are in insert mode:
 
       - Type <ctrl-h> (Control-h) a header will show
-        up according to file type extension
+        up at first line in the current file 
+        according to file type extension
         of your file. It will be saved and cursor
         will return to position before <ctrl-h>.
 
         BUG:
         The state mode not preserved and cursor set at begining of line
         column position not saved!
+
+      - Type <ctrl-c> (Control-c) a header will show
+        up at current line in the current file 
+        according to file type extension
+        of your file. It will be saved and cursor
+        will return to position before <ctrl-h>.
+
 
 Follow these steps if you are in normal mode:
 
