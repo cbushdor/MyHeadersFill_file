@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2024-04-11 21:10:30
+" Last Modified : 2024-11-18 00:58:44
 " Email Address : cbushdor@laposte.net
-" Version : 0.0.0.9
+" Version : 0.0.0.33
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -30,8 +30,10 @@ function! FileHeading()
 	else
 		let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
 	endif
-	echo "Working on file:".fname
+	"echo "Working on file:"..fname
+   "echo getpos(".")
 	for line in reverse(readfile(fname,''))
+   "   echo "------->"..line
 		if match(line,"^:insert$") == 0
 		elseif match(line,"^ \{0,1}$") == 0
 		elseif match(line,"Creation Date :") >=0
@@ -68,12 +70,13 @@ function! FileHeading()
 endfunction
 
 function! SetPosition()
+   " let position = 12 "  getpos(".")
 normal! mA
-:1
+" :2
 :normal! O
 :execute FileHeading()
 :normal! "\<esc>"
-:normal! dd
+":normal! dd
 :w
 'A
 endfunction
