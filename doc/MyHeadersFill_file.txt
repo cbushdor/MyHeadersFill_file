@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2024-11-18 22:13:02
+          Last Modified : 2024-11-18 22:28:49
           Email Address : cbushdor@laposte.net
-          Version : 0.0.0.80
+          Version : 0.0.0.82
 <
 
 ==============================================================================
@@ -205,7 +205,11 @@ Follow these steps if you are in normal mode:
 
 Follow these steps if you are in insert mode:
 
-      - Type <ctrl-h> (Control-h) a header will show
+      - Type <ctrl-h> (Control-h) a header will be created
+        at first line of the file.
+
+      - Type <ctrl-c> (Control-c) a header will be created
+        where the cursor is in in the file.
 
 
 ==============================================================================
