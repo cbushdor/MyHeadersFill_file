@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-01-05 13:54:42
+" Last Modified : 2025-01-08 18:58:57
 " Email Address : cbushdor@laposte.net
-" Version : 0.0.0.96
+" Version : 0.0.0.117
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -24,16 +24,19 @@ endif
 function! FileHeading()
 	let s:line=line(".") " We get the cursor position
 	let $w=expand('%:e') " We check extension
+
+   " echo "extension ---->".$w."<----"
 	let nu=1 " Num to 1
 	if $w=="" " If no extension we work on extension
 		let fname=g:path_headers.expand('%:e')."vimrc_header.txt" " We take path to go to vimrc_header.txt
 	else
 		let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
 	endif
-	"echo "Working on file:"..fname
-   "echo getpos(".")
+	" echo "Working on file:"..fname
+   " echo getpos(".")
+   " exit 0
 	for line in reverse(readfile(fname,''))
-   "   echo "------->"..line
+      " echo "------->"..line
 		if match(line,"^:insert$") == 0
 		elseif match(line,"^ \{0,1}$") == 0
 		elseif match(line,"Creation Date :") >=0
@@ -44,12 +47,15 @@ function! FileHeading()
 		elseif match(line,"#`") == 0 
 			call append(s:line,line)
 		" nu+=1
-		elseif match(line,"# -") == 0 
+		elseif match(line,"# ") == 0 
 			call append(s:line,line)
 		" nu+=1
 		elseif match(line,"q##//q#") == 0 
 			call append(s:line,line)
 		" nu+=1
+		" elseif match(line,"# ") == 0 
+		" 	call append(s:line,line)
+		" " nu+=1
 		elseif match(line,"#;") == 0 
 			call append(s:line,line)
 		" nu+=1
@@ -66,6 +72,7 @@ function! FileHeading()
 			" nu+=1
 		endif
 	endfor
+   " exit 0
 	unlet s:line
 endfunction
 
