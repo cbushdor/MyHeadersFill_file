@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-01-08 19:02:30
+" Last Modified : 2025-02-20 22:03:02
 " Email Address : cbushdor@laposte.net
-" Version : 0.0.0.118
+" Version : 0.0.0.119
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -48,6 +48,9 @@ function! FileHeading()
 			call append(s:line,line)
 		" nu+=1
 		elseif match(line,"# ") == 0 
+			call append(s:line,line)
+		" nu+=1
+		elseif match(line,"% ") == 0 
 			call append(s:line,line)
 		" nu+=1
 		elseif match(line,"q##//q#") == 0 
