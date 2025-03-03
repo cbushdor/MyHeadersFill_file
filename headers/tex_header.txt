@@ -1,10 +1,9 @@
 :insert
-
 % ----------------------------------------------------------------------
 % Created By : sdo
 % File Name : tex_header.txt
 % Creation Date :
-% Last Modified : 2025-02-20 22:11:37
+% Last Modified : 2025-03-03 23:32:13
 % Email Address : cbushdor@laposte.net
 % Version : 0.0.0.0
 % License : 
@@ -13,5 +12,18 @@
 % Purpose :
 %
 % ----------------------------------------------------------------------
+
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[french]{babel}
+
+\begin{document}
+
+\end{document}
 
 .
