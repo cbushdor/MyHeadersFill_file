@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-02-20 22:03:02
-" Email Address : cbushdor@laposte.net
-" Version : 0.0.0.119
+" Last Modified : 2025-07-16 19:58:14
+" Email Address : cbushdor013@laposte.net
+" Version : 0.0.0.144
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -23,6 +23,7 @@ endif
  
 function! FileHeading()
 	let s:line=line(".") " We get the cursor position
+	let pos=line(".") " We get the cursor position
 	let $w=expand('%:e') " We check extension
 
    " echo "extension ---->".$w."<----"
@@ -44,6 +45,14 @@ function! FileHeading()
 		elseif match(line,"------------------------------------------------------") >= 0 
 			call append(s:line,line)
 		" nu+=1
+		elseif match(line,"^#!") == 0  " Check if we have shebang
+         " Check if interpretor can be included according position
+         if pos==1
+            call append(s:line," ") " Empty line
+            call append(s:line,line) " line with shebang included if and only,
+                                     " if cursor is at position first line
+                                     " in file
+         endif
 		elseif match(line,"#`") == 0 
 			call append(s:line,line)
 		" nu+=1

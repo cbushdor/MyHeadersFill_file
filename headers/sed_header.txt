@@ -2,12 +2,12 @@
 #!/usr/bin/sed -f
 
 # ----------------------------------------------------------------------
-# Created By : 
-# File Name :
+# Created By : sdo
+# File Name : sed_header.txt
 # Creation Date : 
-# Last Modified :
-# Email Address :
-# Version : 0.0.0.0
+# Last Modified : 2025-07-16 15:12:26
+# Email Address : cbushdor@laposte.net
+# Version : 0.0.0.3
 # License : 
 # 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 # 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
