@@ -1,14 +1,16 @@
 :insert
 #!/Users/sdo/perl5/perlbrew/perls/perl-5.42.0/bin/perl
 
+use 5.010;
+
 # ------------------------------------------------------
 q##//q#
-* Created By :
-* File Name :
+* Created By : sdo
+* File Name : pl_header.txt
 * Creation Date :
-* Last Modified :
-* Email Address :
-* Version : 0.0.0.0
+* Last Modified : 2025-08-19 20:34:48
+* Email Address : cbushdor013@laposte.net
+* Version : 0.0.0.2
 * License : 
 * 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 * 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
