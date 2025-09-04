@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-07-16 19:58:14
+" Last Modified : 2025-09-05 00:00:18
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.144
+" Version : 0.0.0.208
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -26,32 +26,51 @@ function! FileHeading()
 	let pos=line(".") " We get the cursor position
 	let $w=expand('%:e') " We check extension
 
-   " echo "extension ---->".$w."<----"
+   "echo "extension ---->".$w."<----"
 	let nu=1 " Num to 1
+   "let fname='azeazea'
+
 	if $w=="" " If no extension we work on extension
 		let fname=g:path_headers.expand('%:e')."vimrc_header.txt" " We take path to go to vimrc_header.txt
 	else
-		let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
+      if $w=="pm" || $w=="pl" 
+         " echo "GREETINGS in ["..bufname("%")..":"..pos.."] at ext "..$w
+         if pos==1
+            " echo "first line "..$w.." at pos "..pos
+            let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
+         else
+            " echo "not first line "..$w.." at pos "..pos
+            let fname=g:path_headers.expand('%:e')."_doc_header.txt" " We take path and file extension and _header.txt
+         endif
+      else
+         " echo "if "..$w.."==\"pm\" || "..$w.."==\"pl\"" 
+         let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
+      endif
 	endif
 	" echo "Working on file:"..fname
    " echo getpos(".")
    " exit 0
+   let is_doc=0
 	for line in reverse(readfile(fname,''))
-      " echo "------->"..line
+      "echo "append to line #"..s:line.."-------> this string:"..line
 		if match(line,"^:insert$") == 0
 		elseif match(line,"^ \{0,1}$") == 0
 		elseif match(line,"Creation Date :") >=0
-			call append(s:line,line . strftime("%F %T",getftime(expand("%:t"))))
+			call append(s:line,line . strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+		elseif match(line,"^=") >= 0 && is_doc==0
+         let is_doc=1
+			"call append(s:line,line)
 		elseif match(line,"------------------------------------------------------") >= 0 
 			call append(s:line,line)
 		" nu+=1
 		elseif match(line,"^#!") == 0  " Check if we have shebang
          " Check if interpretor can be included according position
          if pos==1
-            call append(s:line," ") " Empty line
+            call append(s:line,"") " Empty line
             call append(s:line,line) " line with shebang included if and only,
                                      " if cursor is at position first line
                                      " in file
+            "call append(s:line," ") " Empty line
          endif
 		elseif match(line,"#`") == 0 
 			call append(s:line,line)
@@ -83,8 +102,23 @@ function! FileHeading()
 			call append(s:line,line)
 			" nu+=1
 		endif
+      if is_doc==1
+         if match(line,"^:insert$") == 0
+         elseif match(line,"I<Created on:>") >= 0
+            call append(s:line,line ." ". strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+         elseif match(line,"I<Last modification:>") >= 0
+            call append(s:line,line ." ". strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+         else
+            call append(s:line,line)
+         endif
+		endif
 	endfor
    " exit 0
+   echo "---->"..s:line.."<----"
+   if pos==1
+      :1
+      :d
+   endif
 	unlet s:line
 endfunction
 

@@ -1,0 +1,71 @@
+:insert
+
+=head2 sub func
+
+Describe func
+
+=head2 PARAMETER(S)
+
+=over 4
+
+=over 4
+
+None.
+
+=back
+
+=back
+
+=head2 RETURNED VALUE
+
+=over 4
+
+=over 4
+
+None.
+
+=back
+
+=back
+
+=head2 ERRROR RETURNED
+
+=over 4
+
+=over 4
+
+None.
+
+=back
+
+=back
+
+=head2 BUG(S) KNOWN
+
+=over 4
+
+=over 4
+
+None.
+
+=back
+
+=back
+
+=head2 HISTORY OF CREATION/MODIFICATION 
+
+=over 4
+
+=over 4
+
+I<Last modification:>
+
+I<Created on:>
+
+=back
+
+=back
+
+=cut
+
+.
