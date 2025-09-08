@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-09-07 17:15:35
+" Last Modified : 2025-09-08 23:26:06
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.439
+" Version : 0.0.0.467
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -23,11 +23,7 @@ endif
 
 
 :function TestCur(l,str)
-": echom "a:l---->"..a:l
-": echom "a:str---->"..a:str
-": echom "---->"..line('.')
 : let res=match(a:l,a:str)
-":echom "res="..res
 : return res==0
 :endfunction
 
@@ -41,8 +37,10 @@ endif
 
 function! FileHeading()
    let curLi=getline(line('.')+1)
+
+   ":echo "*****>"..curLi
    if TestCur(curLi,'I<Last modification:>')
-      :echo "*****>"..curLi
+   "   :echo "*****>"..curLi
       :call Meow(curLi)
    else
       let s:line=line(".") " We get the cursor position
@@ -146,28 +144,43 @@ function! FileHeading()
    endif
 endfunction
 
+":function! SomeCheck()
+":   let b:baz=expand('%')
+":   let b:fok= filereadable(b:baz)
+":   if ! filereadable(b:baz)
+":        echo "file does not exists "..b:baz
+":        echo "save it first"..b:fok
+":   endif
+":endfunction
+
 function! SetPosition(at_cursor_position = v:false)
 "if exists("a:at_cursor_position")
 ":    execute(":echo 'exists--->'..a:at_cursor_position")
 "endif
+   ":call SomeCheck()
    
-   if (a:at_cursor_position == v:false)
-      normal! mA
-    "  :1
-      :normal! O
-      :execute FileHeading()
-      :normal! "\<esc>"
-      :normal! dd
-      :w
-      'A
-   elseif (a:at_cursor_position == v:true)
-      normal! mA
-      :normal! O
-      :execute FileHeading()
-      :normal! "\<esc>"
-      :w
-      'A
-   endif
+   :if  filereadable(expand('%'))
+      if (a:at_cursor_position == v:false)
+         normal! mA
+       "  :1
+         :normal! O
+         :execute FileHeading()
+         :normal! "\<esc>"
+         :normal! dd
+         :w
+         'A
+      elseif (a:at_cursor_position == v:true)
+         normal! mA
+         :normal! O
+         :execute FileHeading()
+         :normal! "\<esc>"
+         :w
+         'A
+      endif
+   :else
+"   :echohl Statement | echon "Hello " | echohl Identifier | echon "World" | echohl None | echon "!!!"
+:        echohl Statement | echon "File [" | echohl Identifier |echon expand('%') | echohl Statement | echon "] does not exists! Save it first with "| echohl Todo |echon ":w<ret>" | echohl Statement | echon " to do that!"|echohl None
+   :endif
 endfunction
 
 "function! SetPosition()
