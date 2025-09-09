@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-09-08 23:26:06
+" Last Modified : 2025-09-09 21:56:19
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.467
+" Version : 0.0.0.472
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -144,22 +144,8 @@ function! FileHeading()
    endif
 endfunction
 
-":function! SomeCheck()
-":   let b:baz=expand('%')
-":   let b:fok= filereadable(b:baz)
-":   if ! filereadable(b:baz)
-":        echo "file does not exists "..b:baz
-":        echo "save it first"..b:fok
-":   endif
-":endfunction
-
 function! SetPosition(at_cursor_position = v:false)
-"if exists("a:at_cursor_position")
-":    execute(":echo 'exists--->'..a:at_cursor_position")
-"endif
-   ":call SomeCheck()
-   
-   :if  filereadable(expand('%'))
+   :if  filereadable(expand('%')) " We check if file exist
       if (a:at_cursor_position == v:false)
          normal! mA
        "  :1
@@ -177,9 +163,17 @@ function! SetPosition(at_cursor_position = v:false)
          :w
          'A
       endif
-   :else
-"   :echohl Statement | echon "Hello " | echohl Identifier | echon "World" | echohl None | echon "!!!"
-:        echohl Statement | echon "File [" | echohl Identifier |echon expand('%') | echohl Statement | echon "] does not exists! Save it first with "| echohl Todo |echon ":w<ret>" | echohl Statement | echon " to do that!"|echohl None
+   :else " We know that file doesn't exist
+      " We print a message error
+      :echohl Statement | echon "File [" | 
+               \ echohl Identifier |
+               \ echon expand('%') |
+               \ echohl Statement |
+               \ echon "] does not exists! Save it first with "|
+               \ echohl Todo |echon ":w<ret>" |
+               \ echohl Statement |
+               \ echon " to do that!"|
+               \ echohl None
    :endif
 endfunction
 
