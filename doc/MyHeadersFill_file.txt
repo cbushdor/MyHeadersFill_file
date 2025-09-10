@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2025-09-10 23:50:50
+          Last Modified : 2025-09-11 00:00:00
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.104
+          Version : 0.0.0.110
 <
 
 ==============================================================================
@@ -29,7 +29,7 @@ Introduction                                 *MyHeadersFill_file_Introduction*
 
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the set
-nu option is defined to show line numer.
+nu option is defined (to remove set nonu) to show line number.
 
 >
     1 " ------------------------------------------------------
@@ -81,7 +81,8 @@ How to start
   We admit that Vim-plugin is already installed. If not so, go to
   https://github.com/junegunn/vim-plug and follow instructions.
 
-  We configure ~/.vimrc below (~ means home directory same as ${HOME}):
+  We configure ~/.vimrc below (~ means home directory same note for 
+  variable ${HOME}):
 
 >
      call plug#begin('~/.vim/plugged')
@@ -92,8 +93,8 @@ How to start
   and plugin will be installed in ~/.vim/plugged if everything is well
   configured. Then type :wq to save and, :source ~/.vimrc to relaunch.
   Then, type :PlugInstall and, look if plugin is installing itself.
-  If, plugin already installed hence :PlugUpdate. A prompt will ask 
-  not to forget to set in ˜/.vimrc the variable:
+  If, plugin already installed hence :PlugUpdate. A prompt might ask 
+  not to forget to set in ˜/.vimrc the variable email:
 >
 
      let g:myEmail='my.email@my_email.net'
