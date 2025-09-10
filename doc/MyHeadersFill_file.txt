@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2025-09-11 00:04:42
+          Last Modified : 2025-09-11 01:54:51
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.111
+          Version : 0.0.0.120
 <
 
 ==============================================================================
@@ -81,10 +81,9 @@ How to start
   We admit that Vim-plugin is already installed. If not so, go to
   https://github.com/junegunn/vim-plug and follow instructions.
 
-  We configure ~/.vimrc below (~ means home directory same note for 
-  variable ${HOME}):
+  We configure ~/.vimrc below (~ means home directory same story for 
+  the environment variable ${HOME}): >
 
->
      call plug#begin('~/.vim/plugged')
      Plug 'cbushdor/MyHeadersFill_file'
      call plug#end()
@@ -104,7 +103,9 @@ How to start
   the first time (after plugin installed succesfully), a prompt may 
   ask to set an email and, may set it in the file ~/.vimrc 
   for you. Sometime we have $MYVIMRC that contains the path. 
-  Check :!echo $MYVIMRC
+  Check: >
+               :!echo $MYVIMRC
+<
 
   This can be changed with the command :MyHeadersFillFileChangeEmail. 
   Just follow prompt instructions!
