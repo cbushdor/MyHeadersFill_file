@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date :2024-01-30 00:20:50
-          Last Modified : 2025-09-10 21:36:25
+          Last Modified : 2025-09-10 23:50:50
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.92
+          Version : 0.0.0.104
 <
 
 ==============================================================================
@@ -90,17 +90,18 @@ How to start
 <
 
   and plugin will be installed in ~/.vim/plugged if everything is well
-  configured.  Then type :wq to save and, :source ~/.vimrc to relaunch.
+  configured. Then type :wq to save and, :source ~/.vimrc to relaunch.
   Then, type :PlugInstall and, look if plugin is installing itself.
-  A prompt will ask not to forget to set in ˜/.vimrc the variable:
-
+  If, plugin already installed hence :PlugUpdate. A prompt will ask 
+  not to forget to set in ˜/.vimrc the variable:
 >
+
      let g:myEmail='my.email@my_email.net'
 <
 
-
   WATCHOUT OUT! After installing the plugin, when you open a file for 
-  the first time, a prompt will ask email and will set it in ~/.vimrc 
+  the first time (after plugin installed succesfully), a prompt may 
+  ask to set an email and, may set it in the file ~/.vimrc 
   for you. Sometime we have $MYVIMRC that contains the path. 
   Check :!echo $MYVIMRC
 
@@ -132,18 +133,18 @@ How to start
   After saving :w
 
 >
-       1 " ------------------------------------------------------
-       2 " Created By : foo
-       3 " File Name : file.txt
-       4 " Creation Date : 2024-01-29 09:35:31
-       5 " Last Modified : 2024-01-29 09:36:14
-       6 " Email Address : my.email@my_email.net
-       7 " Version :  0.0.0.1
-       8 " Licence :
-       9 " ...  Attribution-NonCommercial 3.0 ...
-      10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
-      11 " Purpose :
-      12 " ------------------------------------------------------
+    1 " ------------------------------------------------------
+    2 " Created By : foo
+    3 " File Name : file.txt
+    4 " Creation Date : 2024-01-29 09:35:31
+    5 " Last Modified : 2024-01-29 09:36:14
+    6 " Email Address : my.email@my_email.net
+    7 " Version :  0.0.0.1
+    8 " Licence :
+    9 " ...  Attribution-NonCommercial 3.0 ...
+   10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
+   11 " Purpose :
+   12 " ------------------------------------------------------
 <
 
 MEANINGS OF FIELDS
