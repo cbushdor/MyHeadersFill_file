@@ -7,9 +7,9 @@ Changelog                                         *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-09-11 22:59:56
+          Last Modified : 2025-09-11 23:10:19
           Email Address : sebastien.dorey013@laposte.net
-          Version : 0.0.0.154
+          Version : 0.0.0.161
 <
 
 ==============================================================================
@@ -28,8 +28,8 @@ CONTENTS                                                    *MyHeadersFill_file*
 Introduction                                   *MyHeadersFill_file_Introduction*
 
 When a file is created with a specific extension (see list below under
-construction) this plugin creates an appropriate header. In ˜/.vimrc the set
-nu option is defined (to remove set nonu) to show line number.
+construction) this plugin creates an appropriate header. In ˜/.vimrc the 
+`:set nu` option is defined (to remove `:set nonu`) to show line number.
 >vim
     1 " ------------------------------------------------------
     2 " Created By :
@@ -42,7 +42,6 @@ nu option is defined (to remove set nonu) to show line number.
     9 " Purpose :
    10 " ------------------------------------------------------
 <
-
 After saving `:w`<ret>
 >vim
      1 " ------------------------------------------------------
@@ -57,7 +56,7 @@ After saving `:w`<ret>
     10 " ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
     11 " Purpose :
     12 " ------------------------------------------------------
-
+<
 ==============================================================================
 How to Install Plugin                               *MyHeadersFill_file_Install*
 
@@ -72,7 +71,6 @@ Technical requirements~
     Note
       Should be all right, as long as Vim Script is supported by the editor 
       (since version 8.0).
-
 
 How to start~
   We admit that Vim-plugin is already installed. If not so, go to
@@ -109,7 +107,7 @@ How to start~
       % cd ˜/Downloads
       % vim file.txt
 <
-   you should have the following (if :set nu is set):
+   you should have the following (if `:set nu` is set):
 >vim
     1 " ------------------------------------------------------
     2 " Created By :
@@ -122,8 +120,7 @@ How to start~
     9 " Purpose :
    10 " ------------------------------------------------------
 <
-  After saving `:w`
-
+  After saving `:w` you should have something similar!
 >vim
     1 " ------------------------------------------------------
     2 " Created By : foo
