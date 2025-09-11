@@ -7,9 +7,9 @@ Changelog                                         *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-09-11 23:10:19
+          Last Modified : 2025-09-11 23:26:49
           Email Address : sebastien.dorey013@laposte.net
-          Version : 0.0.0.161
+          Version : 0.0.0.171
 <
 
 ==============================================================================
@@ -42,7 +42,7 @@ construction) this plugin creates an appropriate header. In ˜/.vimrc the
     9 " Purpose :
    10 " ------------------------------------------------------
 <
-After saving `:w`<ret>
+After saving `:w`<ret> you should have:
 >vim
      1 " ------------------------------------------------------
      2 " Created By : foo
@@ -70,7 +70,12 @@ Technical requirements~
 
     Note
       Should be all right, as long as Vim Script is supported by the editor 
-      (since version 8.0).
+      (since version 8.0). 
+      You can use both ways to enlight text or have basic text like this:
+
+         Text enlighted        Basic text~
+         `:syntax on`            `:syntax off`
+         `:set filetype=help`    `:set filetype=text`
 
 How to start~
   We admit that Vim-plugin is already installed. If not so, go to
