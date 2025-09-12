@@ -7,9 +7,9 @@ Changelog                                         *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-09-11 23:26:49
+          Last Modified : 2025-09-12 11:55:09
           Email Address : sebastien.dorey013@laposte.net
-          Version : 0.0.0.171
+          Version : 0.0.0.175
 <
 
 ==============================================================================
@@ -76,6 +76,9 @@ Technical requirements~
          Text enlighted        Basic text~
          `:syntax on`            `:syntax off`
          `:set filetype=help`    `:set filetype=text`
+
+Notation use~
+  <C-key>: Combination of Control key + another key.
 
 How to start~
   We admit that Vim-plugin is already installed. If not so, go to
@@ -146,21 +149,21 @@ The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.
 Follow these steps if you are in insert mode:
 
-      - Type <ctrl-h> (Control-h) a header will show
+      - Type <C-h> (Control-h) a header will show
         up at first line in the current file 
         according to file extension.
         It will be saved and cursor
-        will return to position before <ctrl-h>.
+        will return to position before <C-h>.
 
         BUG:
         The state mode not preserved and cursor set at begining of line
         column position not saved!
 
-      - Type <ctrl-c> (Control-c) a header will show
+      - Type <C-c> (Control-c) a header will show
         up at current line in the current file 
         according to file type extension
         of your file. It will be saved and cursor
-        will return to position before <ctrl-h>.
+        will return to position before <C-h>.
 
 
 Follow these steps if you are in normal mode:
@@ -199,11 +202,11 @@ Follow these steps if you are in normal mode:
 
 Follow these steps if you are in insert mode:
 
-      - Type <ctrl-h> (Control-h) a header will be created
+      - Type <C-h> (Control-h) a header will be created
         at first line of the file acording to file 
         extension.
 
-      - Type <ctrl-c> (Control-c) a header will be created
+      - Type <C-c> (Control-c) a header will be created
         where the cursor is in in the file. According to 
         file extension (if it is supported) the header will
         contains shebang.
@@ -212,14 +215,14 @@ Follow these steps if you are in insert mode:
         line in file, header will be added with proper 
         shebang.
 
-      - Type <ctrl-c> on the line while in insert mode
+      - Type <C-c> on the line while in insert mode
            145 I<Last modification:> 2025-09-10 20:35:37
 
         and fild will be updated like this:
            145 I<Last modification:> 2025-09-10 20:36:23
 
 
-      - Type <ctrl-c> (Control-c) a header will be created
+      - Type <C-c> (Control-c) a header will be created
         where the cursor is in in the file. In that case, if 
         file as an extension, might add documenttion tag.
       - Header and documentation can be found in:
