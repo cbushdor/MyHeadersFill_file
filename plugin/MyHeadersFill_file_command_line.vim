@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-09-09 21:56:19
-" Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.472
+" Last Modified : 2025-09-12 23:55:24
+" Email Address : sebastien.dorey013@laposte.net
+" Version : 0.0.0.477
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -189,13 +189,13 @@ let AT_CURSOR_POSITION = v:true
 
 " insert mode type ctrl + h then enter
 " header created first line of file
-imap <c-h> <Esc>mz:call SetPosition(!AT_CURSOR_POSITION)<cr><esc>'z
+"imap <c-h> <Esc>mz:call SetPosition(AT_CURSOR_POSITION)<cr><esc>'z
 
 " insert mode type ctrl + c then enter
 " header created where the cursor is
 imap <c-c> <Esc>mz:call SetPosition(AT_CURSOR_POSITION)<cr><esc>'z
 
-command MyHeadersFillFileAddHeaderTopFile  :call SetPosition()
+"command MyHeadersFillFileAddHeaderTopFile  :call SetPosition()
 command MyHeadersFillFileChangeEmail :call MyStartErrorMyHeadersFill_file("1")
 
 function! IncreaseVF1()
