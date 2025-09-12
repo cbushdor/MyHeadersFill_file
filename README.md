@@ -2,15 +2,16 @@
 * Created By : sdo
 * File Name : README.md
 * Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2025-09-13 01:30:12
+* Last Modified : 2025-09-13 01:45:30
 * Email Address : cbushdor013@laposte.net
-* Version : 0.0.0.166
+* Version : 0.0.0.170
 * License :
 *   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 *   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 * Purpose :
 *   It is README.md that introduce in brief how to use plugin!
 ------------------------------------------------------ -->
+
  ~/.vim/plugged/MyHeadersFill\_file/doc/MyHeadersFill\_file.txt.html      <!-- pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; } body { font-family: monospace; color: #ffffff; background-color: #000000; } \* { font-size: 1em; } a { color: inherit; } .Comment { color: #00ffff; } .Constant { color: #ff40ff; } .Special { color: #ffd7d7; } .Identifier { color: #00ffff; font-weight: bold; } .Statement { color: #ffff00; } .PreProc { color: #5fd7ff; } .Todo { color: #000000; background-color: #ffff00; padding-bottom: 1px; } -->
 
 MyHeadersFill\_file.txt Integrates headers in files accord to extensions
@@ -23,18 +24,25 @@ Changelog                                         MyHeadersFill\_file\_Changelog
           Creation Date : 2024-01-30 00:20:50
           Last Modified : 2025-09-13 00:36:52
           Email Address : sebastien.dorey013@laposte.net
-          Version : 0.0.0.248
+          Version : 0.0.0.252
 
 \==============================================================================
 CONTENTS                                                    MyHeadersFill\_file
 
   \* Introduction............. MyHeadersFill\_file\_Introduction
+
   \* How to Install Plugin.... MyHeadersFill\_file\_Install
+
   \* Mapping.................. MyHeadersFill\_file\_Mapping
+
   \* Caveats.................. MyHeadersFill\_file\_Caveats
+
   \* Contributing............. MyHeadersFill\_file\_Contributing
+
   \* Changelog................ MyHeadersFill\_file\_Changelog
+
   \* License.................. MyHeadersFill\_file\_License
+
   \* Credits.................. MyHeadersFill\_file\_Credits
 
 \==============================================================================
