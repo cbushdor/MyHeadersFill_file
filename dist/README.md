@@ -1,207 +1,316 @@
-<!-- ------------------------------------------------------
-* Created By : sdo
-* File Name : README.md
-* Creation Date : 2023-03-15 00:19:36
-* Last Modified : 2024-02-18 01:51:56
-* Email Address : cbushdor@laposte.net
-* Version : 0.0.0.165
-* License :
-*   Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
-*   Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
-* Purpose :
-*   It is README.md that introduce in brief how to use plugin!
------------------------------------------------------- -->
-
-[![License: CC BY-NC 3.0](https://img.shields.io/badge/License-CC_BY--NC_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/3.0/)
-
-# In brief
-This is another plugin[^2] for [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1]. It creates a header for a file according to file extension!
-
-
-# Technical requirements
-
-- [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor))[^1][^3] (text editor): Version 9.0.1050.
-- System [macOS](https://en.wikipedia.org/wiki/MacOS): Version 13.2.1 (22D68).
-- System [Fedora](https://getfedora.org/): Version 38beta (Should work on other linux [distros](https://en.wikipedia.org/wiki/List_of_Linux_distributions) too).
-- Scripts: [Markdown](https://en.wikipedia.org/wiki/Markdown), [Vim Script](https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script), [shell sh](https://en.wikipedia.org/wiki/Unix_shell).
-- Vim plugin: [Vim-plug](https://github.com/junegunn/vim-plug).
-
-[^1]: About [Vim](https://www.vim.org/about.php).
-[^2]: How to install [Vim plugin](https://linuxhandbook.com/install-vim-plugins/).
-[^3]: This code was based on [Vim documentation](https://vimdoc.sourceforge.net/).
-
->***Note***
->
-> Should be ok as long as Vim Script is supported by the editor (since version 8.0).
-
-# Instructions to install plugin
-We admit that Vim-plugin is already installed. If not so, go and install [Vim-plug](https://github.com/junegunn/vim-plug).
-
-We configure *~/.vimrc* below (~[^4][^5]):
-
-[^4]: The ~ is equivalatent to $HOME which represent the home directory.
-[^5]: $MYVIMRC is the path to to file configuration *~/.vimrc* in vim environment.
-
-```
-call plug#begin('~/.vim/plugged')
-Plug 'cbushdor/MyHeadersFill_file'
-call plug#end()
-```
-
-and plugin will be installed in *~/.vim/plugged* if everything is well configured. First, go in vim type *:PlugInstall* and look plugin is installing itself.
-
-Don't forget to add in the configuration file. To do so when you open for the first time a file a prompt will ask you to do that. Hence, the  next will be incerted in $MYVIMRC. 
-
-```
-let g:myEmail='my.email@my_email.net'
-```
-
-Now it is possible to change email.
-
-Follow these steps if you are in normal mode:
-
-      - type :MyHeadersFillFileChangeEmail
-
-
-# Fields and their use
-
-The header is created if file is new and, file type extension supported.
-
-If file already exists, but doesn't have any header, you can create one.
-
-Follow these steps if you are in insert mode:
-
-      - Type <ctrl-h> (Control-h) a header will show
-        up according to file type extension
-        of your file. It will be saved and cursor
-        will return to position before <ctrl-h>.
-
-        BUG:
-        The state mode not preserved and cursor set at begining of line 
-        column position not saved!
-
-
-Follow these steps if you are in normal mode:
-
-      - type :MyHeadersFillFileAddHeaderTopFile 
-        followed by carriage return.
-
-        BUG:
-        The state mode not preserved and cursor sdet at begining of line 
-        column position not saved!
-
-| Field name     | Use      | Update time |
-| :--- | :--- | :--- |
-| Created By | User name. | Created at file creation. Cannot be changed. |
-| File Name | File name. | At file creation. Cannot be changed except, if file name itself is changed. Updated automatically. |
-| Creation Date | Date when file is created. | At file creation.|
-| Last Modified | Date when file is Modified. | Updated when file is saved. |
-| Email Address | Email of the user. | Can be changed within ~/.vimrc. |
-| Version | This is the version number. | Only last field incremented when file is saved. |
-| License | Your choice. | Can be changed anytime! |
-| Purpose | Why this file was created. |  Can be changed anytime! |
-
-# The command line
-
-It is possible to insert where the cursor is a header. Follow the next line:
-> Enter Vim if not so. Go to the line where you want to insert header.
-> Go to insert mode (type *i*) then *Ctrl-h* (*Control key followed by h key at same time*) then return.
-
->***Note***
->
-> It is better to insert the header at the very top (after shebang i.e). 
-> It is working fine if the fields that are updated are in the top 20 first lines of the file!
-> It is not caveat!
-
-# Extensions
-
-Features by extension. A *ok* means implented.
-
-|      | pl      | pm  | xml | xsl | sh   | Makefile | html | htm | css | h   | c   | c++ | cpp | vimrc | t   | php | myconf | js  | raku | vim | cgi | p6  | pl6 | pm6 |
-| ---  | ---     | --- | --- | --- | ---  | ---      | ---  | --- | --- | --- | --- | --- | --- | ---   | --- | --- | ---    | --- | ---  | --- | --- | --- | --- | --- |
-| Created By | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| File Name  | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| Creation Date | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| Last Modified  | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| Email Address | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| Version  | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| License  | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| Purpose  | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-| Version variable   | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok | ok |
-
-
-## Configuration
-
-Some fields can be configured in a seperated file and loaded if file does not exists. This feature is not available if file already exists, either for the variable that contains version of script.
-
-For instance in the directory header we set a file called *license.txt* and is loaded.
-
-# Directories
-
-```
-% ls -R MyHeadersFill_file 
-README.md	headers/	vimrc/		plugin/		doc/
-
-MyHeadersFill_file/headers:
-vimrc_header.txt	cpp_header.txt		c++_header.txt		htm_header.txt		xml_header.txt		pl6_header.txt		license.txt
-t_header.txt		myconf_header.txt	css_header.txt		c_header.txt		html_header.txt		pm6_header.txt
-php_header.txt		sh_header.txt*		xsl_header.txt		h_header.txt		cgi_header.txt		pm_header.txt
-Makefile_header.txt	js_header.txt		raku_header.txt		vim_header.txt		p6_header.txt		pl_header.txt
-
-MyHeadersFill_file/vimrc:
-start_header_vimrc		update_version_header.sh*	update_version_header.sh.old*
-
-MyHeadersFill_file/plugin:
-MyHeadersFill_file.vim			MyHeadersFill_file_command_line.vim
-
-MyHeadersFill_file/doc:
-tags			introScene.cute.txt	MyHeadersFill_file.txt	cuteHelp.txt		typecorr.txt
-```
-
-## HEADERS
-Contains the templates of the headers for each file type.
-
-## PLUGIN
-Contains the file that is read by default.
-
-## VIMRC
-Contains the scripts that modified the headers.  
-
-# DEMO
-
-![output20523](https://user-images.githubusercontent.com/20154269/230741365-b08ab86d-16ce-44f6-8bd2-6fa09cb6bb43.gif)
-
-# OPTIONS
-
-We can define email in ~/.vimrc s.a:
-
-```
-let g:myEmail='my.email@my_email.net'
-```
-
-# License
-
-Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
-* 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
- 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
-
-# CAVEATS
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/.vim/plugged/MyHeadersFill_file/doc/MyHeadersFill_file_README.txt.html</title>
+<meta name="Generator" content="Vim/9.1">
+<meta name="plugin-version" content="vim9.0_v2">
+<meta name="syntax" content="none">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=none">
+<meta name="colorscheme" content="none">
+<style>
 <!--
-If several files are opened in the same vim, headers might not be updated properly when file are saved.
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+a { color: inherit; }
+a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-
-If a file is closed with *:x* command, fields are not updated properly.
-
-
-# TODO
-
-Help commands need to be re-written s.a :help MyHeadersFill_file.
-
-# Credits
-
-[Vim](https://www.vim.org/)
-
-# Contact
-
-Email Address : cbushdor@laposte.net
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+*<a id="MyHeadersFill_file.txt" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
+==============================================================================
+Changelog                                         *<a id="MyHeadersFill_file_Changelog" href="">MyHeadersFill_file_Changelog</a>*
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+          Created By : sdo
+          File Name : MyHeadersFill_file_README.txt
+          Creation Date : 2024-01-30 00:20:50
+          Last Modified : 2025-10-03 10:50:47
+          Email Address : cbushdor013@laposte.net
+          Version : 0.0.0.280
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+==============================================================================
+CONTENTS                                                    *<a id="MyHeadersFill_file" href="">MyHeadersFill_file</a>*
+  * Introduction............. |<a href="#MyHeadersFill_file_Introduction">MyHeadersFill_file_Introduction</a>|
+  * How to Install Plugin.... |<a href="#MyHeadersFill_file_Install">MyHeadersFill_file_Install</a>|
+  * Mapping.................. |<a href="#MyHeadersFill_file_Mapping">MyHeadersFill_file_Mapping</a>|
+  * Caveats.................. |<a href="#MyHeadersFill_file_Caveats">MyHeadersFill_file_Caveats</a>|
+  * Contributing............. |<a href="#MyHeadersFill_file_Contributing">MyHeadersFill_file_Contributing</a>|
+  * Changelog................ |<a href="#MyHeadersFill_file_Changelog">MyHeadersFill_file_Changelog</a>|
+  * License.................. |<a href="#MyHeadersFill_file_License">MyHeadersFill_file_License</a>|
+  * Credits.................. |<a href="#MyHeadersFill_file_Credits">MyHeadersFill_file_Credits</a>|
+==============================================================================
+Introduction                                   *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
+When a file is created with a specific extension (see list below under
+construction) this plugin creates an appropriate header. In ˜/.vimrc the
+<strong>:set nu</strong> option is defined (to remove <strong>:set nonu</strong>) to show line number.
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+    1 " ------------------------------------------------------
+    2 " Created By :
+    3 " File Name :
+    4 " Creation Date : 2024-01-29 09:35:31
+    5 " Last Modified :
+    6 " Email Address :
+    7 " Version :      0.0.0.0
+    8 " License:
+    9 " Purpose :
+   10 " ------------------------------------------------------
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+After saving <strong>:w</strong>&lt;ret&gt; you should have:
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+     1 " ------------------------------------------------------
+     2 " Created By : foo
+     3 " File Name : file.txt
+     4 " Creation Date : 2024-01-29 09:35:31
+     5 " Last Modified : 2024-01-29 09:36:14
+     6 " Email Address : my.email@my_email.net
+     7 " Version :  0.0.0.1
+     8 " Licence :
+     9 " ...  Attribution-NonCommercial 3.0 ...
+    10 " ...  <a href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</a> ...
+    11 " Purpose :
+    12 " ------------------------------------------------------
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+==============================================================================
+How to Install Plugin                               *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
+Technical requirements ~
+    * Vim (text editor): Version 9.0.1050.
+    * System macOS: Version 13.2.1 (22D68).
+    * System Fedora: Version 38beta (Should work on other linux distros too).
+    * Scripts: Markdown, Vim Script, shell sh.
+    * Vim plugin: Vim-plug.
+    Note
+      Should be alright, as long as Vim Script is supported by the editor
+      (since version 8.0).
+      You can use both ways to enlight text or have basic text like this:
+         Text enlighted        Basic text~
+         <strong>:syntax on</strong>            <strong>:syntax off</strong>
+         <strong>:set filetype=help</strong>    <strong>:set filetype=text</strong>
+         <strong>:syntax enable</strong>
+Notation use ~
+  &lt;C-key&gt;: Combination of Control key + another key.
+How to start ~
+  We admit that Vim-plugin is already installed. If not so, go to
+  <a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a> and follow instructions.
+  We configure ~/.vimrc below (~ means home directory same story for
+  the environment variable ${HOME}):
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+     call plug#begin('~/.vim/plugged')
+     Plug 'cbushdor/MyHeadersFill_file'
+     call plug#end()
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+  and plugin will be installed in ~/.vim/plugged if everything is well
+  configured. Then type <strong>:wq</strong> to save and, <strong>:source ~/.vimrc</strong> to relaunch.
+  Then, type <strong>:PlugInstall</strong> and, look if plugin is installing itself.
+  If, plugin already installed hence <strong>:PlugUpdate</strong>.
+  It shoulb be in ${HOME}/.vim/plugged/MyHeadersFill_file/. Later on,
+  we will refer to this path as &lt;my_home_plugin&gt;.
+  A prompt might ask not to forget to set in ˜/.vimrc the variable email:
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+     let g:myEmail='my.email@my_email.net'
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+  WATCHOUT OUT! After installing the plugin, when you open a file for
+  the first time (after plugin installed succesfully), a prompt may
+  ask to set an email and, may set it in the file ~/.vimrc
+  for you. Sometime we have $MYVIMRC that contains the path.
+  Check:
+               <strong>:!echo $MYVIMRC</strong>
+  This can be changed with the command <strong>:MyHeadersFillFileChangeEmail</strong>.
+  Just follow prompt instructions!
+  The final test is to create a text file in a specific directory s.a
+  ˜/Downloads:
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+      % cd ˜/Downloads
+      % vim file.txt
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+   you should have the following (if <strong>:set nu</strong> is set):
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+    1 " ------------------------------------------------------
+    2 " Created By :
+    3 " File Name :
+    4 " Creation Date : 2024-01-29 09:35:31
+    5 " Last Modified :
+    6 " Email Address :
+    7 " Version :      0.0.0.0
+    8 " License:
+    9 " Purpose :
+   10 " ------------------------------------------------------
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+  After saving <strong>:w</strong>&lt;ret&gt; you should have something similar!
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+    1 " ------------------------------------------------------
+    2 " Created By : foo
+    3 " File Name : file.txt
+    4 " Creation Date : 2024-01-29 09:35:31
+    5 " Last Modified : 2024-01-29 09:36:14
+    6 " Email Address : my.email@my_email.net
+    7 " Version :  0.0.0.1
+    8 " Licence :
+    9 " ...  Attribution-NonCommercial 3.0 ...
+   10 " ...  <a href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</a> ...
+   11 " Purpose :
+   12 " ------------------------------------------------------
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+MEANINGS OF FIELDS ~
+The header is created if file is new and, file type extension supported.
+If file already exists, but doesn't have any header, you can create one.
+Follow this:
+      - Go to first line by typing <strong>:1</strong> and then type <strong>i</strong> to be in
+        insert mode. This method should work wherever your cursor is
+        but, shebang line won't show up!
+      - Type &lt;C-c&gt; (Control-c) a header will show up at first line
+        in the current file with shebang according to file extension.
+        It will be saved after <strong>:w</strong>&lt;ret&gt;.
+      - According to some file type instead of header a script to
+        document file will show up as. These files are stored in
+        &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_doc_header.txt.
+        List of headers look for
+        &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
+!Field name    !Use                            !Update time
+---------------!-------------------------------!------------------------------
+!Created By    !User name.                     !At file creation.
+!File Name     !File name.                     !At file creation. Cannot be
+!              !                               !changed except, if file name
+!              !                               !itself is changed. Updated
+!              !                               !automatically.
+!--------------!-------------------------------!------------------------------
+!reation Date  !Date when file is created.     !At file creation.
+!--------------!-------------------------------!------------------------------
+!ast Modified  !Date when file is Modified.    !Updated when file is saved.
+!--------------!-------------------------------!------------------------------
+!mail Address  !Email of the user.             !Can be changed within read
+!              !                               ! !MyHeadersFill_file_Install!.
+!--------------!-------------------------------!------------------------------
+!Version       !This is the version number.    !Only last field incremented
+!              !                               !when file is saved.
+!--------------!-------------------------------!------------------------------
+!License       !Your choice.                   !Can be changed anytime!
+!--------------!-------------------------------!------------------------------
+!Purpose       !Why this file was created.     !Can be changed anytime!
+==============================================================================
+Mapping                                             *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
+Follow these steps if you are in normal mode:
+      - MyHeadersFillFileAddHeaderTopFile
+      - MyHeadersFillFileChangeEmail
+Follow these steps if you are in insert mode:
+      - Type &lt;C-h&gt; (Control-h) a header will be created
+        at first line of the file acording to file
+        extension.
+      - Type &lt;C-c&gt; (Control-c) a header will be created
+        where the cursor is in in the file. According to
+        file extension (if it is supported) the header will
+        contains shebang.
+        If file with extension already exists, but that
+        does not have header and, if cursor is at first
+        line in file, header will be added with proper
+        shebang.
+      - Type &lt;C-c&gt; on the line while in insert mode
+           145 I&lt;Last modification:&gt; 2025-09-10 20:35:37
+        and fild will be updated like this:
+           145 I&lt;Last modification:&gt; 2025-09-10 20:36:23
+      - Type &lt;C-c&gt; (Control-c) a header will be created
+        where the cursor is in in the file. In that case, if
+        file as an extension, might add documenttion tag.
+      - Header and documentation can be found in:
+        ${HOME}/.vim/plugged/MyHeadersFill_file/headers
+        &lt;script_name&gt;_header.txt: holds header
+        &lt;script_name&gt;_doc_header.txt: holds documentation
+==============================================================================
+LICENSE                                             *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
+Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
+Permission is granted to copy, distribute, and/or modify this document under
+the terms of the Creative Commons Attribution-NonCommercial 3.0 Unported
+License, which is available at <a href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</a>.
+==============================================================================
+Caveats                                             *<a id="MyHeadersFill_file_Caveats" href="">MyHeadersFill_file_Caveats</a>*
+- If a file is closed with :x command, fields are not updated properly.
+- If header does not exist in the file, when file is saved we have error
+messages that are printed.
+==============================================================================
+Contributing                                   *<a id="MyHeadersFill_file_Contributing" href="">MyHeadersFill_file_Contributing</a>*
+- GitHub:  <a href="https://github.com/cbushdor/MyHeadersFill_file">https://github.com/cbushdor/MyHeadersFill_file</a>
+- Vim&#0058; <a href="https://www.vim.org/">https://www.vim.org/</a>
+- System macOS: Version 13.2.1 (22D68).
+- System Fedora: Version 38beta (Should work on other linux distros too).
+==============================================================================
+Credits                                             *<a id="MyHeadersFill_file_Credits" href="">MyHeadersFill_file_Credits</a>*
+Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
+Automatically".
+vim&#0058;tw=78:ts=15:ft=help:norl:
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
