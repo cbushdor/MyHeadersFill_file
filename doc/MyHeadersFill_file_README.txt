@@ -7,9 +7,9 @@ Changelog                                         *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-03 10:50:47
+          Last Modified : 2025-10-08 21:57:45
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.280
+          Version : 0.0.0.301
 <
 
 ==============================================================================
@@ -26,6 +26,13 @@ CONTENTS                                                    *MyHeadersFill_file*
 
 ==============================================================================
 Introduction                                   *MyHeadersFill_file_Introduction*
+
+
+Set `man` with the following command (if you shell is zsh):
+
+Go to your file s.a  ${HOME}/.myzshrc and put this line in it:
+echo 'export
+MANPATH="${HOME}/.vim/plugged/MyHeadersFill_file/man:${MANPATH}";'>>~/.myzshrc
 
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the 
