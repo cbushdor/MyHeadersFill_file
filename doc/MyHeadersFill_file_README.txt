@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 00:36:07
+          Last Modified : 2025-10-10 00:40:41
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.337
+          Version : 0.0.0.340
 <
 
 ==============================================================================
@@ -170,8 +170,8 @@ Follow this:
         document file will show up as. These files are stored in
         <my_home_plugin>/headers/<file_extenstion>_doc_header.txt.
         List of headers look for
-        <my_home_plugin>/headers/<file_extenstion>_header.txt. 
->vim
+        <my_home_plugin>/headers/<file_extenstion>_header.txt.
+
 !Field name    !Use                            !Update time
 ---------------!-------------------------------!------------------------------
 !Created By    !User name.                     !At file creation.
@@ -193,8 +193,6 @@ Follow this:
 !License       !Your choice.                   !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
-<
-
 
 ==============================================================================
 Mapping                                           *MyHeadersFill_file_Mapping*
