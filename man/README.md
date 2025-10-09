@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 00:28:43
+          Last Modified : 2025-10-10 00:36:07
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.336
+          Version : 0.0.0.337
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -247,7 +247,12 @@ Follow this:
         document file will show up as. These files are stored in
         &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_doc_header.txt.
         List of headers look for
-        &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt. &gt;vim
+        &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 !Field name    !Use                            !Update time
 ---------------!-------------------------------!------------------------------
 !Created By    !User name.                     !At file creation.
