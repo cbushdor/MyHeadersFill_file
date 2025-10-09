@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 00:21:33
+          Last Modified : 2025-10-10 00:28:43
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.334
+          Version : 0.0.0.336
 <
 
 ==============================================================================
@@ -157,7 +157,6 @@ How to start
 <
    
 MEANINGS OF FIELDS
-   
 The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.
 Follow this:
@@ -171,8 +170,7 @@ Follow this:
         document file will show up as. These files are stored in
         <my_home_plugin>/headers/<file_extenstion>_doc_header.txt.
         List of headers look for
-        <my_home_plugin>/headers/<file_extenstion>_header.txt.
-
+        <my_home_plugin>/headers/<file_extenstion>_header.txt. >vim
 !Field name    !Use                            !Update time
 ---------------!-------------------------------!------------------------------
 !Created By    !User name.                     !At file creation.
@@ -194,6 +192,7 @@ Follow this:
 !License       !Your choice.                   !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
+<
 
 
 ==============================================================================
