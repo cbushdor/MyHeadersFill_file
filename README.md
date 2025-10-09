@@ -7,8 +7,8 @@
 <meta name="syntax" content="none">
 <meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=none">
 <meta name="colorscheme" content="none">
-<style>
 <!--
+<style>
 pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
 body { font-family: monospace; color: #ffffff; background-color: #000000; }
 * { font-size: 1em; }
@@ -17,8 +17,8 @@ a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
 </style>
+-->
 </head>
 <body>
 <pre id='vimCodeElement'>
@@ -35,7 +35,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Creation Date : 2024-01-30 00:20:50
           Last Modified : 2025-10-09 01:52:44
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.311
+          Version : 0.0.0.312
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
