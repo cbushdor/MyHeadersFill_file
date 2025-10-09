@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-09 23:03:05
+          Last Modified : 2025-10-09 23:43:09
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.324
+          Version : 0.0.0.325
 <
 
 ==============================================================================
@@ -77,10 +77,10 @@ Technical requirements ~
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
 
-    Note
-      Should be alright, as long as Vim Script is supported by the editor 
-      (since version 8.0). 
-      You can use both ways to enlight text or have basic text like this:
+ Note
+   Should be alright, as long as Vim Script is supported by the editor 
+   (since version 8.0). 
+   You can use both ways to enlight text or have basic text like this:
 
          Text enlighted        Basic text~
          `:syntax on`            `:syntax off`
