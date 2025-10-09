@@ -1,39 +1,40 @@
 *MyHeadersFill_file.txt* Integrates headers in files accord to extensions
 
 ==============================================================================
-Changelog                                         *MyHeadersFill_file_Changelog*
+Changelog                                       *MyHeadersFill_file_Changelog*
 
 >
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-09 01:52:44
+          Last Modified : 2025-10-09 23:03:05
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.311
+          Version : 0.0.0.324
 <
 
 ==============================================================================
-CONTENTS                                                    *MyHeadersFill_file*
+CONTENTS                                                  *MyHeadersFill_file*
 
-  * Introduction............. |MyHeadersFill_file_Introduction|
-  * How to Install Plugin.... |MyHeadersFill_file_Install|
-  * Mapping.................. |MyHeadersFill_file_Mapping|
-  * Caveats.................. |MyHeadersFill_file_Caveats|
-  * Contributing............. |MyHeadersFill_file_Contributing|
-  * Changelog................ |MyHeadersFill_file_Changelog|
-  * License.................. |MyHeadersFill_file_License|
-  * Credits.................. |MyHeadersFill_file_Credits|
+  * Introduction........................... |MyHeadersFill_file_Introduction|
+  * How to Install Plugin..................      |MyHeadersFill_file_Install|
+  * Mapping................................      |MyHeadersFill_file_Mapping|
+  * Caveats................................      |MyHeadersFill_file_Caveats|
+  * Contributing........................... |MyHeadersFill_file_Contributing|
+  * Changelog..............................    |MyHeadersFill_file_Changelog|
+  * License................................      |MyHeadersFill_file_License|
+  * Credits................................      |MyHeadersFill_file_Credits|
 
 ==============================================================================
-Introduction                                   *MyHeadersFill_file_Introduction*
+Introduction                                 *MyHeadersFill_file_Introduction*
 
 
 Set `man` with the following command (if you shell is zsh):
 
-Go to your terminal and copy and past the two following lines:
+Go to your terminal and copy and past the two following lines (% is prompt):
 >vim
-echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
-   >>~/.myzshrc; source ~/.myzshrc
+%echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+   >>~/.myzshrc ; source ~/.myzshrc
+%man MyHeadersFill_file_README
 <
 
 When a file is created with a specific extension (see list below under
@@ -67,7 +68,7 @@ After saving `:w`<ret> you should have:
     12 " ------------------------------------------------------
 <
 ==============================================================================
-How to Install Plugin                               *MyHeadersFill_file_Install*
+How to Install Plugin                             *MyHeadersFill_file_Install*
 
 Technical requirements ~
     * Vim (text editor): Version 9.0.1050.
@@ -195,7 +196,7 @@ Follow this:
 
 
 ==============================================================================
-Mapping                                             *MyHeadersFill_file_Mapping*
+Mapping                                           *MyHeadersFill_file_Mapping*
 
 Follow these steps if you are in normal mode:
 
@@ -234,7 +235,7 @@ Follow these steps if you are in insert mode:
 
 
 ==============================================================================
-LICENSE                                             *MyHeadersFill_file_License*
+LICENSE                                           *MyHeadersFill_file_License*
 
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 
@@ -243,14 +244,14 @@ the terms of the Creative Commons Attribution-NonCommercial 3.0 Unported
 License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 
 ==============================================================================
-Caveats                                             *MyHeadersFill_file_Caveats*
+Caveats                                           *MyHeadersFill_file_Caveats*
 
 - If a file is closed with :x command, fields are not updated properly.
 - If header does not exist in the file, when file is saved we have error
 messages that are printed.
 
 ==============================================================================
-Contributing                                   *MyHeadersFill_file_Contributing*
+Contributing                                 *MyHeadersFill_file_Contributing*
 
 - GitHub:  https://github.com/cbushdor/MyHeadersFill_file
 - Vim: https://www.vim.org/
@@ -259,7 +260,7 @@ Contributing                                   *MyHeadersFill_file_Contributing*
 
 
 ==============================================================================
-Credits                                             *MyHeadersFill_file_Credits*
+Credits                                           *MyHeadersFill_file_Credits*
 
 Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
 Automatically".

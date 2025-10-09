@@ -23,44 +23,45 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 <pre id='vimCodeElement'>
 *<a id="MyHeadersFill_file.txt" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
 ==============================================================================
-Changelog                                         *<a id="MyHeadersFill_file_Changelog" href="">MyHeadersFill_file_Changelog</a>*
+Changelog                                       *<a id="MyHeadersFill_file_Changelog" href="">MyHeadersFill_file_Changelog</a>*
 <!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
           Created By : sdo
-          File Name : MyHeadersFill_file_README.txt
+          File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-09 01:52:44
+          Last Modified : 2025-10-09 23:03:05
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.311
+          Version : 0.0.0.324
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
 ==============================================================================
-CONTENTS                                                    *<a id="MyHeadersFill_file" href="">MyHeadersFill_file</a>*
-  * Introduction............. |<a href="#MyHeadersFill_file_Introduction">MyHeadersFill_file_Introduction</a>|
-  * How to Install Plugin.... |<a href="#MyHeadersFill_file_Install">MyHeadersFill_file_Install</a>|
-  * Mapping.................. |<a href="#MyHeadersFill_file_Mapping">MyHeadersFill_file_Mapping</a>|
-  * Caveats.................. |<a href="#MyHeadersFill_file_Caveats">MyHeadersFill_file_Caveats</a>|
-  * Contributing............. |<a href="#MyHeadersFill_file_Contributing">MyHeadersFill_file_Contributing</a>|
-  * Changelog................ |<a href="#MyHeadersFill_file_Changelog">MyHeadersFill_file_Changelog</a>|
-  * License.................. |<a href="#MyHeadersFill_file_License">MyHeadersFill_file_License</a>|
-  * Credits.................. |<a href="#MyHeadersFill_file_Credits">MyHeadersFill_file_Credits</a>|
+CONTENTS                                                  *<a id="MyHeadersFill_file" href="">MyHeadersFill_file</a>*
+  * Introduction........................... |<a href="#MyHeadersFill_file_Introduction">MyHeadersFill_file_Introduction</a>|
+  * How to Install Plugin..................      |<a href="#MyHeadersFill_file_Install">MyHeadersFill_file_Install</a>|
+  * Mapping................................      |<a href="#MyHeadersFill_file_Mapping">MyHeadersFill_file_Mapping</a>|
+  * Caveats................................      |<a href="#MyHeadersFill_file_Caveats">MyHeadersFill_file_Caveats</a>|
+  * Contributing........................... |<a href="#MyHeadersFill_file_Contributing">MyHeadersFill_file_Contributing</a>|
+  * Changelog..............................    |<a href="#MyHeadersFill_file_Changelog">MyHeadersFill_file_Changelog</a>|
+  * License................................      |<a href="#MyHeadersFill_file_License">MyHeadersFill_file_License</a>|
+  * Credits................................      |<a href="#MyHeadersFill_file_Credits">MyHeadersFill_file_Credits</a>|
 ==============================================================================
-Introduction                                   *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
+Introduction                                 *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
 Set <strong>man</strong> with the following command (if you shell is zsh):
-Go to your terminal and copy and past the two following lines:
+Go to your terminal and copy and past the two following lines (% is prompt):
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
-   &gt;&gt;~/.myzshrc; source ~/.myzshrc
+%echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+   &gt;&gt;~/.myzshrc ; source ~/.myzshrc
+%man MyHeadersFill_file_README
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -113,7 +114,7 @@ a:hover { color: white; background-color: transparent; text-decoration: none; }
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
 ==============================================================================
-How to Install Plugin                               *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
+How to Install Plugin                             *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
 Technical requirements ~
     * Vim (text editor): Version 9.0.1050.
     * System macOS: Version 13.2.1 (22D68).
@@ -269,7 +270,7 @@ Follow this:
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
 ==============================================================================
-Mapping                                             *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
+Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
 Follow these steps if you are in normal mode:
       - MyHeadersFillFileAddHeaderTopFile
       - MyHeadersFillFileChangeEmail
@@ -297,24 +298,24 @@ Follow these steps if you are in insert mode:
         &lt;script_name&gt;_header.txt: holds header
         &lt;script_name&gt;_doc_header.txt: holds documentation
 ==============================================================================
-LICENSE                                             *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
+LICENSE                                           *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
 Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 Permission is granted to copy, distribute, and/or modify this document under
 the terms of the Creative Commons Attribution-NonCommercial 3.0 Unported
 License, which is available at <a href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</a>.
 ==============================================================================
-Caveats                                             *<a id="MyHeadersFill_file_Caveats" href="">MyHeadersFill_file_Caveats</a>*
+Caveats                                           *<a id="MyHeadersFill_file_Caveats" href="">MyHeadersFill_file_Caveats</a>*
 - If a file is closed with :x command, fields are not updated properly.
 - If header does not exist in the file, when file is saved we have error
 messages that are printed.
 ==============================================================================
-Contributing                                   *<a id="MyHeadersFill_file_Contributing" href="">MyHeadersFill_file_Contributing</a>*
+Contributing                                 *<a id="MyHeadersFill_file_Contributing" href="">MyHeadersFill_file_Contributing</a>*
 - GitHub:  <a href="https://github.com/cbushdor/MyHeadersFill_file">https://github.com/cbushdor/MyHeadersFill_file</a>
 - Vim&#0058; <a href="https://www.vim.org/">https://www.vim.org/</a>
 - System macOS: Version 13.2.1 (22D68).
 - System Fedora: Version 38beta (Should work on other linux distros too).
 ==============================================================================
-Credits                                             *<a id="MyHeadersFill_file_Credits" href="">MyHeadersFill_file_Credits</a>*
+Credits                                           *<a id="MyHeadersFill_file_Credits" href="">MyHeadersFill_file_Credits</a>*
 Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
 Automatically".
 vim&#0058;tw=78:ts=15:ft=help:norl:
