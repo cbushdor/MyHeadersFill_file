@@ -18,8 +18,9 @@ a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
-</style>-->
-</head>
+@@@@@
+</style>
+@@@@@</head>
 <body>
 <pre id='vimCodeElement'>
 *<a id="MyHeadersFill_file.txt" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
@@ -29,7 +30,7 @@ Changelog                                         *<a id="MyHeadersFill_file_Cha
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
@@ -40,7 +41,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
 ==============================================================================
 CONTENTS                                                    *<a id="MyHeadersFill_file" href="">MyHeadersFill_file</a>*
   * Introduction............. |<a href="#MyHeadersFill_file_Introduction">MyHeadersFill_file_Introduction</a>|
@@ -59,14 +60,14 @@ Go to your terminal and copy and past the two following lines:
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
 echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
    &gt;&gt;~/.myzshrc; source ~/.myzshrc
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the
 <strong>:set nu</strong> option is defined (to remove <strong>:set nonu</strong>) to show line number.
@@ -74,7 +75,7 @@ construction) this plugin creates an appropriate header. In ˜/.vimrc the
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
     1 " ------------------------------------------------------
     2 " Created By :
     3 " File Name :
@@ -89,13 +90,13 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
 After saving <strong>:w</strong>&lt;ret&gt; you should have:
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
      1 " ------------------------------------------------------
      2 " Created By : foo
      3 " File Name : file.txt
@@ -112,7 +113,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
 ==============================================================================
 How to Install Plugin                               *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
 Technical requirements ~
@@ -140,7 +141,7 @@ How to start ~
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
      call plug#begin('~/.vim/plugged')
      Plug 'cbushdor/MyHeadersFill_file'
      call plug#end()
@@ -148,7 +149,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
   and plugin will be installed in ~/.vim/plugged if everything is well
   configured. Then type <strong>:wq</strong> to save and, <strong>:source ~/.vimrc</strong> to relaunch.
   Then, type <strong>:PlugInstall</strong> and, look if plugin is installing itself.
@@ -160,13 +161,13 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
      let g:myEmail='my.email@my_email.net'
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
   WATCHOUT OUT! After installing the plugin, when you open a file for
   the first time (after plugin installed succesfully), a prompt may
   ask to set an email and, may set it in the file ~/.vimrc
@@ -181,20 +182,20 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
       % cd ˜/Downloads
       % vim file.txt
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
    you should have the following (if <strong>:set nu</strong> is set):
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
     1 " ------------------------------------------------------
     2 " Created By :
     3 " File Name :
@@ -209,13 +210,13 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
   After saving <strong>:w</strong>&lt;ret&gt; you should have something similar!
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
     1 " ------------------------------------------------------
     2 " Created By : foo
     3 " File Name : file.txt
@@ -232,7 +233,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
 MEANINGS OF FIELDS ~
 The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.
@@ -326,4 +327,4 @@ vim&#0058;tw=78:ts=15:ft=help:norl:
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
+@@@@@
