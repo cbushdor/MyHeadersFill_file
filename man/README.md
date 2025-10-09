@@ -7,6 +7,22 @@
 <meta name="syntax" content="none">
 <meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=none">
 <meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+a { color: inherit; }
+a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+*<a id="MyHeadersFill_file.txt" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
 ==============================================================================
 Changelog                                         *<a id="MyHeadersFill_file_Changelog" href="">MyHeadersFill_file_Changelog</a>*
 <!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
