@@ -34,9 +34,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-08 21:57:45
+          Last Modified : 2025-10-09 01:52:44
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.301
+          Version : 0.0.0.311
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -55,9 +55,19 @@ CONTENTS                                                    *<a id="MyHeadersFil
 ==============================================================================
 Introduction                                   *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
 Set <strong>man</strong> with the following command (if you shell is zsh):
-Go to your file s.a  ${HOME}/.myzshrc and put this line in it:
-echo 'export
-MANPATH="${HOME}/.vim/plugged/MyHeadersFill_file/man:${MANPATH}";'&gt;&gt;~/.myzshrc
+Go to your terminal and copy and past the two following lines:
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+   &gt;&gt;~/.myzshrc; source ~/.myzshrc
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the
 <strong>:set nu</strong> option is defined (to remove <strong>:set nonu</strong>) to show line number.
