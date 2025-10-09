@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>~/.vim/plugged/MyHeadersFill_file/doc/MyHeadersFill_file_README.txt.html</title>
 <meta name="Generator" content="Vim/9.1">
 <meta name="plugin-version" content="vim9.0_v2">
 <meta name="syntax" content="none">
