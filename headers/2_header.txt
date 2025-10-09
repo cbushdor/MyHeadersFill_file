@@ -1,0 +1,31 @@
+:insert
+./" ------------------------------------------------------
+./" Created By :
+./" File Name :
+./" Creation Date :
+./" Last Modified :
+./" Email Address :
+./" Version : 0.0.0.0
+./" License : 
+./" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
+./" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+./" Purpose :
+./" (man2) 2 - Unix and C system calls
+./" ------------------------------------------------------
+./" Man page for your_function
+.TH man 2 "10 September 2017" "1.0" "your_function man page"
+.SH NAME
+your_function - do....
+.SH SYNOPSIS
+your_function [optional argument] [optional argument]
+.SH DESCRIPTION
+your_function is a function which .....
+.SH OPTIONS
+your_function does not take any options
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+written by your_name (your_website or your_github or whatever)
+.SH REPORTING BUGS
+you_github_repository/issues for example
+
