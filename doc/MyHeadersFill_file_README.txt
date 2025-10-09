@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file_README.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-09 23:43:09
+          Last Modified : 2025-10-10 00:18:38
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.325
+          Version : 0.0.0.333
 <
 
 ==============================================================================
@@ -70,27 +70,27 @@ After saving `:w`<ret> you should have:
 ==============================================================================
 How to Install Plugin                             *MyHeadersFill_file_Install*
 
-Technical requirements ~
+Technical requirements
     * Vim (text editor): Version 9.0.1050.
     * System macOS: Version 13.2.1 (22D68).
     * System Fedora: Version 38beta (Should work on other linux distros too).
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
 
- Note
-   Should be alright, as long as Vim Script is supported by the editor 
-   (since version 8.0). 
-   You can use both ways to enlight text or have basic text like this:
+Note
+Should be alright, as long as Vim Script is supported by the editor 
+(since version 8.0). 
+You can use both ways to enlight text or have basic text like this:
 
-         Text enlighted        Basic text~
+         Text enlighted        Basic text
          `:syntax on`            `:syntax off`
          `:set filetype=help`    `:set filetype=text`
          `:syntax enable`
 
-Notation use ~
+Notation use
   <C-key>: Combination of Control key + another key.
 
-How to start ~
+How to start
   We admit that Vim-plugin is already installed. If not so, go to
   https://github.com/junegunn/vim-plug and follow instructions.
 
@@ -155,7 +155,8 @@ How to start ~
    11 " Purpose :
    12 " ------------------------------------------------------
 <
-MEANINGS OF FIELDS ~
+   
+MEANINGS OF FIELDS
 
 The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.

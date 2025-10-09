@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-09 23:43:09
+          Last Modified : 2025-10-10 00:18:38
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.325
+          Version : 0.0.0.333
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -115,23 +115,23 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 How to Install Plugin                             *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
-Technical requirements ~
+Technical requirements
     * Vim (text editor): Version 9.0.1050.
     * System macOS: Version 13.2.1 (22D68).
     * System Fedora: Version 38beta (Should work on other linux distros too).
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
- Note
-   Should be alright, as long as Vim Script is supported by the editor
-   (since version 8.0).
-   You can use both ways to enlight text or have basic text like this:
-         Text enlighted        Basic text~
+Note
+Should be alright, as long as Vim Script is supported by the editor
+(since version 8.0).
+You can use both ways to enlight text or have basic text like this:
+         Text enlighted        Basic text
          <strong>:syntax on</strong>            <strong>:syntax off</strong>
          <strong>:set filetype=help</strong>    <strong>:set filetype=text</strong>
          <strong>:syntax enable</strong>
-Notation use ~
+Notation use
   &lt;C-key&gt;: Combination of Control key + another key.
-How to start ~
+How to start
   We admit that Vim-plugin is already installed. If not so, go to
   <a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a> and follow instructions.
   We configure ~/.vimrc below (~ means home directory same story for
@@ -233,7 +233,7 @@ a:visited { color: white; background-color: transparent; text-decoration: none; 
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-MEANINGS OF FIELDS ~
+MEANINGS OF FIELDS
 The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.
 Follow this:
