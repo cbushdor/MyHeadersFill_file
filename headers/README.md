@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 04:50:04
+          Last Modified : 2025-10-10 04:55:48
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.374
+          Version : 0.0.0.376
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -253,30 +253,31 @@ a:visited { color: white; background-color: transparent; text-decoration: none; 
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
    !Field name    !Use                            !Update time
-   *<a id="" href=""></a>*****************************************************************************
+   *<a id="" href=""></a>**************************************************************************
    !Created By    !User name.                     !At file creation.
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
    !File Name     !File name.                     !At file creation. Cannot be
-   !              !                               !changed except, if file name
-   !              !                               !itself is changed. Updated
-   !              !                               !automatically.
-   !--------------!-------------------------------!------------------------------
+   !              !                               !changed except, if file
+   !              !                               !name itself is changed.
+   !              !                               !Updated automatically.
+   !--------------!-------------------------------!---------------------------
    !reation Date  !Date when file is created.     !At file creation.
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
    !ast Modified  !Date when file is Modified.    !Updated when file is saved.
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
    !mail Address  !Email of the user.             !Can be changed within read
-   !              !                               ! !MyHeadersFill_file_Install!.
-   !--------------!-------------------------------!------------------------------
+   !              !                               !!MyHeadersFill_file...
+   !              !                               !_Install!.
+   !--------------!-------------------------------!---------------------------
    !Version       !This is the version number.    !Only last field incremented
    !              !                               !when file is saved.
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
    !License       !Your choice.                   !Can be changed anytime!
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
    !Purpose       !Why this file was created.     !Can be changed anytime!
-   !--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!---------------------------
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
