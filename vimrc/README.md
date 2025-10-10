@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:04:04
+          Last Modified : 2025-10-10 05:06:31
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.380
+          Version : 0.0.0.382
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -340,8 +340,18 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 Credits                                           *<a id="MyHeadersFill_file_Credits" href="">MyHeadersFill_file_Credits</a>*
-Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
-Automatically".
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+   Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
+   Automatically".
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 vim&#0058;tw=78:ts=15:ft=help:norl:
 </pre>
 </body>
