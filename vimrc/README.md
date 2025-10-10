@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 04:24:06
+          Last Modified : 2025-10-10 04:29:41
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.360
+          Version : 0.0.0.361
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -248,6 +248,11 @@ Follow this:
      &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_doc_header.txt.
      List of headers look for
      &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 !--------------!-------------------------------!------------------------------
 !Field name    !Use                            !Update time
 *<a id="" href=""></a>*****************************************************************************
@@ -272,6 +277,11 @@ Follow this:
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
 Follow these steps if you are in normal mode:
