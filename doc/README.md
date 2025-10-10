@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:00:34
+          Last Modified : 2025-10-10 05:04:04
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.379
+          Version : 0.0.0.380
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -328,6 +328,16 @@ Contributing                                 *<a id="MyHeadersFill_file_Contribu
 - Vim&#0058; <a href="https://www.vim.org/">https://www.vim.org/</a>
 - System macOS: Version 13.2.1 (22D68).
 - System Fedora: Version 38beta (Should work on other linux distros too).
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 Credits                                           *<a id="MyHeadersFill_file_Credits" href="">MyHeadersFill_file_Credits</a>*
 Based on "Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
