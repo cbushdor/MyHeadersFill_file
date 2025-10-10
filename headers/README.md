@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 22:10:54
+          Last Modified : 2025-10-10 22:52:19
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.395
+          Version : 0.0.0.396
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -59,8 +59,13 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
  Set <strong>man</strong> with the following command (if you shell is zsh). Go to your
  terminal and copy and past the two following lines (% is prompt):
-    %echo 'export MANPATH="\
-$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";' &gt;&gt;~/.myzshrc ;
+    %echo \
+'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->&gt;~/.myzshrc ;
     %source ~/.myzshrc;man MyHeadersFill_file
  When a file is created with a specific extension (see list below under
  construction) this plugin creates an appropriate header. In ˜/.vimrc the
