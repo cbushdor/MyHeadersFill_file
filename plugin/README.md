@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:06:31
+          Last Modified : 2025-10-10 05:10:16
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.382
+          Version : 0.0.0.385
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -313,26 +313,47 @@ Follow these steps if you are in insert mode:
         &lt;script_name&gt;_doc_header.txt: holds documentation
 ==============================================================================
 LICENSE                                           *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
-Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
-Permission is granted to copy, distribute, and/or modify this document under
-the terms of the Creative Commons Attribution-NonCommercial 3.0 Unported
-License, which is available at <a href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</a>.
-==============================================================================
-Caveats                                           *<a id="MyHeadersFill_file_Caveats" href="">MyHeadersFill_file_Caveats</a>*
-- If a file is closed with :x command, fields are not updated properly.
-- If header does not exist in the file, when file is saved we have error
-messages that are printed.
-==============================================================================
-Contributing                                 *<a id="MyHeadersFill_file_Contributing" href="">MyHeadersFill_file_Contributing</a>*
-- GitHub:  <a href="https://github.com/cbushdor/MyHeadersFill_file">https://github.com/cbushdor/MyHeadersFill_file</a>
-- Vim&#0058; <a href="https://www.vim.org/">https://www.vim.org/</a>
-- System macOS: Version 13.2.1 (22D68).
-- System Fedora: Version 38beta (Should work on other linux distros too).
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
+   Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
+   Permission is granted to copy, distribute, and/or modify this document
+   under the terms of the Creative Commons Attribution-NonCommercial 3.0
+   Unported License, which is available at
+   <a href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</a>.
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+==============================================================================
+Caveats                                           *<a id="MyHeadersFill_file_Caveats" href="">MyHeadersFill_file_Caveats</a>*
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+   - If a file is closed with :x command, fields are not updated properly.
+   - If header does not exist in the file, when file is saved we have error
+   messages that are printed.
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+==============================================================================
+Contributing                                 *<a id="MyHeadersFill_file_Contributing" href="">MyHeadersFill_file_Contributing</a>*
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+   - GitHub:  <a href="https://github.com/cbushdor/MyHeadersFill_file">https://github.com/cbushdor/MyHeadersFill_file</a>
+   - Vim&#0058; <a href="https://www.vim.org/">https://www.vim.org/</a>
+   - System macOS: Version 13.2.1 (22D68).
+   - System Fedora: Version 38beta (Should work on other linux distros too).
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
