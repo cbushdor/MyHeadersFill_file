@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 03:51:48
+          Last Modified : 2025-10-10 04:03:35
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.356
+          Version : 0.0.0.358
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -250,7 +250,8 @@ Follow this:
      &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
 !--------------!-------------------------------!------------------------------
 !Field name    !Use                            !Update time
-!--------------!-------------------------------!------------------------------
+*<a id="" href=""></a>*****************************************************************************
+*<a id="" href=""></a>*****************************************************************************
 !Created By    !User name.                     !At file creation.
 !--------------!-------------------------------!------------------------------
 !File Name     !File name.                     !At file creation. Cannot be
