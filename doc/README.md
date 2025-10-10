@@ -34,7 +34,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Creation Date : 2024-01-30 00:20:50
           Last Modified : 2025-10-10 03:33:55
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.355
+          Version : 0.0.0.356
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -248,6 +248,7 @@ Follow this:
      &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_doc_header.txt.
      List of headers look for
      &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
+>
 !--------------!-------------------------------!------------------------------
 !Field name    !Use                            !Update time
 !--------------!-------------------------------!------------------------------
@@ -272,6 +273,7 @@ Follow this:
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
+<
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
 Follow these steps if you are in normal mode:
