@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 04:37:19
+          Last Modified : 2025-10-10 04:46:12
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.367
+          Version : 0.0.0.371
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -53,15 +53,15 @@ CONTENTS                                                  *<a id="MyHeadersFill_
 ==============================================================================
 Introduction                                 *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
 Set <strong>man</strong> with the following command (if you shell is zsh):
-Go to your terminal and copy and past the two following lines (% is prompt):
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+Go to your terminal and copy and past the two following lines (% is prompt): &gt;vim
+   % echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+      &gt;&gt;~/.myzshrc ; source ~/.myzshrc
+   % man MyHeadersFill_file_README
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-%echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
-   &gt;&gt;~/.myzshrc ; source ~/.myzshrc
-%man MyHeadersFill_file_README
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the
 <strong>:set nu</strong> option is defined (to remove <strong>:set nonu</strong>) to show line number.
@@ -248,30 +248,35 @@ a:visited { color: white; background-color: transparent; text-decoration: none; 
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-!--------------!-------------------------------!------------------------------
-!Field name    !Use                            !Update time
-*<a id="" href=""></a>*****************************************************************************
-!Created By    !User name.                     !At file creation.
-!--------------!-------------------------------!------------------------------
-!File Name     !File name.                     !At file creation. Cannot be
-!              !                               !changed except, if file name
-!              !                               !itself is changed. Updated
-!              !                               !automatically.
-!--------------!-------------------------------!------------------------------
-!reation Date  !Date when file is created.     !At file creation.
-!--------------!-------------------------------!------------------------------
-!ast Modified  !Date when file is Modified.    !Updated when file is saved.
-!--------------!-------------------------------!------------------------------
-!mail Address  !Email of the user.             !Can be changed within read
-!              !                               ! !MyHeadersFill_file_Install!.
-!--------------!-------------------------------!------------------------------
-!Version       !This is the version number.    !Only last field incremented
-!              !                               !when file is saved.
-!--------------!-------------------------------!------------------------------
-!License       !Your choice.                   !Can be changed anytime!
-!--------------!-------------------------------!------------------------------
-!Purpose       !Why this file was created.     !Can be changed anytime!
-!--------------!-------------------------------!------------------------------
+   !--------------!-------------------------------!------------------------------
+   !Field name    !Use                            !Update time
+   *<a id="" href=""></a>*****************************************************************************
+   !Created By    !User name.                     !At file creation.
+   !--------------!-------------------------------!------------------------------
+   !File Name     !File name.                     !At file creation. Cannot be
+   !              !                               !changed except, if file name
+   !              !                               !itself is changed. Updated
+   !              !                               !automatically.
+   !--------------!-------------------------------!------------------------------
+   !reation Date  !Date when file is created.     !At file creation.
+   !--------------!-------------------------------!------------------------------
+   !ast Modified  !Date when file is Modified.    !Updated when file is saved.
+   !--------------!-------------------------------!------------------------------
+   !mail Address  !Email of the user.             !Can be changed within read
+   !              !                               ! !MyHeadersFill_file_Install!.
+   !--------------!-------------------------------!------------------------------
+   !Version       !This is the version number.    !Only last field incremented
+   !              !                               !when file is saved.
+   !--------------!-------------------------------!------------------------------
+   !License       !Your choice.                   !Can be changed anytime!
+   !--------------!-------------------------------!------------------------------
+   !Purpose       !Why this file was created.     !Can be changed anytime!
+   !--------------!-------------------------------!------------------------------
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
 Follow these steps if you are in normal mode:

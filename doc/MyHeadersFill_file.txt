@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 04:37:19
+          Last Modified : 2025-10-10 04:46:12
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.367
+          Version : 0.0.0.371
 <
 
 ==============================================================================
@@ -29,13 +29,11 @@ Introduction                                 *MyHeadersFill_file_Introduction*
 
 Set `man` with the following command (if you shell is zsh):
 
-Go to your terminal and copy and past the two following lines (% is prompt):
-
->vim
-%echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
-   >>~/.myzshrc ; source ~/.myzshrc
-%man MyHeadersFill_file_README
-
+Go to your terminal and copy and past the two following lines (% is prompt): >vim
+   % echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+      >>~/.myzshrc ; source ~/.myzshrc
+   % man MyHeadersFill_file_README
+<
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the 
 `:set nu` option is defined (to remove `:set nonu`) to show line number.
@@ -172,31 +170,31 @@ Follow this:
      <my_home_plugin>/headers/<file_extenstion>_header.txt.
 
 >
-!--------------!-------------------------------!------------------------------
-!Field name    !Use                            !Update time
-******************************************************************************
-!Created By    !User name.                     !At file creation.
-!--------------!-------------------------------!------------------------------
-!File Name     !File name.                     !At file creation. Cannot be
-!              !                               !changed except, if file name
-!              !                               !itself is changed. Updated
-!              !                               !automatically.
-!--------------!-------------------------------!------------------------------
-!reation Date  !Date when file is created.     !At file creation.
-!--------------!-------------------------------!------------------------------
-!ast Modified  !Date when file is Modified.    !Updated when file is saved.
-!--------------!-------------------------------!------------------------------
-!mail Address  !Email of the user.             !Can be changed within read
-!              !                               ! !MyHeadersFill_file_Install!.
-!--------------!-------------------------------!------------------------------
-!Version       !This is the version number.    !Only last field incremented
-!              !                               !when file is saved.
-!--------------!-------------------------------!------------------------------
-!License       !Your choice.                   !Can be changed anytime!
-!--------------!-------------------------------!------------------------------
-!Purpose       !Why this file was created.     !Can be changed anytime!
-!--------------!-------------------------------!------------------------------
-    
+   !--------------!-------------------------------!------------------------------
+   !Field name    !Use                            !Update time
+   ******************************************************************************
+   !Created By    !User name.                     !At file creation.
+   !--------------!-------------------------------!------------------------------
+   !File Name     !File name.                     !At file creation. Cannot be
+   !              !                               !changed except, if file name
+   !              !                               !itself is changed. Updated
+   !              !                               !automatically.
+   !--------------!-------------------------------!------------------------------
+   !reation Date  !Date when file is created.     !At file creation.
+   !--------------!-------------------------------!------------------------------
+   !ast Modified  !Date when file is Modified.    !Updated when file is saved.
+   !--------------!-------------------------------!------------------------------
+   !mail Address  !Email of the user.             !Can be changed within read
+   !              !                               ! !MyHeadersFill_file_Install!.
+   !--------------!-------------------------------!------------------------------
+   !Version       !This is the version number.    !Only last field incremented
+   !              !                               !when file is saved.
+   !--------------!-------------------------------!------------------------------
+   !License       !Your choice.                   !Can be changed anytime!
+   !--------------!-------------------------------!------------------------------
+   !Purpose       !Why this file was created.     !Can be changed anytime!
+   !--------------!-------------------------------!------------------------------
+<    
 ==============================================================================
 Mapping                                           *MyHeadersFill_file_Mapping*
 
