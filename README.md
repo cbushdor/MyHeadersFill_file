@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:10:16
+          Last Modified : 2025-10-10 05:12:29
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.385
+          Version : 0.0.0.387
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -285,32 +285,42 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
-Follow these steps if you are in normal mode:
-      - MyHeadersFillFileAddHeaderTopFile
-      - MyHeadersFillFileChangeEmail
-Follow these steps if you are in insert mode:
-      - Type &lt;C-h&gt; (Control-h) a header will be created
-        at first line of the file acording to file
-        extension.
-      - Type &lt;C-c&gt; (Control-c) a header will be created
-        where the cursor is in in the file. According to
-        file extension (if it is supported) the header will
-        contains shebang.
-        If file with extension already exists, but that
-        does not have header and, if cursor is at first
-        line in file, header will be added with proper
-        shebang.
-      - Type &lt;C-c&gt; on the line while in insert mode
-           145 I&lt;Last modification:&gt; 2025-09-10 20:35:37
-        and fild will be updated like this:
-           145 I&lt;Last modification:&gt; 2025-09-10 20:36:23
-      - Type &lt;C-c&gt; (Control-c) a header will be created
-        where the cursor is in in the file. In that case, if
-        file as an extension, might add documenttion tag.
-      - Header and documentation can be found in:
-        ${HOME}/.vim/plugged/MyHeadersFill_file/headers
-        &lt;script_name&gt;_header.txt: holds header
-        &lt;script_name&gt;_doc_header.txt: holds documentation
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+   Follow these steps if you are in normal mode:
+         - MyHeadersFillFileAddHeaderTopFile
+         - MyHeadersFillFileChangeEmail
+   Follow these steps if you are in insert mode:
+         - Type &lt;C-h&gt; (Control-h) a header will be created
+           at first line of the file acording to file
+           extension.
+         - Type &lt;C-c&gt; (Control-c) a header will be created
+           where the cursor is in in the file. According to
+           file extension (if it is supported) the header will
+           contains shebang.
+           If file with extension already exists, but that
+           does not have header and, if cursor is at first
+           line in file, header will be added with proper
+           shebang.
+         - Type &lt;C-c&gt; on the line while in insert mode
+              145 I&lt;Last modification:&gt; 2025-09-10 20:35:37
+           and fild will be updated like this:
+              145 I&lt;Last modification:&gt; 2025-09-10 20:36:23
+         - Type &lt;C-c&gt; (Control-c) a header will be created
+           where the cursor is in in the file. In that case, if
+           file as an extension, might add documenttion tag.
+         - Header and documentation can be found in:
+           ${HOME}/.vim/plugged/MyHeadersFill_file/headers
+           &lt;script_name&gt;_header.txt: holds header
+           &lt;script_name&gt;_doc_header.txt: holds documentation
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 LICENSE                                           *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
