@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 03:29:05
+          Last Modified : 2025-10-10 03:30:54
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.350
+          Version : 0.0.0.352
 <
 
 ==============================================================================
@@ -171,6 +171,7 @@ Follow this:
      List of headers look for
      <my_home_plugin>/headers/<file_extenstion>_header.txt.
 
+>
 !Field name    !Use                            !Update time
 ---------------!-------------------------------!------------------------------
 !Created By    !User name.                     !At file creation.
@@ -192,7 +193,7 @@ Follow this:
 !License       !Your choice.                   !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
-
+<
 
 ==============================================================================
 Mapping                                           *MyHeadersFill_file_Mapping*
