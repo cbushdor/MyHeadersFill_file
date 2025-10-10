@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 04:55:48
+          Last Modified : 2025-10-10 05:00:34
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.376
+          Version : 0.0.0.379
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -59,9 +59,9 @@ a:visited { color: white; background-color: transparent; text-decoration: none; 
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-   % echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
+ %echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
       &gt;&gt;~/.myzshrc ; source ~/.myzshrc
-   % man MyHeadersFill_file_README
+ %man MyHeadersFill_file
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
