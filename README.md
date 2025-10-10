@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:25:11
+          Last Modified : 2025-10-10 22:01:03
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.392
+          Version : 0.0.0.394
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -52,23 +52,18 @@ CONTENTS                                                  *<a id="MyHeadersFill_
   * Credits................................      |<a href="#MyHeadersFill_file_Credits">MyHeadersFill_file_Credits</a>|
 ==============================================================================
 Introduction                                 *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
-Set <strong>man</strong> with the following command (if you shell is zsh):
-Go to your terminal and copy and past the two following lines (% is prompt):
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
- %echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
-      &gt;&gt;~/.myzshrc ; source ~/.myzshrc
- %man MyHeadersFill_file
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
-When a file is created with a specific extension (see list below under
-construction) this plugin creates an appropriate header. In ˜/.vimrc the
+ Set <strong>man</strong> with the following command (if you shell is zsh). Go to your
+ terminal and copy and past the two following lines (% is prompt):
+    %echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man\
+       :$MANPATH";' &gt;&gt;~/.myzshrc ; source ~/.myzshrc
+    %man MyHeadersFill_file
+ When a file is created with a specific extension (see list below under
+ construction) this plugin creates an appropriate header. In ˜/.vimrc the
 <strong>:set nu</strong> option is defined (to remove <strong>:set nonu</strong>) to show line number.
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
