@@ -21,7 +21,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 </head>
 <body>
 <pre id='vimCodeElement'>
-*<a id="MyHeadersFill_file.txt" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
+*<a id="README.md" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
 ==============================================================================
 Changelog                                       *<a id="MyHeadersFill_file_Changelog" href="">MyHeadersFill_file_Changelog</a>*
 <!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 00:40:41
+          Last Modified : 2025-10-10 04:24:06
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.340
+          Version : 0.0.0.360
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -237,20 +237,22 @@ MEANINGS OF FIELDS
 The header is created if file is new and, file type extension supported.
 If file already exists, but doesn't have any header, you can create one.
 Follow this:
-      - Go to first line by typing <strong>:1</strong> and then type <strong>i</strong> to be in
-        insert mode. This method should work wherever your cursor is
-        but, shebang line won't show up!
-      - Type &lt;C-c&gt; (Control-c) a header will show up at first line
-        in the current file with shebang according to file extension.
-        It will be saved after <strong>:w</strong>&lt;ret&gt;.
-      - According to some file type instead of header a script to
-        document file will show up as. These files are stored in
-        &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_doc_header.txt.
-        List of headers look for
-        &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
+   - Go to first line by typing <strong>:1</strong> and then type <strong>i</strong> to be in
+     insert mode. This method should work wherever your cursor is
+     but, shebang line won't show up!
+   - Type &lt;C-c&gt; (Control-c) a header will show up at first line
+     in the current file with shebang according to file extension.
+     It will be saved after <strong>:w</strong>&lt;ret&gt;.
+   - According to some file type instead of header a script to
+     document file will show up as. These files are stored in
+     &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_doc_header.txt.
+     List of headers look for
+     &lt;my_home_plugin&gt;/headers/&lt;file_extenstion&gt;_header.txt.
+!--------------!-------------------------------!------------------------------
 !Field name    !Use                            !Update time
----------------!-------------------------------!------------------------------
+*<a id="" href=""></a>*****************************************************************************
 !Created By    !User name.                     !At file creation.
+!--------------!-------------------------------!------------------------------
 !File Name     !File name.                     !At file creation. Cannot be
 !              !                               !changed except, if file name
 !              !                               !itself is changed. Updated
@@ -269,6 +271,7 @@ Follow this:
 !License       !Your choice.                   !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
+!--------------!-------------------------------!------------------------------
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
 Follow these steps if you are in normal mode:
