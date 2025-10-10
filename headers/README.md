@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 04:29:41
+          Last Modified : 2025-10-10 04:37:19
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.361
+          Version : 0.0.0.367
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -62,11 +62,6 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 %echo 'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
    &gt;&gt;~/.myzshrc ; source ~/.myzshrc
 %man MyHeadersFill_file_README
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the
 <strong>:set nu</strong> option is defined (to remove <strong>:set nonu</strong>) to show line number.
@@ -277,11 +272,6 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 !--------------!-------------------------------!------------------------------
 !Purpose       !Why this file was created.     !Can be changed anytime!
 !--------------!-------------------------------!------------------------------
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
 Follow these steps if you are in normal mode:
