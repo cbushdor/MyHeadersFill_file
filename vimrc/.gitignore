@@ -2,11 +2,11 @@
 *.old
 *.tar.gz
 *.tmp
+.*tmp
 *~
 .pause
 /.build
 /.tidyall.d
-/.*.swp
 /Build
 /Build.bat
 /MYMETA.yml
@@ -17,4 +17,3 @@
 /blib
 /cover_db
 .DS_Store
-
