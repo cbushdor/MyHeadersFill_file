@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:23:53
+          Last Modified : 2025-10-10 05:25:11
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.390
+          Version : 0.0.0.392
 <
 
 ==============================================================================
@@ -154,8 +154,8 @@ How to start
    12 " ------------------------------------------------------
 <
    
-MEANINGS OF FIELDS
 >
+ MEANINGS OF FIELDS
    The header is created if file is new and, file type extension supported.
    If file already exists, but doesn't have any header, you can create one.
    Follow this:

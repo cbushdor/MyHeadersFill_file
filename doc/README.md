@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:23:53
+          Last Modified : 2025-10-10 05:25:11
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.390
+          Version : 0.0.0.392
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -233,12 +233,12 @@ a:visited { color: white; background-color: transparent; text-decoration: none; 
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-MEANINGS OF FIELDS
 <!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
+ MEANINGS OF FIELDS
    The header is created if file is new and, file type extension supported.
    If file already exists, but doesn't have any header, you can create one.
    Follow this:
