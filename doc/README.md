@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:45:08
+          Last Modified : 2025-10-11 23:47:50
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.433
+          Version : 0.0.0.435
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -184,6 +184,16 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 How to start
   We admit that Vim-plugin is already installed. If not so, go to
   <a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a> and follow instructions.
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
   We configure ~/.vimrc below (~ means home directory same story for
   the environment variable ${HOME}):
      call plug#begin('~/.vim/plugged')
