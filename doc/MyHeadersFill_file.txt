@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:43:57
+          Last Modified : 2025-10-11 23:45:08
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.432
+          Version : 0.0.0.433
 <
 
 ==============================================================================
@@ -92,7 +92,8 @@ Note
 
 Notation use
   <C-key>: Combination of Control key + another key.
-
+<
+>
 How to start
   We admit that Vim-plugin is already installed. If not so, go to
   https://github.com/junegunn/vim-plug and follow instructions.
