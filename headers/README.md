@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:22:49
+          Last Modified : 2025-10-11 23:24:51
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.423
+          Version : 0.0.0.425
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -141,6 +141,16 @@ Technical requirements
     * System Fedora: Version 38beta (Should work on other linux distros too).
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 Note
   Should be alright, as long as Vim Script is supported by the editor
   (since version 8.0).
