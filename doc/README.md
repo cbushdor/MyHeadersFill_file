@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:27:52
+          Last Modified : 2025-10-11 23:41:17
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.427
+          Version : 0.0.0.431
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -62,13 +62,23 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 Introduction                                 *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
  Set <strong>man</strong> with the following command (if you shell is zsh). Go to your
- terminal and copy and past the two following lines (% is prompt):
+ terminal and copy and past these following lines (this is '%' the prompt):
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
     %echo \
  'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
     &gt;&gt;~/.myzshrc ;source ~/.myzshrc;man MyHeadersFill_file

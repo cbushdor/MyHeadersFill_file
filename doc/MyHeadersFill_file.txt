@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:27:52
+          Last Modified : 2025-10-11 23:41:17
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.427
+          Version : 0.0.0.431
 <
 
 ==============================================================================
@@ -28,10 +28,11 @@ CONTENTS                                                  *MyHeadersFill_file*
 
 ==============================================================================
 Introduction                                 *MyHeadersFill_file_Introduction*
->vim
+>
  Set `man` with the following command (if you shell is zsh). Go to your 
- terminal and copy and past the two following lines (% is prompt):
-
+ terminal and copy and past these following lines (this is '%' the prompt):
+<
+>vim
     %echo \
  'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
     >>~/.myzshrc ;source ~/.myzshrc;man MyHeadersFill_file
