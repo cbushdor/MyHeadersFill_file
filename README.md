@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:47:50
+          Last Modified : 2025-10-11 23:49:45
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.435
+          Version : 0.0.0.437
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -165,10 +165,30 @@ Note
   Should be alright, as long as Vim Script is supported by the editor
   (since version 8.0).
   You can use both ways to enlight text or have basic text like this:
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
          Text enlighted        Basic text
          <strong>:syntax on</strong>            <strong>:syntax off</strong>
          <strong>:set filetype=help</strong>    <strong>:set filetype=text</strong>
          <strong>:syntax enable</strong>
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 Notation use
   &lt;C-key&gt;: Combination of Control key + another key.
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}

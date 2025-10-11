@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:47:50
+          Last Modified : 2025-10-11 23:49:45
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.435
+          Version : 0.0.0.437
 <
 
 ==============================================================================
@@ -84,12 +84,15 @@ Note
   Should be alright, as long as Vim Script is supported by the editor 
   (since version 8.0). 
   You can use both ways to enlight text or have basic text like this:
-
+<
+>vim
          Text enlighted        Basic text
          `:syntax on`            `:syntax off`
          `:set filetype=help`    `:set filetype=text`
          `:syntax enable`
+<
 
+>
 Notation use
   <C-key>: Combination of Control key + another key.
 <
@@ -99,6 +102,7 @@ How to start
   We admit that Vim-plugin is already installed. If not so, go to
   https://github.com/junegunn/vim-plug and follow instructions.
 <
+
 >vim
   We configure ~/.vimrc below (~ means home directory same story for 
   the environment variable ${HOME}): 
