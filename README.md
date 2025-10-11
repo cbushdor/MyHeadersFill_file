@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:41:17
+          Last Modified : 2025-10-11 23:43:57
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.431
+          Version : 0.0.0.432
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -169,28 +169,8 @@ Note
          <strong>:syntax on</strong>            <strong>:syntax off</strong>
          <strong>:set filetype=help</strong>    <strong>:set filetype=text</strong>
          <strong>:syntax enable</strong>
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
-<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
 Notation use
   &lt;C-key&gt;: Combination of Control key + another key.
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
-<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
 How to start
   We admit that Vim-plugin is already installed. If not so, go to
   <a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a> and follow instructions.
