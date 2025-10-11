@@ -7,14 +7,15 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 22:59:36
+          Last Modified : 2025-10-11 22:14:15
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.401
+          Version : 0.0.0.418
 <
 
 ==============================================================================
 CONTENTS                                                  *MyHeadersFill_file*
 
+>
   * Introduction........................... |MyHeadersFill_file_Introduction|
   * How to Install Plugin..................      |MyHeadersFill_file_Install|
   * Mapping................................      |MyHeadersFill_file_Mapping|
@@ -23,14 +24,14 @@ CONTENTS                                                  *MyHeadersFill_file*
   * Changelog..............................    |MyHeadersFill_file_Changelog|
   * License................................      |MyHeadersFill_file_License|
   * Credits................................      |MyHeadersFill_file_Credits|
+<
 
 ==============================================================================
 Introduction                                 *MyHeadersFill_file_Introduction*
 >vim
  Set `man` with the following command (if you shell is zsh). Go to your 
  terminal and copy and past the two following lines (% is prompt):
-<
->vim
+
     %echo \
  'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
     >>~/.myzshrc ;source ~/.myzshrc;man MyHeadersFill_file
@@ -67,39 +68,39 @@ After saving `:w`<ret> you should have:
     12 " ------------------------------------------------------
 <
 ==============================================================================
-How to Install Plugin                             *MyHeadersFill_file_Install*
-
-Technical requirements
+How-to Install Plugin                             *MyHeadersFill_file_Install*
+>
+   Technical requirements
     * Vim (text editor): Version 9.0.1050.
     * System macOS: Version 13.2.1 (22D68).
     * System Fedora: Version 38beta (Should work on other linux distros too).
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
 
-Note
-Should be alright, as long as Vim Script is supported by the editor 
-(since version 8.0). 
-You can use both ways to enlight text or have basic text like this:
+   Note
+    Should be alright, as long as Vim Script is supported by the editor 
+    (since version 8.0). 
+    You can use both ways to enlight text or have basic text like this:
 
          Text enlighted        Basic text
          `:syntax on`            `:syntax off`
          `:set filetype=help`    `:set filetype=text`
          `:syntax enable`
 
-Notation use
+ Notation use
   <C-key>: Combination of Control key + another key.
 
-How to start
+ How to start
   We admit that Vim-plugin is already installed. If not so, go to
   https://github.com/junegunn/vim-plug and follow instructions.
 
   We configure ~/.vimrc below (~ means home directory same story for 
   the environment variable ${HOME}): 
->vim
+
      call plug#begin('~/.vim/plugged')
      Plug 'cbushdor/MyHeadersFill_file'
      call plug#end()
-<
+
   and plugin will be installed in ~/.vim/plugged if everything is well
   configured. Then type `:wq` to save and, `:source ~/.vimrc` to relaunch.
   Then, type `:PlugInstall` and, look if plugin is installing itself.
@@ -107,9 +108,9 @@ How to start
   It shoulb be in ${HOME}/.vim/plugged/MyHeadersFill_file/. Later on,
   we will refer to this path as <my_home_plugin>.
   A prompt might ask not to forget to set in ˜/.vimrc the variable email:
->vim
+
      let g:myEmail='my.email@my_email.net'
-<
+
   WATCHOUT OUT! After installing the plugin, when you open a file for 
   the first time (after plugin installed succesfully), a prompt may 
   ask to set an email and, may set it in the file ~/.vimrc 
@@ -122,7 +123,7 @@ How to start
 
   The final test is to create a text file in a specific directory s.a
   ˜/Downloads:
->
+>vim
       % cd ˜/Downloads
       % vim file.txt
 <

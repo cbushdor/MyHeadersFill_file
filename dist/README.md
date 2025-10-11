@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 22:59:36
+          Last Modified : 2025-10-11 22:14:15
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.401
+          Version : 0.0.0.418
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -42,6 +42,11 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 CONTENTS                                                  *<a id="MyHeadersFill_file" href="">MyHeadersFill_file</a>*
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
   * Introduction........................... |<a href="#MyHeadersFill_file_Introduction">MyHeadersFill_file_Introduction</a>|
   * How to Install Plugin..................      |<a href="#MyHeadersFill_file_Install">MyHeadersFill_file_Install</a>|
   * Mapping................................      |<a href="#MyHeadersFill_file_Mapping">MyHeadersFill_file_Mapping</a>|
@@ -50,6 +55,11 @@ CONTENTS                                                  *<a id="MyHeadersFill_
   * Changelog..............................    |<a href="#MyHeadersFill_file_Changelog">MyHeadersFill_file_Changelog</a>|
   * License................................      |<a href="#MyHeadersFill_file_License">MyHeadersFill_file_License</a>|
   * Credits................................      |<a href="#MyHeadersFill_file_Credits">MyHeadersFill_file_Credits</a>|
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 Introduction                                 *<a id="MyHeadersFill_file_Introduction" href="">MyHeadersFill_file_Introduction</a>*
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
@@ -59,16 +69,6 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
  Set <strong>man</strong> with the following command (if you shell is zsh). Go to your
  terminal and copy and past the two following lines (% is prompt):
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
     %echo \
  'export MANPATH="$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH";'\
     &gt;&gt;~/.myzshrc ;source ~/.myzshrc;man MyHeadersFill_file
@@ -129,41 +129,36 @@ a:hover { color: white; background-color: transparent; text-decoration: none; }
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
 ==============================================================================
-How to Install Plugin                             *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
-Technical requirements
+How-to Install Plugin                             *<a id="MyHeadersFill_file_Install" href="">MyHeadersFill_file_Install</a>*
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+   Technical requirements
     * Vim (text editor): Version 9.0.1050.
     * System macOS: Version 13.2.1 (22D68).
     * System Fedora: Version 38beta (Should work on other linux distros too).
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
-Note
-Should be alright, as long as Vim Script is supported by the editor
-(since version 8.0).
-You can use both ways to enlight text or have basic text like this:
+   Note
+    Should be alright, as long as Vim Script is supported by the editor
+    (since version 8.0).
+    You can use both ways to enlight text or have basic text like this:
          Text enlighted        Basic text
          <strong>:syntax on</strong>            <strong>:syntax off</strong>
          <strong>:set filetype=help</strong>    <strong>:set filetype=text</strong>
          <strong>:syntax enable</strong>
-Notation use
+ Notation use
   &lt;C-key&gt;: Combination of Control key + another key.
-How to start
+ How to start
   We admit that Vim-plugin is already installed. If not so, go to
   <a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a> and follow instructions.
   We configure ~/.vimrc below (~ means home directory same story for
   the environment variable ${HOME}):
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
      call plug#begin('~/.vim/plugged')
      Plug 'cbushdor/MyHeadersFill_file'
      call plug#end()
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
   and plugin will be installed in ~/.vim/plugged if everything is well
   configured. Then type <strong>:wq</strong> to save and, <strong>:source ~/.vimrc</strong> to relaunch.
   Then, type <strong>:PlugInstall</strong> and, look if plugin is installing itself.
@@ -171,17 +166,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
   It shoulb be in ${HOME}/.vim/plugged/MyHeadersFill_file/. Later on,
   we will refer to this path as &lt;my_home_plugin&gt;.
   A prompt might ask not to forget to set in ˜/.vimrc the variable email:
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
      let g:myEmail='my.email@my_email.net'
-<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
-a:visited { color: white; background-color: transparent; text-decoration: none; }
-a:hover { color: white; background-color: transparent; text-decoration: none; } 
-a:active { color: white; background-color: transparent; text-decoration: underline; }
--->
   WATCHOUT OUT! After installing the plugin, when you open a file for
   the first time (after plugin installed succesfully), a prompt may
   ask to set an email and, may set it in the file ~/.vimrc
@@ -192,7 +177,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
   Just follow prompt instructions!
   The final test is to create a text file in a specific directory s.a
   ˜/Downloads:
-<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
