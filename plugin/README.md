@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 22:31:36
+          Last Modified : 2025-10-12 22:33:50
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.443
+          Version : 0.0.0.444
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -159,7 +159,7 @@ Note
          <strong>:syntax on</strong>            <strong>:syntax off</strong>
          <strong>:set filetype=help</strong>    <strong>:set filetype=text</strong>
          <strong>:syntax enable</strong>
-Notation use'
+Notation use~
   &lt;C-key&gt;: Combination of Control key + another key.
 How to start
   We admit that Vim-plugin is already installed. If not so, go to
