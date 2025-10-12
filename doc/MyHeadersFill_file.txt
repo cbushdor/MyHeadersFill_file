@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 23:10:25
+          Last Modified : 2025-10-12 23:11:44
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.460
+          Version : 0.0.0.462
 <
 
 ==============================================================================
@@ -180,9 +180,8 @@ MEANINGS OF FIELDS
      <my_home_plugin>/headers/<file_extenstion>_doc_header.txt.
      List of headers look for
      <my_home_plugin>/headers/<file_extenstion>_header.txt.
-<
-   
->
+
+
    !--------------!-------------------------------!---------------------------
    !Field name    !Use                            !Update time
    ***************************************************************************
