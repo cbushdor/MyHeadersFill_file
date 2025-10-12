@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 22:51:47
+          Last Modified : 2025-10-12 22:55:20
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.449
+          Version : 0.0.0.451
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -204,16 +204,21 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 How to start
   We admit that Vim-plugin is already installed. If not so, go to
   <a href="https://github.com/junegunn/vim-plug">https://github.com/junegunn/vim-plug</a> and follow instructions.
+  We configure ~/.vimrc below (~ means home directory same story for
+  the environment variable ${HOME}):
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
-  We configure ~/.vimrc below (~ means home directory same story for
-  the environment variable ${HOME}):
      call plug#begin('~/.vim/plugged')
      Plug 'cbushdor/MyHeadersFill_file'
      call plug#end()
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
   and plugin will be installed in ~/.vim/plugged if everything is well
   configured. Then type <strong>:wq</strong> to save and, <strong>:source ~/.vimrc</strong> to relaunch.
   Then, type <strong>:PlugInstall</strong> and, look if plugin is installing itself.
@@ -221,7 +226,17 @@ a:active { color: white; background-color: transparent; text-decoration: underli
   It shoulb be in ${HOME}/.vim/plugged/MyHeadersFill_file/. Later on,
   we will refer to this path as &lt;my_home_plugin&gt;.
   A prompt might ask not to forget to set in ˜/.vimrc the variable email:
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
      let g:myEmail='my.email@my_email.net'
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
   WATCHOUT OUT! After installing the plugin, when you open a file for
   the first time (after plugin installed succesfully), a prompt may
   ask to set an email and, may set it in the file ~/.vimrc
