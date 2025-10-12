@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 22:55:20
+          Last Modified : 2025-10-12 22:58:09
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.451
+          Version : 0.0.0.453
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -242,16 +242,21 @@ a:active { color: white; background-color: transparent; text-decoration: underli
   ask to set an email and, may set it in the file ~/.vimrc
   for you. Sometime we have $MYVIMRC that contains the path.
   Check:
-               <strong>:!echo $MYVIMRC</strong>
-  This can be changed with the command <strong>:MyHeadersFillFileChangeEmail</strong>.
-  Just follow prompt instructions!
-  The final test is to create a text file in a specific directory s.a
-  ˜/Downloads:
+<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+     :!echo $MYVIMRC`
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
 -->
+  This can be changed with the command <strong>:MyHeadersFillFileChangeEmail</strong>.
+  Just follow prompt instructions!
+  The final test is to create a text file in a specific directory s.a
+  ˜/Downloads:
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
