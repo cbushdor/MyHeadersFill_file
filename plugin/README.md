@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 23:05:20
+          Last Modified : 2025-10-12 23:07:01
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.458
+          Version : 0.0.0.459
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -411,6 +411,11 @@ a:active { color: white; background-color: transparent; text-decoration: underli
            ${HOME}/.vim/plugged/MyHeadersFill_file/headers
            &lt;script_name&gt;_header.txt: holds header
            &lt;script_name&gt;_doc_header.txt: holds documentation
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 LICENSE                                           *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
 <!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
