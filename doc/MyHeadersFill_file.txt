@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 22:59:43
+          Last Modified : 2025-10-12 23:05:20
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.456
+          Version : 0.0.0.458
 <
 
 ==============================================================================
@@ -211,12 +211,13 @@ MEANINGS OF FIELDS
 <    
 ==============================================================================
 Mapping                                           *MyHeadersFill_file_Mapping*
->vim
    Follow these steps if you are in normal mode:
 
          - MyHeadersFillFileAddHeaderTopFile
          - MyHeadersFillFileChangeEmail
-
+>
+               
+<
    Follow these steps if you are in insert mode:
 
          - Type <C-h> (Control-h) a header will be created
@@ -246,7 +247,7 @@ Mapping                                           *MyHeadersFill_file_Mapping*
            ${HOME}/.vim/plugged/MyHeadersFill_file/headers
            <script_name>_header.txt: holds header
            <script_name>_doc_header.txt: holds documentation
-<
+
 
 ==============================================================================
 LICENSE                                           *MyHeadersFill_file_License*
