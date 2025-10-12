@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 23:12:56
+          Last Modified : 2025-10-12 23:16:20
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.463
+          Version : 0.0.0.464
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
@@ -380,6 +380,16 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 Mapping                                           *<a id="MyHeadersFill_file_Mapping" href="">MyHeadersFill_file_Mapping</a>*
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
    Follow these steps if you are in normal mode:
          - MyHeadersFillFileAddHeaderTopFile
          - MyHeadersFillFileChangeEmail
@@ -416,9 +426,19 @@ a:active { color: white; background-color: transparent; text-decoration: underli
            ${HOME}/.vim/plugged/MyHeadersFill_file/headers
            &lt;script_name&gt;_header.txt: holds header
            &lt;script_name&gt;_doc_header.txt: holds documentation
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
+<!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
+a:visited { color: white; background-color: transparent; text-decoration: none; }
+a:hover { color: white; background-color: transparent; text-decoration: none; } 
+a:active { color: white; background-color: transparent; text-decoration: underline; }
+-->
 ==============================================================================
 LICENSE                                           *<a id="MyHeadersFill_file_License" href="">MyHeadersFill_file_License</a>*
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
@@ -435,7 +455,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 Caveats                                           *<a id="MyHeadersFill_file_Caveats" href="">MyHeadersFill_file_Caveats</a>*
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
@@ -450,7 +470,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 -->
 ==============================================================================
 Contributing                                 *<a id="MyHeadersFill_file_Contributing" href="">MyHeadersFill_file_Contributing</a>*
-<!--&gt;vima:link { color: white; background-color: transparent; text-decoration: none;}
+<!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
 a:active { color: white; background-color: transparent; text-decoration: underline; }
