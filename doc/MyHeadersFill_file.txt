@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 23:07:01
+          Last Modified : 2025-10-12 23:10:25
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.459
+          Version : 0.0.0.460
 <
 
 ==============================================================================
@@ -181,7 +181,7 @@ MEANINGS OF FIELDS
      List of headers look for
      <my_home_plugin>/headers/<file_extenstion>_header.txt.
 <
-
+   
 >
    !--------------!-------------------------------!---------------------------
    !Field name    !Use                            !Update time
@@ -208,7 +208,9 @@ MEANINGS OF FIELDS
    !--------------!-------------------------------!---------------------------
    !Purpose       !Why this file was created.     !Can be changed anytime!
    !--------------!-------------------------------!---------------------------
-<    
+ >
+
+ <   
 ==============================================================================
 Mapping                                           *MyHeadersFill_file_Mapping*
    Follow these steps if you are in normal mode:
@@ -247,7 +249,7 @@ Mapping                                           *MyHeadersFill_file_Mapping*
            ${HOME}/.vim/plugged/MyHeadersFill_file/headers
            <script_name>_header.txt: holds header
            <script_name>_doc_header.txt: holds documentation
-<
+
 
 ==============================================================================
 LICENSE                                           *MyHeadersFill_file_License*
