@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-11 23:49:45
+          Last Modified : 2025-10-12 22:25:35
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.437
+          Version : 0.0.0.440
 <
 
 ==============================================================================
@@ -77,14 +77,12 @@ Technical requirements
     * System Fedora: Version 38beta (Should work on other linux distros too).
     * Scripts: Markdown, Vim Script, shell sh.
     * Vim plugin: Vim-plug.
-<
 
->
 Note
   Should be alright, as long as Vim Script is supported by the editor 
   (since version 8.0). 
   You can use both ways to enlight text or have basic text like this:
-<
+
 >vim
          Text enlighted        Basic text
          `:syntax on`            `:syntax off`
@@ -93,7 +91,7 @@ Note
 <
 
 >
-Notation use
+Notation use'
   <C-key>: Combination of Control key + another key.
 <
 
