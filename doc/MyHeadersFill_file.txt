@@ -1,4 +1,4 @@
-*MyHeadersFill_file.txt* Integrates headers in files accord to extensions
+*MyHeadersFill_file.txt* Integrates headers in files according to extensions!
 
 ==============================================================================
 Changelog                                       *MyHeadersFill_file_Changelog*
@@ -7,9 +7,9 @@ Changelog                                       *MyHeadersFill_file_Changelog*
           Created By : sdo
           File Name : MyHeadersFill_file.txt
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 23:50:52
+          Last Modified : 2025-10-13 02:06:39
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.467
+          Version : 0.0.0.468
 <
 
 ==============================================================================

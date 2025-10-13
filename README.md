@@ -21,7 +21,7 @@ a:active { color: white; background-color: transparent; text-decoration: underli
 </head>
 <body>
 <pre id='vimCodeElement'>
-*<a id="README.md" href="">MyHeadersFill_file.txt</a>* Integrates headers in files accord to extensions
+*<a id="README.md" href="">MyHeadersFill_file.txt</a>* Integrates headers in files according to extensions!
 ==============================================================================
 Changelog                                       *<a id="MyHeadersFill_file_Changelog" href="">MyHeadersFill_file_Changelog</a>*
 <!--&gt;a:link { color: white; background-color: transparent; text-decoration: none;}
@@ -32,9 +32,9 @@ a:active { color: white; background-color: transparent; text-decoration: underli
           Created By : sdo
           File Name : README.md
           Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-12 23:50:52
+          Last Modified : 2025-10-13 02:06:39
           Email Address : cbushdor013@laposte.net
-          Version : 0.0.0.467
+          Version : 0.0.0.468
 <!--&lt;a:link { color: white; background-color: transparent; text-decoration: none;}
 a:visited { color: white; background-color: transparent; text-decoration: none; }
 a:hover { color: white; background-color: transparent; text-decoration: none; } 
