@@ -1,30 +1,30 @@
 .IP
 .EX
- Integrates headers in files accord to extensions
+Integrates headers in files accord to extensions
 
 ==============================================================================
 Changelog                                       
 
 
-          Created By : sdo
-          File Name : MyHeadersFill_file.txt
-          Creation Date : 2024-01-30 00:20:50
-          Last Modified : 2025-10-10 05:25:11
-          Email Address : cbushdor013\[at]laposte.net
-          Version : 0.0.0.392
+Created By : sdo
+File Name : MyHeadersFill_file.1
+Creation Date : 2024-01-30 00:20:50
+Last Modified : 2025-10-13 02:23:51
+Email Address : cbushdor013\[at]laposte.net
+Version : 0.0.0.393
 
 
 ==============================================================================
 CONTENTS                                                  
 
-  * Introduction 
-  * How to Install Plugin      
-  * Mapping      
-  * Caveats      
-  * Contributing 
-  * Changelog    
-  * License      
-  * Credits      
+* Introduction 
+* How to Install Plugin      
+* Mapping      
+* Caveats      
+* Contributing 
+* Changelog    
+* License      
+* Credits      
 
 ==============================================================================
 Introduction                                 
@@ -33,248 +33,248 @@ Set "man" with the following command (if you shell is zsh):
 
 Go to your terminal and copy and past the two following lines (% is prompt):
 
- %echo \[aq]export MANPATH=\[dq]$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH\[dq];\[aq]\[rs]
-      >>\[ti]/.myzshrc ; source \[ti]/.myzshrc
- %man MyHeadersFill_file
+%echo \[aq]export MANPATH=\[dq]$HOME/.vim/plugged/MyHeadersFill_file/man:$MANPATH\[dq];\[aq]\[rs]
+>>\[ti]/.myzshrc ; source \[ti]/.myzshrc
+%man MyHeadersFill_file
 
 When a file is created with a specific extension (see list below under
 construction) this plugin creates an appropriate header. In ˜/.vimrc the
 ":set nu" option is defined (to remove ":set nonu") to show line number.
 
-    1 \[dq] ------------------------------------------------------
-    2 \[dq] Created By :
-    3 \[dq] File Name :
-    4 \[dq] Creation Date : 2024-01-29 09:35:31
-    5 \[dq] Last Modified :
-    6 \[dq] Email Address :
-    7 \[dq] Version :      0.0.0.0
-    8 \[dq] License:
-    9 \[dq] Purpose :
-   10 \[dq] ------------------------------------------------------
+1 \[dq] ------------------------------------------------------
+2 \[dq] Created By :
+3 \[dq] File Name :
+4 \[dq] Creation Date : 2024-01-29 09:35:31
+5 \[dq] Last Modified :
+6 \[dq] Email Address :
+7 \[dq] Version :      0.0.0.0
+8 \[dq] License:
+9 \[dq] Purpose :
+10 \[dq] ------------------------------------------------------
 
 After saving ":w"<ret> you should have:
 
-     1 \[dq] ------------------------------------------------------
-     2 \[dq] Created By : foo
-     3 \[dq] File Name : file.txt
-     4 \[dq] Creation Date : 2024-01-29 09:35:31
-     5 \[dq] Last Modified : 2024-01-29 09:36:14
-     6 \[dq] Email Address : my.email\[at]my_email.net
-     7 \[dq] Version :  0.0.0.1
-     8 \[dq] Licence :
-     9 \[dq] ...  Attribution-NonCommercial 3.0 ...
-    10 \[dq] ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
-    11 \[dq] Purpose :
-    12 \[dq] ------------------------------------------------------
+1 \[dq] ------------------------------------------------------
+2 \[dq] Created By : foo
+3 \[dq] File Name : file.txt
+4 \[dq] Creation Date : 2024-01-29 09:35:31
+5 \[dq] Last Modified : 2024-01-29 09:36:14
+6 \[dq] Email Address : my.email\[at]my_email.net
+7 \[dq] Version :  0.0.0.1
+8 \[dq] Licence :
+9 \[dq] ...  Attribution-NonCommercial 3.0 ...
+10 \[dq] ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
+11 \[dq] Purpose :
+12 \[dq] ------------------------------------------------------
 
 ==============================================================================
 How to Install Plugin                             
 
 Technical requirements
-    * Vim (text editor): Version 90.1050.
-    * System macOS: Version 132.1 (22D68).
-    * System Fedora: Version 38beta (Should work on other linux distros too)
-    * Scripts: Markdown, Vim Script, shell sh
-    * Vim plugin: Vim-plug
+* Vim (text editor): Version 90.1050.
+* System macOS: Version 132.1 (22D68).
+* System Fedora: Version 38beta (Should work on other linux distros too)
+* Scripts: Markdown, Vim Script, shell sh
+* Vim plugin: Vim-plug
 
 Note
 Should be alright, as long as Vim Script is supported by the editor
 (since version 8.0).
 You can use both ways to enlight text or have basic text like this:
 
-         Text enlighted        Basic text
-         ":syntax on"            ":syntax off"
-         ":set filetype=help"    ":set filetype=text"
-         ":syntax enable"
+Text enlighted        Basic text
+":syntax on"            ":syntax off"
+":set filetype=help"    ":set filetype=text"
+":syntax enable"
 
 Notation use
-  <C-key>: Combination of Control key + another key.
+<C-key>: Combination of Control key + another key.
 
 How to start
-  We admit that Vim-plugin is already installed. If not so, go to
-  https://github.com/junegunn/vim-plug and follow instructions.
+We admit that Vim-plugin is already installed. If not so, go to
+https://github.com/junegunn/vim-plug and follow instructions.
 
-  We configure \[ti]/.vimrc below (\[ti] means home directory same story for
-  the environment variable ${HOME}):
+We configure \[ti]/.vimrc below (\[ti] means home directory same story for
+the environment variable ${HOME}):
 
-     call plug#begin(\[aq]\[ti]/.vim/plugged\[aq])
-     Plug \[aq]cbushdor/MyHeadersFill_file\[aq]
-     call plug#end()
+call plug#begin(\[aq]\[ti]/.vim/plugged\[aq])
+Plug \[aq]cbushdor/MyHeadersFill_file\[aq]
+call plug#end()
 
-  and plugin will be installed in \[ti]/.vim/plugged if everything is well
-  configured. Then type ":wq" to save and, \[ga]:source \[ti]/.vimrc\[ga] to relaunch.
-  Then, type ":PlugInstall" and, look if plugin is installing itself.
-  If, plugin already installed hence ":PlugUpdate".
-  It shoulb be in ${HOME}/.vim/plugged/MyHeadersFill_file/. Later on,
-  we will refer to this path as <my_home_plugin>.
-  A prompt might ask not to forget to set in ˜/.vimrc the variable email:
+and plugin will be installed in \[ti]/.vim/plugged if everything is well
+configured. Then type ":wq" to save and, \[ga]:source \[ti]/.vimrc\[ga] to relaunch.
+Then, type ":PlugInstall" and, look if plugin is installing itself.
+If, plugin already installed hence ":PlugUpdate".
+It shoulb be in ${HOME}/.vim/plugged/MyHeadersFill_file/. Later on,
+we will refer to this path as <my_home_plugin>.
+A prompt might ask not to forget to set in ˜/.vimrc the variable email:
 
-     let g:myEmail=\[aq]my.email\[at]my_email.net\[aq]
+let g:myEmail=\[aq]my.email\[at]my_email.net\[aq]
 
-  WATCHOUT OUT! After installing the plugin, when you open a file for
-  the first time (after plugin installed succesfully), a prompt may
-  ask to set an email and, may set it in the file \[ti]/.vimrc
-  for you. Sometime we have $MYVIMRC that contains the path.
-  Check:
-               ":!echo $MYVIMRC"
+WATCHOUT OUT! After installing the plugin, when you open a file for
+the first time (after plugin installed succesfully), a prompt may
+ask to set an email and, may set it in the file \[ti]/.vimrc
+for you. Sometime we have $MYVIMRC that contains the path.
+Check:
+":!echo $MYVIMRC"
 
-  This can be changed with the command ":MyHeadersFillFileChangeEmail".
-  Just follow prompt instructions!
+This can be changed with the command ":MyHeadersFillFileChangeEmail".
+Just follow prompt instructions!
 
-  The final test is to create a text file in a specific directory s.a
-  ˜/Downloads:
+The final test is to create a text file in a specific directory s.a
+˜/Downloads:
 
-      % cd ˜/Downloads
-      % vim file.txt
+% cd ˜/Downloads
+% vim file.txt
 
-   you should have the following (if ":set nu" is set):
+you should have the following (if ":set nu" is set):
 
-    1 \[dq] ------------------------------------------------------
-    2 \[dq] Created By :
-    3 \[dq] File Name :
-    4 \[dq] Creation Date : 2024-01-29 09:35:31
-    5 \[dq] Last Modified :
-    6 \[dq] Email Address :
-    7 \[dq] Version :      0.0.0.0
-    8 \[dq] License:
-    9 \[dq] Purpose :
-   10 \[dq] ------------------------------------------------------
+1 \[dq] ------------------------------------------------------
+2 \[dq] Created By :
+3 \[dq] File Name :
+4 \[dq] Creation Date : 2024-01-29 09:35:31
+5 \[dq] Last Modified :
+6 \[dq] Email Address :
+7 \[dq] Version :      0.0.0.0
+8 \[dq] License:
+9 \[dq] Purpose :
+10 \[dq] ------------------------------------------------------
 
-  After saving ":w"<ret> you should have something similar!
+After saving ":w"<ret> you should have something similar!
 
-    1 \[dq] ------------------------------------------------------
-    2 \[dq] Created By : foo
-    3 \[dq] File Name : file.txt
-    4 \[dq] Creation Date : 2024-01-29 09:35:31
-    5 \[dq] Last Modified : 2024-01-29 09:36:14
-    6 \[dq] Email Address : my.email\[at]my_email.net
-    7 \[dq] Version :  0.0.0.1
-    8 \[dq] Licence :
-    9 \[dq] ...  Attribution-NonCommercial 3.0 ...
-   10 \[dq] ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
-   11 \[dq] Purpose :
-   12 \[dq] ------------------------------------------------------
-
-
-
- MEANINGS OF FIELDS
-   The header is created if file is new and, file type extension supported.
-   If file already exists, but doesn\[aq]t have any header, you can create one.
-   Follow this:
-   - Go to first line by typing \[ga]:1" and then type "i\[ga] to be in
-     insert mode. This method should work wherever your cursor is
-     but, shebang line won\[aq]t show up!
-   - Type <C-c> (Control-c) a header will show up at first line
-     in the current file with shebang according to file extension.
-     It will be saved after ":w"<ret>.
-   - According to some file type instead of header a script to
-     document file will show up as. These files are stored in
-     <my_home_plugin>/headers/<file_extenstion>_doc_header.txt.
-     List of headers look for
-     <my_home_plugin>/headers/<file_extenstion>_header.txt.
+1 \[dq] ------------------------------------------------------
+2 \[dq] Created By : foo
+3 \[dq] File Name : file.txt
+4 \[dq] Creation Date : 2024-01-29 09:35:31
+5 \[dq] Last Modified : 2024-01-29 09:36:14
+6 \[dq] Email Address : my.email\[at]my_email.net
+7 \[dq] Version :  0.0.0.1
+8 \[dq] Licence :
+9 \[dq] ...  Attribution-NonCommercial 3.0 ...
+10 \[dq] ...  http://creativecommons.org/licenses/by-nc/3.0/ ...
+11 \[dq] Purpose :
+12 \[dq] ------------------------------------------------------
 
 
 
-   !--------------!-------------------------------!---------------------------
-   !Field name    !Use                            !Update time
-   
-   !Created By    !User name.                     !At file creation.
-   !--------------!-------------------------------!---------------------------
-   !File Name     !File name.                     !At file creation. Cannot be
-   !              !                               !changed except, if file
-   !              !                               !name itself is changed.
-   !              !                               !Updated automatically.
-   !--------------!-------------------------------!---------------------------
-   !reation Date  !Date when file is created.     !At file creation.
-   !--------------!-------------------------------!---------------------------
-   !ast Modified  !Date when file is Modified.    !Updated when file is saved.
-   !--------------!-------------------------------!---------------------------
-   !mail Address  !Email of the user.             !Can be changed within read
-   !              !                               !!MyHeadersFill_file...
-   !              !                               !_Install!.
-   !--------------!-------------------------------!---------------------------
-   !Version       !This is the version number.    !Only last field incremented
-   !              !                               !when file is saved.
-   !--------------!-------------------------------!---------------------------
-   !License       !Your choice.                   !Can be changed anytime!
-   !--------------!-------------------------------!---------------------------
-   !Purpose       !Why this file was created.     !Can be changed anytime!
-   !--------------!-------------------------------!---------------------------
+MEANINGS OF FIELDS
+The header is created if file is new and, file type extension supported.
+If file already exists, but doesn\[aq]t have any header, you can create one.
+Follow this:
+- Go to first line by typing \[ga]:1" and then type "i\[ga] to be in
+insert mode. This method should work wherever your cursor is
+but, shebang line won\[aq]t show up!
+- Type <C-c> (Control-c) a header will show up at first line
+in the current file with shebang according to file extension.
+It will be saved after ":w"<ret>.
+- According to some file type instead of header a script to
+document file will show up as. These files are stored in
+<my_home_plugin>/headers/<file_extenstion>_doc_header.txt.
+List of headers look for
+<my_home_plugin>/headers/<file_extenstion>_header.txt.
+
+
+
+!--------------!-------------------------------!---------------------------
+!Field name    !Use                            !Update time
+
+!Created By    !User name.                     !At file creation.
+!--------------!-------------------------------!---------------------------
+!File Name     !File name.                     !At file creation. Cannot be
+!              !                               !changed except, if file
+!              !                               !name itself is changed.
+!              !                               !Updated automatically.
+!--------------!-------------------------------!---------------------------
+!reation Date  !Date when file is created.     !At file creation.
+!--------------!-------------------------------!---------------------------
+!ast Modified  !Date when file is Modified.    !Updated when file is saved.
+!--------------!-------------------------------!---------------------------
+!mail Address  !Email of the user.             !Can be changed within read
+!              !                               !!MyHeadersFill_file...
+!              !                               !_Install!.
+!--------------!-------------------------------!---------------------------
+!Version       !This is the version number.    !Only last field incremented
+!              !                               !when file is saved.
+!--------------!-------------------------------!---------------------------
+!License       !Your choice.                   !Can be changed anytime!
+!--------------!-------------------------------!---------------------------
+!Purpose       !Why this file was created.     !Can be changed anytime!
+!--------------!-------------------------------!---------------------------
 
 ==============================================================================
 Mapping                                           
 
-   Follow these steps if you are in normal mode:
+Follow these steps if you are in normal mode:
 
-         - MyHeadersFillFileAddHeaderTopFile
-         - MyHeadersFillFileChangeEmail
+- MyHeadersFillFileAddHeaderTopFile
+- MyHeadersFillFileChangeEmail
 
-   Follow these steps if you are in insert mode:
+Follow these steps if you are in insert mode:
 
-         - Type <C-h> (Control-h) a header will be created
-           at first line of the file acording to file
-           extension.
+- Type <C-h> (Control-h) a header will be created
+at first line of the file acording to file
+extension.
 
-         - Type <C-c> (Control-c) a header will be created
-           where the cursor is in in the file. According to
-           file extension (if it is supported) the header will
-           contains shebang.
-           If file with extension already exists, but that
-           does not have header and, if cursor is at first
-           line in file, header will be added with proper
-           shebang.
+- Type <C-c> (Control-c) a header will be created
+where the cursor is in in the file. According to
+file extension (if it is supported) the header will
+contains shebang.
+If file with extension already exists, but that
+does not have header and, if cursor is at first
+line in file, header will be added with proper
+shebang.
 
-         - Type <C-c> on the line while in insert mode
-              145 I<Last modification:> 2025-09-10 20:35:37
+- Type <C-c> on the line while in insert mode
+145 I<Last modification:> 2025-09-10 20:35:37
 
-           and fild will be updated like this:
-              145 I<Last modification:> 2025-09-10 20:36:23
+and fild will be updated like this:
+145 I<Last modification:> 2025-09-10 20:36:23
 
 
-         - Type <C-c> (Control-c) a header will be created
-           where the cursor is in in the file. In that case, if
-           file as an extension, might add documenttion tag.
-         - Header and documentation can be found in:
-           ${HOME}/.vim/plugged/MyHeadersFill_file/headers
-           <script_name>_header.txt: holds header
-           <script_name>_doc_header.txt: holds documentation
+- Type <C-c> (Control-c) a header will be created
+where the cursor is in in the file. In that case, if
+file as an extension, might add documenttion tag.
+- Header and documentation can be found in:
+${HOME}/.vim/plugged/MyHeadersFill_file/headers
+<script_name>_header.txt: holds header
+<script_name>_doc_header.txt: holds documentation
 
 
 ==============================================================================
 LICENSE                                           
 
-   Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
+Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
 
-   Permission is granted to copy, distribute, and/or modify this document
-   under the terms of the Creative Commons Attribution-NonCommercial 3.0
-   Unported License, which is available at
-   http://creativecommons.org/licenses/by-nc/3.0/.
+Permission is granted to copy, distribute, and/or modify this document
+under the terms of the Creative Commons Attribution-NonCommercial 3.0
+Unported License, which is available at
+http://creativecommons.org/licenses/by-nc/3.0/.
 
 
 ==============================================================================
 Caveats                                           
 
 
-   - If a file is closed with :x command, fields are not updated properly.
-   - If header does not exist in the file, when file is saved we have error
-   messages that are printed.
+- If a file is closed with :x command, fields are not updated properly.
+- If header does not exist in the file, when file is saved we have error
+messages that are printed.
 
 
 ==============================================================================
 Contributing                                 
 
 
-   - GitHub:  https://github.com/cbushdor/MyHeadersFill_file
-   - Vim: https://www.vim.org/
-   - System macOS: Version 13.2.1 (22D68).
-   - System Fedora: Version 38beta (Should work on other linux distros too).
+- GitHub:  https://github.com/cbushdor/MyHeadersFill_file
+- Vim: https://www.vim.org/
+- System macOS: Version 13.2.1 (22D68).
+- System Fedora: Version 38beta (Should work on other linux distros too).
 
 
 ==============================================================================
 Credits                                           
 
-   Based on \[dq]Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
-   Automatically\[dq].
+Based on \[dq]Vi and Vim Autocommand: 3 Steps to Add Custom Header To Your File
+Automatically\[dq].
 
 
 vim:tw=78:ts=15:ft=help:norl:
