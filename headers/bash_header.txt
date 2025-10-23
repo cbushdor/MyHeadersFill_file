@@ -2,12 +2,12 @@
 #!/usr/bin/env bash
 
 # ----------------------------------------------------------------------
-# Created By : sdo
-# File Name : bash_header.txt
+# Created By :
+# File Name :
 # Creation Date :
-# Last Modified : 2025-01-05 13:10:47
-# Email Address : cbushdor@laposte.net
-# Version : 0.0.0.2
+# Last Modified : 
+# Email Address :
+# Version : 
 # License : 
 # 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 # 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
