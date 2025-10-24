@@ -1,18 +1,18 @@
 :insert
-./" ------------------------------------------------------
-./" Created By :
-./" File Name :
-./" Creation Date :
-./" Last Modified :
-./" Email Address :
-./" Version : 0.0.0.0
-./" License : 
-./" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
-./" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
-./" Purpose :
-./" (man5) 5 - File formats and conventions for files used by Unix
-./" ------------------------------------------------------
-./" Man page for your_function
+.\" ------------------------------------------------------
+.\" Created By :
+.\" File Name :
+.\" Creation Date :
+.\" Last Modified :
+.\" Email Address :
+.\" Version : 0.0.0.0
+.\" License : 
+.\" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
+.\" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+.\" Purpose :
+.\" (man5) 5 - File formats and conventions for files used by Unix
+.\" ------------------------------------------------------
+.\" Man page for your_function
 .TH man 5 "10 September 2017" "1.0" "your_function man page"
 .SH NAME
 your_function - do....
@@ -28,4 +28,4 @@ No known bugs.
 written by your_name (your_website or your_github or whatever)
 .SH REPORTING BUGS
 you_github_repository/issues for example
-
+.

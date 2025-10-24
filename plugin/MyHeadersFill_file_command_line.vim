@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-09-12 23:55:24
-" Email Address : sebastien.dorey013@laposte.net
-" Version : 0.0.0.477
+" Last Modified : 2025-10-24 03:31:01
+" Email Address : cbushdor013@laposte.net
+" Version : 0.0.0.547
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -24,10 +24,11 @@ endif
 
 :function TestCur(l,str)
 : let res=match(a:l,a:str)
+: echo "TestCur("..a:l..","..a:str..")=====>"..res
 : return res==0
 :endfunction
 
-:function Meow(li)
+:function MeowPe(li)" Update date field when on it for perl files only (.pl,.pm)
    normal! mA
    :call setline(line('.'),substitute(a:li,'\(I<Last modification:>\).*','\1 '..strftime("%F %T",getftime(expand("%:t"))),"g"))
    :+1
@@ -35,27 +36,47 @@ endif
    'A
 :endfunction
 
+:function MeowMan(li) " Update date field when on it for man files only
+   normal! mA
+   :call setline(line('.'),substitute(a:li,'\(.TH[^\"]\{0,\}\"\)[^\"]\{0,\}\(".*\)','\1'..strftime("%F %T",getftime(expand("%:t")))..'\2',"g"))
+   :+1
+   :d
+   'A
+:endfunction
+
+
 function! FileHeading()
    let curLi=getline(line('.')+1)
 
-   ":echo "*****>"..curLi
+   :echo "======>"..curLi
    if TestCur(curLi,'I<Last modification:>')
-   "   :echo "*****>"..curLi
-      :call Meow(curLi)
+      :echo "*****>"..curLi
+      :call MeowPe(curLi) " When on line update line
+   elseif TestCur(curLi,'.TH')
+      :echo "xxxxxx>"..curLi
+      :call MeowMan(curLi) " When on line update line (.TH)
    else
       let s:line=line(".") " We get the cursor position
       let pos=line(".") " We get the cursor position
       let $w=expand('%:e') " We check extension
 
-      "echo "extension ---->".$w."<----"
+      echo "extension ---->"..$w.."<----"
       let nu=1 " Num to 1
       "let fname='azeazea'
 
       if $w=="" " If no extension we work on extension
          let fname=g:path_headers.expand('%:e')."vimrc_header.txt" " We take path to go to vimrc_header.txt
       else
-         if $w=="pm" || $w=="pl" 
+         if $w=="pm" || $w=="pl"  " file extension for perl s.a .pl or .pm
             " echo "GREETINGS in ["..bufname("%")..":"..pos.."] at ext "..$w
+            if pos==1
+               " echo "first line "..$w.." at pos "..pos
+               let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
+            else
+               " echo "not first line "..$w.." at pos "..pos
+               let fname=g:path_headers.expand('%:e')."_doc_header.txt" " We take path and file extension and _header.txt
+            endif
+         elseif match($w,"^[1-8]$") == 0 || match($w,"^nro$") == 0  " We check file extension if man s.a .[1-7] or nro (for nroff or n run off)
             if pos==1
                " echo "first line "..$w.." at pos "..pos
                let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
@@ -68,20 +89,26 @@ function! FileHeading()
             let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
          endif
       endif
-      " echo "Working on file:"..fname
-      " echo getpos(".")
-      " exit 0
+       " echo "Working on file:"..fname.." file extension:"..$w
+       " echo getpos(".")
+       "exit 0
       let is_doc=0
+      let lroff='^.\\' " For roff troff groff
       for line in reverse(readfile(fname,''))
-         "echo "append to line #"..s:line.."-------> this string:"..line
+         " echo "append to line #"..s:line.."-------> this string:"..line
          if match(line,"^:insert$") == 0
          elseif match(line,"^ \{0,1}$") == 0
+         elseif match(line,"^.$") == 0
          elseif match(line,"Creation Date :") >=0
             call append(s:line,line . strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
          elseif match(line,"^=") >= 0 && is_doc==0
             let is_doc=1
             "call append(s:line,line)
          elseif match(line,"------------------------------------------------------") >= 0 
+            call append(s:line,line)
+         elseif match(line,lroff) >= 0   " For roff troff groff
+            call append(s:line,line)
+         elseif match(line,"^\.[^\.]") >= 0  " For roff troff groff
             call append(s:line,line)
          " nu+=1
          elseif match(line,"^#!") == 0  " Check if we have shebang
