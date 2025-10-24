@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-24 03:31:01
+" Last Modified : 2025-10-24 08:20:39
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.547
+" Version : 0.0.0.549
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -108,7 +108,7 @@ function! FileHeading()
             call append(s:line,line)
          elseif match(line,lroff) >= 0   " For roff troff groff
             call append(s:line,line)
-         elseif match(line,"^\.[^\.]") >= 0  " For roff troff groff
+         elseif match(line,"^\.[^\.]") >= 0 && pos != 1  " For roff troff groff
             call append(s:line,line)
          " nu+=1
          elseif match(line,"^#!") == 0  " Check if we have shebang
