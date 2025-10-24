@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-24 08:20:39
+" Last Modified : 2025-10-25 01:10:56
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.549
+" Version : 0.0.0.573
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -21,7 +21,6 @@ else
     finish
 endif
 
-
 :function TestCur(l,str)
 : let res=match(a:l,a:str)
 : echo "TestCur("..a:l..","..a:str..")=====>"..res
@@ -36,10 +35,25 @@ endif
    'A
 :endfunction
 
+:function GetsNumVers()
+   :1
+   /Version
+   :let l:l=getline(".")
+   :let l:f=matchstr(l:l,"[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}")
+   :echo l:f
+   "echo "::::::>"..l:f.."<::::"
+   :return l:f
+:endfunction
+
 :function MeowMan(li) " Update date field when on it for man files only
    normal! mA
    :call setline(line('.'),substitute(a:li,'\(.TH[^\"]\{0,\}\"\)[^\"]\{0,\}\(".*\)','\1'..strftime("%F %T",getftime(expand("%:t")))..'\2',"g"))
    :+1
+   :d
+   'A
+   normal! mA
+   :call setline(line('.'),substitute(a:li,'\(.TH[^\"]\{0,\}\"[^\"]\{0,\}\"[^\"]\{0,\}\"\)[^\"]\{0,\}','\1'..GetsNumVers()..'\2',"g"))
+   :-1
    :d
    'A
 :endfunction
@@ -48,19 +62,19 @@ endif
 function! FileHeading()
    let curLi=getline(line('.')+1)
 
-   :echo "======>"..curLi
+   ":echo "======>"..curLi
    if TestCur(curLi,'I<Last modification:>')
-      :echo "*****>"..curLi
+      ":echo "*****>"..curLi
       :call MeowPe(curLi) " When on line update line
    elseif TestCur(curLi,'.TH')
-      :echo "xxxxxx>"..curLi
+      ":echo "xxxxxx>"..curLi
       :call MeowMan(curLi) " When on line update line (.TH)
    else
       let s:line=line(".") " We get the cursor position
       let pos=line(".") " We get the cursor position
       let $w=expand('%:e') " We check extension
 
-      echo "extension ---->"..$w.."<----"
+      "echo "extension ---->"..$w.."<----"
       let nu=1 " Num to 1
       "let fname='azeazea'
 

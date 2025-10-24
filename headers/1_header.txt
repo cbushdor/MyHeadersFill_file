@@ -5,7 +5,7 @@
 .\" Creation Date :
 .\" Last Modified : 2025-10-24 03:12:11
 .\" Email Address : cbushdor013@laposte.net
-.\" Version :
+.\" Version : 0.0.0.0
 .\" License : 
 .\" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 .\" 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
