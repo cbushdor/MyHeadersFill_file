@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-25 02:12:05
+" Last Modified : 2025-10-25 23:56:42
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.575
+" Version : 0.0.0.582
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -23,7 +23,7 @@ endif
 
 :function TestCur(l,str)
 : let res=match(a:l,a:str)
-: echo "TestCur("..a:l..","..a:str..")=====>"..res
+": echo "TestCur("..a:l..","..a:str..")=====>"..res
 : return res==0
 :endfunction
 
@@ -67,7 +67,7 @@ function! FileHeading()
       ":echo "*****>"..curLi
       :call MeowPe(curLi) " When on line update line
    elseif TestCur(curLi,'.TH')
-      ":echo "xxxxxx>"..curLi
+      :!echo "xxxxxx>"..curLi
       :call MeowMan(curLi) " When on line update line (.TH)
    else
       let s:line=line(".") " We get the cursor position

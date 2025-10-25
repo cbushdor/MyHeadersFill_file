@@ -2,25 +2,14 @@
 " Created By : sdo
 " File Name : start_header_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2025-10-25 23:01:02
+" Last Modified : 2025-10-26 01:01:16
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.148
+" Version : 0.0.0.153
 " Licence : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
-
-":function GetsNumVers()
-"   :1
-"   /Version
-"   :let l:l=getline(".")
-"   :let l:f=matchstr(l:l,"[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}")
-"   :echo l:f
-"   :!echo "::::::>"..l:f.."<::::"
-"   :return l:f
-":endfunction
-
 
 " ----------------------------------------------------------------------------------------
 augroup updateVersionNumberPL
@@ -38,10 +27,10 @@ augroup updateVersionNumberPL
 	autocmd BufWritePre,FileWritePre $TR_SOURCE silent! exe "1," . 12 . "g/Created By :.*/s/Created By :.*/Created By : " .$USER
 	autocmd BufWritePre,FileWritePre $TR_SOURCE silent! exe "1," . 11 . "g/File Name :.*/s/File Name :.*/File Name : " .expand('%:t')
 	autocmd BufWritePre,FileWritePre $TR_SOURCE silent! exe "1," . 12 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%F %T")
-	autocmd BufWritePre,FileWritePre $TR_SOURCE silent! exe "1,$g/^.TH/s/\\(.TH[^\"]*\"\\)[^\"]*\\(\"\\)/\\1" .strftime("%F %T").."\\2"
 	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! exe "1," . 12 . "g/Email Address :.*/s/Email Address :.*/Email Address : ".g:myEmail
 	autocmd bufwritepost,filewritepost $TR_SOURCE silent! execute "normal `a" 
-	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! :call GetsNumVers()
 	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! :call UpdatesReleaseNumber()
+	autocmd BufWritePre,FileWritePre $TR_SOURCE silent! exe "1,$g/^.TH/s/\\(.TH[^\"]*\"\\)[^\"]*\\(\"\\)/\\1" .strftime("%F %T").."\\2"
+	autocmd BufWritePre,FileWritePre $TR_SOURCE silent! exe "1,$g/^.TH/s/\\(.TH[^\"]*\"[^\"]*\"[^\"]*\"\\)[^\"]*\\(\"\\)/\\1" ..GetsNumVers().."\\2"
 augroup END
 " ----------------------------------------------------------------------------------------
