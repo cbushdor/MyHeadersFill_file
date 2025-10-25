@@ -13,7 +13,7 @@
 .\" (man1) 1 - Commands available to users
 .\" ------------------------------------------------------
 .\" Man page for your_function
-.TH man 1 "10 September 2017" "1.0" "your_function man page"
+.TH man 1 "10 September 2017" "0.0.0.0" "your_function man page"
 .SH NAME
 your_function - do....
 .SH SYNOPSIS

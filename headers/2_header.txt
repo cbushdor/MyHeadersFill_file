@@ -13,7 +13,7 @@
 .\" (man2) 2 - Unix and C system calls
 .\" ------------------------------------------------------
 .\" Man page for your_function
-.TH man 2 "10 September 2017" "1.0" "your_function man page"
+.TH man 2 "10 September 2017" "0.0.0.0" "your_function man page"
 .SH NAME
 your_function - do....
 .SH SYNOPSIS
