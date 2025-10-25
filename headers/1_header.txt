@@ -1,10 +1,10 @@
 :insert
 .\" ------------------------------------------------------
-.\" Created By : sdo
-.\" File Name : 1_header.txt
+.\" Created By :
+.\" File Name :
 .\" Creation Date :
-.\" Last Modified : 2025-10-24 03:12:11
-.\" Email Address : cbushdor013@laposte.net
+.\" Last Modified :
+.\" Email Address :
 .\" Version : 0.0.0.0
 .\" License : 
 .\" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0

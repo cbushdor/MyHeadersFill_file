@@ -2,24 +2,24 @@
 " Created By : sdo
 " File Name : start_header_vimrc
 " Creation Date :2023-03-22 02:32:13
-" Last Modified : 2025-10-25 00:50:35
+" Last Modified : 2025-10-25 02:15:46
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.136
+" Version : 0.0.0.143
 " Licence : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
 " Purpose :
 " ------------------------------------------------------
 
-":function GetsNumVers()
-"   :1
-"   /Version
-"   :let l:l=getline(".")
-"   :let l:f=matchstr(l:l,"[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}")
-"   :echo l:f
+:function GetsNumVers()
+   :1
+   /Version
+   :let l:l=getline(".")
+   :let l:f=matchstr(l:l,"[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}")
+   :echo l:f
 "   echo "::::::>"..l:f.."<::::"
-"   :return l:f
-":endfunction
+   :return l:f
+:endfunction
 
 
 " ----------------------------------------------------------------------------------------
@@ -42,6 +42,6 @@ augroup updateVersionNumberPL
 	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! exe "1," . 12 . "g/Email Address :.*/s/Email Address :.*/Email Address : ".g:myEmail
 	autocmd bufwritepost,filewritepost $TR_SOURCE silent! execute "normal `a" 
 	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! :call UpdatesReleaseNumber()
-"   call GetsNumVers()
+	autocmd Bufwritepre,filewritepre $TR_SOURCE silent! :call GetsNumVers()
 augroup END
 " ----------------------------------------------------------------------------------------
