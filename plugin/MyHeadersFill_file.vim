@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-25 23:52:47
+" Last Modified : 2025-10-26 02:41:02
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.248 
+" Version : 0.0.0.282 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -23,7 +23,10 @@ else
 endif
 
 :function GetsNumVers()
-   :return g:rstr
+   ":return strftime("%F %T").."---" " g:rstr
+   /Version
+   let l:ll=substitute(getline("."),'.\\" \(Version : \)',"","g")
+   return l:ll
 :endfunction
 
 function! MyPrint(p)
@@ -156,12 +159,14 @@ function InsertsHeader()
 endfunction
 
 :function!  s:updatesReleaseNumber(ff,iv)
-:let s:vli=a:ff "..a:sf
+:unset g:rstr
+:let s:vli=a:ff
+:let l:gcl=a:ff " getline(".")
 " Increase number
 :let s:ir=a:iv+1
 " Working on release number r is for release number
-:let g:rstr=s:vli..s:ir
-":let g:rstr=substitute(l:rstr,"Version : ","","g")
+:let g:rstr=s:vli..s:ir.."---"..l:gcl
+":echo g:rstr
 :return s:vli..s:ir
 :endfunction
 

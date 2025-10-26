@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-25 23:56:42
+" Last Modified : 2025-10-26 01:39:42
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.582
+" Version : 0.0.0.583
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -35,15 +35,6 @@ endif
    'A
 :endfunction
 
-":function GetsNumVers()
-"   :1
-"   /Version
-"   :let l:l=getline(".")
-"   :let l:f=matchstr(l:l,"[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}\.[0-9]\\{1,\\}")
-""   :echo l:f
-"   "echo "::::::>"..l:f.."<::::"
-"   :return l:f
-":endfunction
 
 :function MeowMan(li) " Update date field when on it for man files only
    normal! mA
