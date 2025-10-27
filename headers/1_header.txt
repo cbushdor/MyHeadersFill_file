@@ -1,10 +1,11 @@
 :insert
 .\" ------------------------------------------------------
+.\" Man page for your_function
 .\" Created By :
 .\" File Name :
 .\" Creation Date :
 .\" Last Modified :
-.\" Email Address :
+.\" Email Address : 
 .\" Version : 0.0.0.0
 .\" License : 
 .\" 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
@@ -12,8 +13,7 @@
 .\" Purpose :
 .\" (man1) 1 - Commands available to users
 .\" ------------------------------------------------------
-.\" Man page for your_function
-.TH man 1 "10 September 2017" "0.0.0.0" "your_function man page"
+.TH man 1 "yyy-mm-dd hh:mm:ss" "version" "your_function man page"
 .SH NAME
 your_function - do....
 .SH SYNOPSIS

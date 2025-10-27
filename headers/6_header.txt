@@ -1,5 +1,6 @@
 :insert
 .\" ------------------------------------------------------
+.\" Man page for your_function
 .\" Created By :
 .\" File Name :
 .\" Creation Date :
@@ -12,8 +13,7 @@
 .\" Purpose :
 .\" (man6) 6 - Games
 .\" ------------------------------------------------------
-.\" Man page for your_function
-.TH man 6 "10 September 2017" "0.0.0.0" "your_function man page"
+.TH man 6 "yyy-mm-dd hh:mm:ss" "version" "your_function man page"
 .SH NAME
 your_function - do....
 .SH SYNOPSIS
