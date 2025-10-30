@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-26 01:39:42
+" Last Modified : 2025-10-31 00:29:46
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.583
+" Version : 0.0.0.638
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -26,6 +26,43 @@ endif
 ": echo "TestCur("..a:l..","..a:str..")=====>"..res
 : return res==0
 :endfunction
+
+function CheckIfInHeaderField(curpos) " Current position in current File
+   :0
+   :echo "current file:"..expand("%")
+   :let l:cp=line('.') " Curson position init
+   :silent! /------------------------------------------------------
+   :let l:ncp=line('.') " Curson position init after first seach
+   :let l:begin=line('.')
+   :echo "Begin:"..l:begin
+   :silent! /------------------------------------------------------
+   :let l:end=line('.') " We recort position after second search
+   :echo "End:"..l:end
+   :if l:cp == l:ncp && l:begin==l:end " We check if moved
+   :   return -2 " Nothing happened
+   :endif
+   :if l:end<l:begin " Must be top down! If so we permute positions
+   :   let l:tmp=l:begin
+   :   let l:begin=l:end
+   :   let l:end=l:tmp
+   :endif
+   :echo l:begin.."<="..a:curpos.."&&"..a:curpos.."<="..l:end
+   :if a:curpos<=l:end " We wheck if current potition is in or, out !
+   :   if l:begin<=a:curpos
+   :      echo "return 0"
+   :      return 0
+   :   elseif l:begin>a:curpos
+   :      echo "return 0"
+   :      return 0
+   :   else
+   :      echo "return -1"
+   :      return -1
+   :   endif
+   :else
+   :   echo "return 1"
+   :   return 1
+   :endif
+endfunction
 
 :function MeowPe(li)" Update date field when on it for perl files only (.pl,.pm)
    normal! mA
@@ -52,127 +89,141 @@ endif
 
 function! FileHeading()
    let curLi=getline(line('.')+1)
+   let mycurpos=line(".")
 
-   ":echo "======>"..curLi
-   if TestCur(curLi,'I<Last modification:>')
-      ":echo "*****>"..curLi
-      :call MeowPe(curLi) " When on line update line
-   elseif TestCur(curLi,'.TH')
-      :!echo "xxxxxx>"..curLi
-      :call MeowMan(curLi) " When on line update line (.TH)
-   else
-      let s:line=line(".") " We get the cursor position
-      let pos=line(".") " We get the cursor position
-      let $w=expand('%:e') " We check extension
-
-      "echo "extension ---->"..$w.."<----"
-      let nu=1 " Num to 1
-      "let fname='azeazea'
-
-      if $w=="" " If no extension we work on extension
-         let fname=g:path_headers.expand('%:e')."vimrc_header.txt" " We take path to go to vimrc_header.txt
+   :let res=CheckIfInHeaderField(line("."))
+   :echo "------->"..res.."<====>"..mycurpos.."(++++)"
+   :if res == 0
+   :echo "nothing to do"
+   :else
+      :echo "vvvvvv======>"..curLi
+      if TestCur(curLi,'I<Last modification:>')
+         :echo "*****>"..curLi
+         :call MeowPe(curLi) " When on line update line
+      elseif TestCur(curLi,'.TH')
+         :echo "xxxxxx>"..curLi
+         :call MeowMan(curLi) " When on line update line (.TH)
       else
-         if $w=="pm" || $w=="pl"  " file extension for perl s.a .pl or .pm
-            " echo "GREETINGS in ["..bufname("%")..":"..pos.."] at ext "..$w
-            if pos==1
-               " echo "first line "..$w.." at pos "..pos
-               let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
-            else
-               " echo "not first line "..$w.." at pos "..pos
-               let fname=g:path_headers.expand('%:e')."_doc_header.txt" " We take path and file extension and _header.txt
-            endif
-         elseif match($w,"^[1-8]$") == 0 || match($w,"^nro$") == 0  " We check file extension if man s.a .[1-7] or nro (for nroff or n run off)
-            if pos==1
-               " echo "first line "..$w.." at pos "..pos
-               let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
-            else
-               " echo "not first line "..$w.." at pos "..pos
-               let fname=g:path_headers.expand('%:e')."_doc_header.txt" " We take path and file extension and _header.txt
-            endif
+         let s:line=mycurpos " line(".") " We get the cursor position
+         "let l:pos=line(".") " We get the cursor position
+         let $w=expand('%:e') " We check extension
+
+         :echo "extension ---->"..$w.."<---->>>>"..mycurpos.."<<<<"
+         let nu=1 " Num to 1
+         "let fname='azeazea'
+
+         if $w=="" " If no extension we work on extension
+            let fname=g:path_headers.expand('%:e')."vimrc_header.txt" " We take path to go to vimrc_header.txt
          else
-            " echo "if "..$w.."==\"pm\" || "..$w.."==\"pl\"" 
-            let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
-         endif
-      endif
-       " echo "Working on file:"..fname.." file extension:"..$w
-       " echo getpos(".")
-       "exit 0
-      let is_doc=0
-      let lroff='^.\\' " For roff troff groff
-      for line in reverse(readfile(fname,''))
-         " echo "append to line #"..s:line.."-------> this string:"..line
-         if match(line,"^:insert$") == 0
-         elseif match(line,"^ \{0,1}$") == 0
-         elseif match(line,"^.$") == 0
-         elseif match(line,"Creation Date :") >=0
-            call append(s:line,line . strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
-         elseif match(line,"^=") >= 0 && is_doc==0
-            let is_doc=1
-            "call append(s:line,line)
-         elseif match(line,"------------------------------------------------------") >= 0 
-            call append(s:line,line)
-         elseif match(line,lroff) >= 0   " For roff troff groff
-            call append(s:line,line)
-         elseif match(line,"^\.[^\.]") >= 0 && pos != 1  " For roff troff groff
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"^#!") == 0  " Check if we have shebang
-            " Check if interpretor can be included according position
-            if pos==1
-               call append(s:line,"") " Empty line
-               call append(s:line,line) " line with shebang included if and only,
-                                        " if cursor is at position first line
-                                        " in file
-               "call append(s:line," ") " Empty line
-            endif
-         elseif match(line,"#`") == 0 
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"# ") == 0 
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"% ") == 0 
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"q##//q#") == 0 
-            call append(s:line,line)
-         " nu+=1
-         " elseif match(line,"# ") == 0 
-         " 	call append(s:line,line)
-         " " nu+=1
-         elseif match(line,"#;") == 0 
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"]") == 0 
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"//") == 0 
-            call append(s:line,line)
-         " nu+=1
-         elseif match(line,"*") == 0 
-            call append(s:line,line)
-         elseif match(line,"\"") == 0 
-            call append(s:line,line)
-            " nu+=1
-         endif
-         if is_doc==1
-            if match(line,"^:insert$") == 0
-            elseif match(line,"I<Created on:>") >= 0
-               call append(s:line,line ." ". strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
-            elseif match(line,"I<Last modification:>") >= 0
-               call append(s:line,line ." ". strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+            "let l:pos=line(".") " We get the cursor position
+            if $w=="pm" || $w=="pl"  " file extension for perl s.a .pl or .pm
+               " echo "GREETINGS in ["..bufname("%")..":"..pos.."] at ext "..$w
+               if mycurpos==1
+                  " echo "first line "..$w.." at pos "..pos
+                  let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
+               else
+                  " echo "not first line "..$w.." at pos "..mycurpos
+                  let fname=g:path_headers.expand('%:e')."_doc_header.txt" " We take path and file extension and _header.txt
+               endif
+            elseif match($w,"^[1-8]$") == 0 || match($w,"^nro$") == 0  " We check file extension if man s.a .[1-7] or nro (for nroff or n run off)
+               ":let l:pos=line(".") " We get the cursor position
+               :echo "---------WE RECALCULATED CURSOR POSITON:"..mycurpos
+               ":echo getcurpos('.')
+               if mycurpos==1
+                  echo "first line "..$w.." at pos "..mycurpos
+                  let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
+               else
+                  echo "xxxx not first line "..$w.." at pos "..mycurpos
+                  let fname=g:path_headers.expand('%:e')."_doc_header.txt" " We take path and file extension and _header.txt
+               endif
             else
-               call append(s:line,line)
+               " echo "if "..$w.."==\"pm\" || "..$w.."==\"pl\"" 
+               let fname=g:path_headers.expand('%:e')."_header.txt" " We take path and file extension and _header.txt
             endif
          endif
-      endfor
-      " exit 0
-      echo "---->"..s:line.."<----"
-      if pos==1
-         :1
-         :d
+          " echo "Working on file:"..fname.." file extension:"..$w
+          " echo getpos(".")
+          "exit 0
+         let is_doc=0
+         let lroff='^.\\' " For roff troff groff
+         for line in reverse(readfile(fname,''))
+            " echo "append to line #"..s:line.."-------> this string:"..line
+            if is_doc==0
+            if match(line,"^:insert$") == 0
+            elseif match(line,"^=") >= 0 && is_doc==0
+               let is_doc=1
+               :echo "we found doc"
+               "call append(s:line,line)
+            elseif match(line,"^ \{0,1}$") == 0
+            elseif match(line,"^.$") == 0
+            elseif match(line,"Creation Date :") >=0
+               call append(s:line,line . strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+            elseif match(line,"------------------------------------------------------") >= 0 
+               call append(s:line,line)
+            elseif match(line,lroff) >= 0   " For roff troff groff
+               call append(s:line,line)
+            elseif match(line,"^\.[^\.]") >= 0 && mycurpos != 1  " For roff troff groff
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"^#!") == 0  " Check if we have shebang
+               " Check if interpretor can be included according position
+               if mycurpos==1
+                  call append(s:line,"") " Empty line
+                  call append(s:line,line) " line with shebang included if and only,
+                                           " if cursor is at position first line
+                                           " in file
+                  "call append(s:line," ") " Empty line
+               endif
+            elseif match(line,"#`") == 0 
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"# ") == 0 
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"% ") == 0 
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"q##//q#") == 0 
+               call append(s:line,line)
+            " nu+=1
+            " elseif match(line,"# ") == 0 
+            " 	call append(s:line,line)
+            " " nu+=1
+            elseif match(line,"#;") == 0 
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"]") == 0 
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"//") == 0 
+               call append(s:line,line)
+            " nu+=1
+            elseif match(line,"*") == 0 
+               call append(s:line,line)
+            elseif match(line,"\"") == 0 
+               call append(s:line,line)
+               " nu+=1
+            endif
+            endif
+            if is_doc==1
+               if match(line,"^:insert$") == 0
+               elseif match(line,"I<Created on:>") >= 0
+                  call append(s:line,line ." ". strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+               elseif match(line,"I<Last modification:>") >= 0
+                  call append(s:line,line ." ". strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+               else
+                  call append(s:line,line)
+               endif
+            endif
+         endfor
+         " exit 0
+         echo "---->"..s:line.."<----"
+         if mycurpos==1
+            :1
+            :d
+         endif
+         unlet s:line
       endif
-      unlet s:line
    endif
 endfunction
 
@@ -189,7 +240,7 @@ function! SetPosition(at_cursor_position = v:false)
          'A
       elseif (a:at_cursor_position == v:true)
          normal! mA
-         :normal! O
+         ":normal! O
          :execute FileHeading()
          :normal! "\<esc>"
          :w
