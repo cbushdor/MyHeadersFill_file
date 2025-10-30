@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-31 00:29:46
+" Last Modified : 2025-10-31 00:33:12
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.638
+" Version : 0.0.0.639
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -149,61 +149,61 @@ function! FileHeading()
          for line in reverse(readfile(fname,''))
             " echo "append to line #"..s:line.."-------> this string:"..line
             if is_doc==0
-            if match(line,"^:insert$") == 0
-            elseif match(line,"^=") >= 0 && is_doc==0
-               let is_doc=1
-               :echo "we found doc"
-               "call append(s:line,line)
-            elseif match(line,"^ \{0,1}$") == 0
-            elseif match(line,"^.$") == 0
-            elseif match(line,"Creation Date :") >=0
-               call append(s:line,line . strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
-            elseif match(line,"------------------------------------------------------") >= 0 
-               call append(s:line,line)
-            elseif match(line,lroff) >= 0   " For roff troff groff
-               call append(s:line,line)
-            elseif match(line,"^\.[^\.]") >= 0 && mycurpos != 1  " For roff troff groff
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"^#!") == 0  " Check if we have shebang
-               " Check if interpretor can be included according position
-               if mycurpos==1
-                  call append(s:line,"") " Empty line
-                  call append(s:line,line) " line with shebang included if and only,
-                                           " if cursor is at position first line
-                                           " in file
-                  "call append(s:line," ") " Empty line
-               endif
-            elseif match(line,"#`") == 0 
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"# ") == 0 
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"% ") == 0 
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"q##//q#") == 0 
-               call append(s:line,line)
-            " nu+=1
-            " elseif match(line,"# ") == 0 
-            " 	call append(s:line,line)
-            " " nu+=1
-            elseif match(line,"#;") == 0 
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"]") == 0 
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"//") == 0 
-               call append(s:line,line)
-            " nu+=1
-            elseif match(line,"*") == 0 
-               call append(s:line,line)
-            elseif match(line,"\"") == 0 
-               call append(s:line,line)
+               if match(line,"^:insert$") == 0
+               elseif match(line,"^=") >= 0 && is_doc==0
+                  let is_doc=1
+                  :echo "we found doc"
+                  "call append(s:line,line)
+               elseif match(line,"^ \{0,1}$") == 0
+               elseif match(line,"^.$") == 0
+               elseif match(line,"Creation Date :") >=0
+                  call append(s:line,line . strftime("%F %T",getftime(expand("%:t")))) " append to current s:line (line number) the text line
+               elseif match(line,"------------------------------------------------------") >= 0 
+                  call append(s:line,line)
+               elseif match(line,lroff) >= 0   " For roff troff groff
+                  call append(s:line,line)
+               elseif match(line,"^\.[^\.]") >= 0 && mycurpos != 1  " For roff troff groff
+                  call append(s:line,line)
                " nu+=1
-            endif
+               elseif match(line,"^#!") == 0  " Check if we have shebang
+                  " Check if interpretor can be included according position
+                  if mycurpos==1
+                     call append(s:line,"") " Empty line
+                     call append(s:line,line) " line with shebang included if and only,
+                                              " if cursor is at position first line
+                                              " in file
+                     "call append(s:line," ") " Empty line
+                  endif
+               elseif match(line,"#`") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               elseif match(line,"# ") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               elseif match(line,"% ") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               elseif match(line,"q##//q#") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               " elseif match(line,"# ") == 0 
+               " 	call append(s:line,line)
+               " " nu+=1
+               elseif match(line,"#;") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               elseif match(line,"]") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               elseif match(line,"//") == 0 
+                  call append(s:line,line)
+               " nu+=1
+               elseif match(line,"*") == 0 
+                  call append(s:line,line)
+               elseif match(line,"\"") == 0 
+                  call append(s:line,line)
+                  " nu+=1
+               endif
             endif
             if is_doc==1
                if match(line,"^:insert$") == 0
