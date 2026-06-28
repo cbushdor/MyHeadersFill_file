@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file_command_line.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-11-02 00:03:00
+" Last Modified : 2025-11-04 22:59:44
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.730
+" Version : 0.0.0.732
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -36,10 +36,6 @@ function CheckIfInHeaderField(curpos) " Current position in current File
    :silent! /------------------------------------------------------
    :let l:end=line('.') " We recort position after second search
    :if l:cp == l:ncp && l:begin==l:end " We check if moved
-   ":echohl ErrorMsg
-   ":echomsg 'Hello World'
-   ":echohl NONE
-   ":throw "Hello return aaaaaa"
    :echohl Statement| "HELLO WORLD"|echohl NONE
    :  call StacksMessagesToPrint("Header does not exist?")
    :  return -2 " Nothing happened
@@ -49,29 +45,18 @@ function CheckIfInHeaderField(curpos) " Current position in current File
    :   let l:begin=l:end
    :   let l:end=l:tmp
    :endif
-   ":echo l:begin.."<="..a:curpos.."&&"..a:curpos.."<="..l:end
    :if a:curpos<=l:end " We wheck if current potition is in or, out !
    :   if l:begin<=a:curpos
-   ":      echo "return 0"
-   ":      throw 'Hello returns 0'
-   :        call StacksMessagesToPrint("Within header or first line(s) reserved!")
-   :      return 0
+   :     call StacksMessagesToPrint("Within header or first line(s) reserved!")
+   :     return 0
    :   elseif l:begin>a:curpos
-   ":      echo "return 0"
-   ":      throw 'Hello returns 0'
-   :        call StacksMessagesToPrint("Within header or first line(s) reserved!")
-   ":     call StacksMessagesToPrint("2 none xill happened")
-   :      return 0
+   :     call StacksMessagesToPrint("Within header or first line(s) reserved!")
+   :     return 0
    :   else
-   ":      echo "return -1"
-   ":      throw 'Hello returns -1'
    :     call StacksMessagesToPrint("3 none xill happened")
-   :      return -1
+   :     return -1
    :   endif
    :else
-   ":   echo "return 1"
-   ":      throw 'Hello returns 1'
-   ":  call StacksMessagesToPrint("4 none xill happened")
    :   return 1
    :endif
 endfunction
@@ -107,12 +92,12 @@ endfunction
 :endfunction
 
 :function PrintsMessages()
-   :if exists("g:errmsg")
+   :if exists("g:errmsg") " Case we have messages to print
    :  execute "echon 'Message: ' |
                \ echohl ErrorMsg |
                \ echon g:errmsg |
                \ echohl None "
-   :else
+   :else " Case nothing to print
    :  execute "echo ' ' "
    :endif
 :endfunction

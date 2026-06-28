@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="Generator" content="Vim/9.1">
-<meta name="plugin-version" content="vim9.0_v2">
+<meta name="Generator" content="Vim/9.2">
+<meta name="plugin-version" content="vim9.2_v1">
 <meta name="syntax" content="none">
 <meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=none">
 <meta name="colorscheme" content="none">

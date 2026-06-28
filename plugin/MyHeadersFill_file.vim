@@ -2,9 +2,9 @@
 " Created By : sdo
 " File Name : MyHeadersFill_file.vim
 " Creation Date :2023-03-30 01:35:19
-" Last Modified : 2025-10-26 02:41:02
+" Last Modified : 2026-06-27 20:31:33
 " Email Address : cbushdor013@laposte.net
-" Version : 0.0.0.282 
+" Version : 0.0.0.284 
 " License : 
 " 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
 " 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
@@ -173,5 +173,6 @@ endfunction
 function UpdatesReleaseNumber()
 	:1
 	g/Version/s/\(Version\ \:\ [0-9]\+.[0-9]\+.[0-9]\+.\)\([0-9]\+\)/\= s:updatesReleaseNumber(submatch(1),submatch(2))/
+	g/my $VERSION/s/\(VERSION=\"[0-9]\+.[0-9]\+.[0-9]\+.\)\([0-9]\+\)/\= s:updatesReleaseNumber(submatch(1),submatch(2))/
 endfunction
 
