@@ -1,0 +1,1120 @@
+# ----------------------------------------------------------------------
+# Created By : sdo
+# File Name :  .myalias
+# Creation Date : 2020-04-04 06:43:31
+# Last Modified : 2026-08-17 23:12:49
+# Email Address : sebastien.dorey013@laposte.net
+# Version : 0.0.0.46
+# License : 
+# 	Permission is granted to copy, distribute, and/or modify this document under the terms of the Creative Commons Attribution-NonCommercial 3.0
+# 	Unported License, which is available at http://creativecommons.org/licenses/by-nc/3.0/.
+#
+# Purpose :
+# ----------------------------------------------------------------------
+
+# From github Colossal Cave Adventure – The Most Famous Classic Text-based Adventure Game
+alias adventure="cd $HOME/Documents/Games/ColosalCaveAdventure/Adventure && ./advent"
+alias advent="emacs -batch -l dunnet"
+# Prints moose manual
+alias mm="man Moose::Manual"
+alias brewForceUpgrade="brew upgrade --force-bottle"
+
+# Old version used copy files from maop project to repo
+#alias cpmaop="cd ~/Sites/cgi-bin;cp -vr {./README.pod,./album.cgi,./maop.cgi,./g3ogle.cgi,./io} ~/Documents/My-Proj/V1/Sites/cgi-bin/;cd -"
+#alias cpmaop2="export myPath=`pwd`;cd ~/Sites/cgi-bin;cp -vr {./README.pod,./album.cgi,./maop.cgi,./g3ogle.cgi,./io,./album/css,./album/fonts} ~/Downloads/MyMAOP/V1/Sites/cgi-bin/;cd $myPath"
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+
+# Copy from website to repository
+alias cpmaopSiToRep="cd ${HOME}/Sites/cgi-bin; cp -vr {./README.pod,./album.cgi,./maop.cgi,./g3ogle.cgi,./io} ${HOME}/Downloads/MyMAOP/V1/Sites/cgi-bin/; cp -vr {./album/css,./album/fonts,./album/image} ${HOME}/Downloads/MyMAOP/V1/Sites/cgi-bin/album/; ;cd -;pwd;"
+# Copy from repository to website
+alias cpmaopRepToSi="cd ${HOME}/Downloads/MyMAOP/V1/Sites/cgi-bin/ ; cp -vr {./README.pod,./album.cgi,./maop.cgi,./g3ogle.cgi,./io,./album/css,./album/fonts} ${HOME}/Sites/cgi-bin; cp -vr {./album/css,./album/fonts,./album/image} ${HOME}/Sites/cgi-bin/album/;
+;cd -;pwd;"
+
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+
+alias cpMyHeaderFromVimToRep="scopy \"/Users/sdo/.vim/plugged/MyHeadersFill_file\" \"$HOME/Downloads/MyHeadersFill_file\" \"doc\" "
+alias cpMyHeaderFromRepToVim="scopy \"$HOME/Downloads/MyHeadersFill_file\" \"/Users/sdo/.vim/plugged/MyHeadersFill_file\" \"doc\""
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+
+cleanTemp(){
+   find . \( -iname \*.tmp -o -iname .\*tmp  -o -iname .\*swp \) -exec rm {} \; -print
+}
+
+alias hn="hostname";
+alias myip="export ipen0=\"$(ipconfig getifaddr en0)\";export ipen1=\"$(ipconfig getifaddr en1)\"; if [[ ! -z \"$ipen0\" ]] ; then export myip=\"$ipen0\";else export myip=\"$ipen1\"; fi;echo \"$myip\""
+
+# prints only with #id from commited list of file committed in a commit
+# alias gitno="git diff-tree --no-commit-id --name-only -r"
+alias gitgr="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+# Get info credential git
+alias gitcred="git credential-osxkeychain get"
+
+# Copy recursively files
+alias cpgit='for i in ./README.md ./README.pod ./CC-BY-NC-3.0.md ./.gitignore ; do if [ -f "$i" ] ; then echo "Testing ${Green}$i${Color_Off} is newer than in some directory" ; find . -type d -not -path "./.git*" -exec rsync -u $i {} \;  -print ; else echo "Testing ${Red}$i${Color_Off} and it does not exist in this directory"; fi; done;'
+
+# Identity who ami + hostname
+alias woai="echo \"$(whoami)@$(hostname):$(pwd)\""
+# Log on machines alpha
+alias alpha="sshpass -p \"${BETAPASSWD}\" ssh alpha"
+# Log on machines beta
+alias beta="sshpass -p \"${BETAPASSWD}\" ssh beta"
+
+# Tests
+#alias sm="./sendEmailMime.pl $(($RANDOM))  $(($RANDOM ))"
+alias sm="./sendEmailMime.pl"
+#alias dat="$(( echo `date` ))"
+alias mysend="cd $HOME/Sites/cgi-bin;while (( 1<=3 )) ; do for i in 1 2 3; do ./mail2.pl; done;done";
+
+# We add a prompt to ed's command line
+alias ed="ed -p\>"
+alias vi="vim -o"
+
+# su -l touch .bash_profile
+alias msudo="sudo su -l"
+alias su="su -l"; # load .bashrc
+
+# add signature to modulethis is exemple only
+alias signmodule=' sudo  codesign -s "Sébastien Dorey"  --keychain ~/Library/Keychains/login.keychain-db  /usr/local/lib/httpd/modules/libphp.so'
+alias mylistsec='security find-identity; security list-keychains'
+
+# log to another machine
+alias sdoll="ssh sdo@fedora33-sdo"
+
+# Analyse disk occupation human readable
+alias anal="du -sh *"
+
+# connect to distant host
+alias mmount="sshfs sebastien.dorey@linux.home:/ ~/mount "
+
+export destdir="$HOME/Downloads/dest-$$/";
+#
+# perl -MCPAN -e 'install   Net::Twitter::Lite::WithAPIv1_1'
+#
+# for i in `ls` ; do [[ $i =~ tes(.([0-9])).sh ]] ; echo "-${BASH_REMATCH[1]}-${BASH_REMATCH[2]}- for $i"; done
+alias rehash="hash -r"
+alias movy="open -n /Applications/Blender/blender.app"
+#alias swp="find ~ -name "*.swp" -exec rm {} \; -print"
+alias mysize=" find / -type f -size +100000k -exec ls -lh {} \; | awk '{ print $9 \": \" $5 }'"
+
+#To set your machine to boot into 64 bit mode enter this command and reboot:
+#sudo systemsetup -setkernelbootarchitecture x86_64
+#for i in `\ls |grep nanar`; do mmkisofs $i.iso  $i; done
+#for i in `find . -iname "*doc" -exec dirname {} \; | sort -u |sed 's/ /---/g'`;do export a="`echo $i|sed 's/---/ /g'`" ;cd "$a";echo "---->${a}";pwd;git rm "*dt" ;git commit -m "file removed" .;cd -; echo "${a}";done
+
+# Go to Angular x s.a x>5.0
+alias ga='cd /Users/sdo/LangProg/Angular/angular5/Tuto'
+# Go to ionic tuto
+alias gi="cd /Users/sdo/LangProg/ionic/"
+
+# cleans usb key (given one)
+alias cvol='sudo sh -c "cd /Volumes;rm -rf UNTITLED/._*;rm -rf UNTITLED/{._*,.S*,.T*,.fs*};touch UNTITLED/ok"'
+#alias cvols='sudo sh -c "export pppp=`find  /Volumes/UNTITLED/  -name  .[_STL]* -o -name .fs*`; echo \"$pppp\" ;touch /Volumes/UNTITLED/ok"'
+#alias cvols='sudo sh -c "find  /Volumes/UNTITLED/  -name  .[STL]* -o -name .fs* -exec rm -rf {} \; ;touch /Volumes/UNTITLED/ok"'
+#alias cvols='sudo sh -c "find  /Volumes/UNTITLED/  -name  \".[STL]*\" -o -name \".fs*\" -exec rm {} \; -print"'
+# start debugger adb for chrom i.e
+alias madb="adb forward tcp:9222 localabstract:chrome_devtools_remote"
+
+# play game with emacs
+alias tetris="emacs -q  -f tetris"
+
+# alias eject="drutil eject"
+alias MAOP="cd /Users/sdo/Documents/Projects/MAOP "
+# preserve date
+alias cp="cp -p"
+# usefull when log with ssh to go to Perl 6 training
+alias tp6="cd  ${HOME}/LangProg/Perl/6/tp6/"
+alias p6="perl6"
+#alias raku="perl6"
+
+alias vuejs2="cd /Users/sdo/Sites/VueJS"
+
+# create where a cpommand that prints the path where a given command is s.a where ls
+alias where="which -a"
+# HISTORY
+alias h=history
+
+# clean stuff
+alias mtidy="tidy --output-xhtml y --indent \"auto\" --indent-spaces \"2\" --wrap \"90\" "
+
+# copy stuff (perl6)
+alias cpyp="cd ~/Sites/Perl6/course/fr/;cp -p {cult.pod,README.pod,interface.pod,p6-sh.pod} ~/Documents/My-Proj/p6/course/fr/;cd ~/Documents/My-Proj/p6/course/fr/"
+
+# tar all reports from job search
+alias rap='cd /Users/sdo/Documents/RechEmpl;find .  -type d -iname "rapport*" |tar -czvf rapports.tgz -T -'
+
+# give version of perl module
+alias modver="perl -e\"eval qq{use \\\$ARGV[0];\\\\\\\$v=\\\\\\\$\\\${ARGV[0]}::VERSION;};\ print\\\$@?qq{No module found\\n}:\\\$v?qq{Version \\\$v\\n}:qq{Found.\\n};\"\$1"
+
+#  [[ "test1.sh" =~ ((test[0-9]).sh) ]] ; cat  ${BASH_REMATCH[1]} | text2pdf -o ${BASH_REMATCH[2]}.pdf
+
+# Command to deal with ython and open office
+alias shpython="/Applications/LibreOffice.app/Contents/Resources/python"
+
+#To set your machine to boot into 32 bit mode enter this command and reboot:
+#sudo systemsetup -setkernelbootarchitecture i386
+
+# perldoc -t album.cgi|less
+#for i in `\ls|sed 's/ /---/g'`;do export a="`echo $i|sed 's/---/ /g'`" ;mv "$a" "Q106HoustTx${a}";done
+# Get the version of a module written with Perl
+alias modver="perl -e\"eval qq{use \\\$ARGV[0];\\\\\\\$v=\\\\\\\$\\\${ARGV[0]}::VERSION;};\ print\\\$@?qq{No module found\\n}:\\\$v?qq{Version \\\$v\\n}:qq{Found.\\n};\"\$1"
+alias sysup="systemsetup -getkernelbootarchitecturesetting"
+# Launch a game in emacs
+alias gam="emacs -batch -l dunnet"
+#hdiutil mount 2011-07-27-BckUp.iso
+#alias cusb="if  [ -d \"/Volumes/USB\ DISK/\" ] ; then cd /Volumes/USB\ DISK/;find /Volumes/USB\ DISK/  -name \"._*\" -exec rm -rf {} \; -print; rm -rf .Spotlight-V100/ .Trashes/ ._* .fseventsd/;cd -; fi ; if  [ -d \"/Volumes/PATRIOT/\" ] ; then cd /Volumes/PATRIOT/; find . -name \".*\" -exec rm -rf {} \; -print;cd ; fi"
+alias cip="sudo ipconfig set en1 DHCP"
+#alias httrack="cd ~/Movies/download/;httrack --continue "
+#alias dia="dia >&/dev/null&"
+# Launch configuration files that contains alias, profiles
+# Comand ls with extra characters that tells the type of the file (s.a dir, reg files,links,...) and order them last modified is the first
+alias ls="ls -Ft"
+# Alias on gimp
+#alias gimp="gimp-1.2 >& /dev/null &"
+# Launches uml program
+alias uml="bouml >& /dev/null &"
+#  allow to load several files at once in vi
+#alias  vi="myvi " 
+alias via="mv ${HOME}/.myalias $HOME/\ .myalias; vi $HOME/\ .myalias; mv $HOME/\ .myalias .myalias"
+# cs is alias on clear that clear screen
+alias cs=clear
+# al pine alias on email reader
+alias al=alpine
+# Helps to log and launch .profile
+alias mlog="sudo su -"
+# Go to directory
+alias up6="cd /Users/sdo/Documents/Projects/Perl6/UsingPerl6 "
+# Clean from home directory all .metadata files
+alias sweep="cd $HOME; brew cleanup; find . -iname  \"*lightning*talk*\" ! -path ./Downloads/\*  -exec rm -rf {} \; -print ; find $HOME -name \".metadata\" -exec rm -rf {} \; -print; find $HOME -name \".xv*\"  -exec rm -rf {} \; -print; find $HOME -name \".*sw*\" -exec rm -f {} \; -print; find $HOME -name \".DS_Store\" -exec rm -f {} \; -print; find $HOME -name \".localized\" -exec rm -rf {} \; -print; find ~ -name \"._*\" -exec rm -rf {} \; -print; find . -type f \( -iname \"*.swp\" -o -iname \"*.swo\" -o -iname \"*.swm\" -o iname \"*.swl\" -o -iname \"\*.swn\"\) -exec rm {} \; -print" 
+#alias sweepe="cd $HOME;tar czvfp ./Backup.tgz ./Library/Application\ Support/{Mozilla,Firefox} ./Library/Preferences/ ./Library/Fonts/ ./Library/FontCollections/; cd -; brew cleanup;find $HOME -name \".metadata\" -exec rm -rf {} \; -print; find $HOME -name \".xv*\"  -exec rm -rf {} \; -print; find $HOME -name \".*sw*\" -exec rm -f {} \; -print; find $HOME -name \".DS_Store\" -exec rm -f {} \; -print; find $HOME -name \".localized\" -exec rm -f {} \; -print; find ~ -name \"._*\" -exec rm -rf {} \; -print; rm -rvf $HOME/Library/;cd $HOME;tar xzvfp ./Backup.tgz -C .;cd -;" 
+# Launches a program that do backups (deprecated)
+alias bup=" cd ~/Sites/cgi-bin/;./backup.cgi;cd -;"
+# Creates an iso file
+alias packg=" cd ~/Sites/cgi-bin/;./backup.cgi ;if [ ! -d ${BROOT} ] ; then mkdir -p ${BROOT} ; fi; cd ; tar pczvf ${BROOT}/docOpenOffice-${CURDATE}.tgz ~${USER}/Documents/Projects ;tar pczvf ${BROOT}/bckUpSite-${CURDATE}.tgz ~${USER}/Sites/ /Users/sdo/Library/Application\ Support/{Firefox,Mozilla}; tar pczvf ${BROOT}/album-${CURDATE}.tgz ~${USER}/Perl ~${USER}/Sites/cgi-bin/{album.cgi,g2o*,io,doc.cgi,tweet} ~${USER}/Sites/images/ref.jpg /etc/apache2/ ~${USER}/Sites/img/{youtube.gif,wheel.gif,friend.jpg,powered.gif,jangada.gif,chair1-a.gif,sorry.jpg,my_lovely_pict.gif,under_construction10.gif,new_cross.gif}; tar pczvf ${BROOT}/_album-${CURDATE}.tgz ~${USER}/Sites/cgi-bin/{album.cgi,g2o*} ~${USER}/Sites/cgi-bin/io/gut/machine/MyFile*.pm ~${USER}/Sites/cgi-bin/io/{MyTime.pm,MyUtilities.pm,MyNav.pm,MySec.pm} ~${USER}/Sites/images/ref.jpg ~${USER}/Sites/img/{youtube.gif,wheel.gif,friend.jpg,powered.gif,jangada.gif,chair1-a.gif,sorry.jpg,my_lovely_pict.gif,under_construction10.gif,new_cross.gif}; cd ;tar pczvf ${BROOT}/docPerlPodHTML-${CURDATE}.tgz ~${USER}/Sites/cgi-bin/mydoc ; tar pczvf ${BROOT}/conf-${CURDATE}.tgz ~${USER}/.my* ~${USER}/.profile /etc/apache2/; mkisofs -r -J -allow-lowercase -allow-multidot -o ${BROOT}/${CURDATE}-BckUp.iso ${BROOT}/_album-${CURDATE}.tgz  ${BROOT}/album-${CURDATE}.tgz  ${BROOT}/docOpenOffice-${CURDATE}.tgz ${BROOT}/bckUpSite-${CURDATE}.tgz ${BROOT}/docPerlPodHTML-${CURDATE}.tgz ${BROOT}/conf-${CURDATE}.tgz ;rm  ${BROOT}/album-${CURDATE}.tgz ${BROOT}/_album-${CURDATE}.tgz  ${BROOT}/docOpenOffice-${CURDATE}.tgz ${BROOT}/bckUpSite-${CURDATE}.tgz ${BROOT}/docPerlPodHTML-${CURDATE}.tgz ${BROOT}/conf-${CURDATE}.tgz ; mkisofs -r -J -allow-lowercase -allow-multidot  -o ${BROOT}/${CURDATE}-Doc.iso ${BROOT}/../Library ;cd $BROOT;/usr/bin/shasum5.10.0 ${CURDATE}-Doc.iso > ${CURDATE}-Doc.iso.shasum ;/usr/bin/shasum5.10.0 ${CURDATE}-BckUp.iso >${CURDATE}-BckUp.iso.shasum; "
+
+# Split a file into 4000m file size
+alias spl="split -b 4000m media.dmg.gz media.dmg.gz_split_"
+
+# Make a backup of MAOP: album.cgi ...
+alias packmaop="pushd ~/Sites;tar czvf ../MAOP.tgz cgi-bin/{album*,maop.*,private,io} img images js;popd"
+
+
+# Undust brew env
+alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
+
+mvpic(){ # begin mvpic()
+	mkdir -p ../montoto
+		for i in `find . -name "*jpg" -print`; do
+			echo $i;
+	m=`date +%y%m%d%S%s`;
+	mv $i ../montoto/$m.jpg;
+	sleep 3;
+	done;
+} # end mvpic()
+
+rnpic(){ # begin rnpic()
+	r=$1;
+	mkdir -p $r;
+	for i in `find . -name "*jpg" -print`; do
+		echo $i;
+	m=`date +%y%m%d%S%s`;
+	mv $i $r/creampie$m.jpg;
+	sleep 3;
+	done;
+} # end rnpic()
+
+#  how 2 use mktab: mkTab album.cgi login.cgi doc.cgi
+mkTab(){ # begin mkTab()
+	export MONP="`pwd`"
+		cd ~/Sites/cgi-bin;
+		rm -rf mydoc;
+		mkdir -p mydoc/io;
+		echo -n "<center>PERL POD</center><br><br><br><br><center>">mydoc/index.html;
+		for ll in $@ ; do
+			export o=`cat $ll|grep ^use |grep -v constant|sed 's/use / /g'|wc -l`;
+#perldoc -oHTml $ll >mydoc/$ll.html
+				if test -f "$ll" ; then
+					pod2html $ll >mydoc/$ll.html;
+						fi;
+						b=`cat mydoc/$ll.html|grep VERSION|sed 's!<p>!!g'|sed 's!</p>!!g'|sed 's!$VERSION!\&nbsp;!g'|sed s!=!!g|sed s/\&\#39\;//g|sed s/\&\#34\;//g`;
+	echo -e "		<a href=\"index.$ll.html\">$ll</a>&nbsp;&nbsp; $b\n<br>\n">>mydoc/index.html;
+		cat << TOTO>mydoc/index.$ll.html
+		<html>
+		<head>
+		<script language="javascript" src="../../js/menu.js"></script>
+		<script>
+		my_menu("../..", new Array("Admin",              "Administration",
+					"Calculus/default.htm",    "Calculus",
+					"Methodology",     "Methodology",
+					"NFS",             "Network File System",
+					"Perl",            "Perl",
+					"teamProject",     "Team"),
+				"The Manuals");
+	</script>
+		</head>
+		<body>
+TOTO
+		echo -e "<br><br><center><table width=75% border=1>\n<tr><th colspan=$o><center>">>mydoc/index.$ll.html
+		echo "<a href=\"$ll.html\">$ll</a><br>$b">>mydoc/index.$ll.html
+		echo -e "</center></td></tr>">>mydoc/index.$ll.html
+		depSimp $ll;
+#echo -e "<br><a href=\"javascript:history.back()\">\nback</a>">>mydoc/index.$ll.html
+	cat << TOTO>>mydoc/index.$ll.html
+		<br>
+		<br>
+		<br>
+		<br>
+		<br> <br> <br> <br> <br>
+		<br> <br> <br> <br> <br>
+		<script>
+		footer("http://dorey.sebastien.free.fr","javascript:history.back()");
+	</script>
+		</body>
+		</html>
+TOTO
+#fi
+		done
+		echo -en "\n</center>\n<br><br>Last update:`date`">>mydoc/index.html
+		tar czvf ${BROOT}/docPerlPodHTML-${CURDATE}.tgz mydoc/ 
+		cd ${MONP}
+} # end mkTab()
+
+depSimp(){ # begin depSimp()
+	export SIMP=`cat $1|grep ^use |grep -v constant|sed 's/use / /g' |sed 's/qw\([^\(]*\)//g'`
+		echo "<tr>">>mydoc/index.$1.html
+		for i in $SIMP ; do
+			o=`echo -n "$i"|sed 's/\;$//g'|sed 's/\:\:/\//'|xargs echo -n`
+#perldoc -oHTml $o.pm >mydoc/$o.html
+				pod2html  $o.pm >mydoc/$o.html
+				rm -f mydoc/{\:*,\(.html,\(\$VERSION\).html}
+	if test -f "mydoc/$o.html" ; then
+		m=`echo -n "$i"|sed 's/\;$//g'|xargs echo -n`
+			pp=`echo $m|grep -v DEFAULT|grep -v flock|grep -v \(`
+			if test ! -z "$pp" ; then
+#	b=`cat mydoc/$o.html|grep VERSION|xargs echo -n`
+				b=`cat mydoc/$o.html|grep VERSION|sed 's!<p>!!g'|sed 's!</p>!!g'|sed 's!$VERSION!\&nbsp;!g'|sed s!=!!g|sed s/\&\#39\;//g|sed s/\&\#34\;//g`
+	echo "<td valign=center align=center><a href=\"$o.html\">$m.pm</a><br><i>$b</i></td>">>mydoc/index.$1.html
+			else
+				if test -z "`echo $m|grep ':DEFAULT'`" ; then
+					echo "<td valign=center align=center>$m.pm</td>">>mydoc/index.$1.html
+						fi
+						fi
+						fi
+						done
+						echo "</tr>">>mydoc/index.$1.html
+						echo "</table>">>mydoc/index.$1.html
+} # end depSimp()
+
+depDou(){ # begin depDou()
+	export SIMPD=`cat album.cgi|grep ^use |grep -v constant|grep packages|sed 's/::/\//g'|sed 's/\;\ use\ / /g'|sed 's/\;/ /g'`
+
+} # end depDou()
+
+getssub(){ # begin getssub()
+	grep ^sub $1|sort -d|sed 's/^sub\ //g'|sed 's/{.*//g' 
+} # end getssub()
+
+# renames any kind of file in the current directory
+iog(){ # begin iog()
+	for i in `ls $*|sed 's! !--!g'`; do
+		p="`echo $i|cut -d. -f2`";
+	a=`date +%s`;
+	o="`echo $i|sed 's!--! !g'`";
+	echo $i;
+	mv "$o" $a.$p; 
+#		echo "$o $a.$p ($p)"; 
+	sleep 3;
+	done
+} # end iog()
+
+# special wget
+mwget(){ # begin mwget()
+	date;
+#echo $1;
+	mkdir -p ~/Movies/download/;
+	cd ~/Movies/download/;
+	for i in $* ; do
+		export a=`echo $i |sed 's/http:\/\//.\/\_/'|sed 's/[^\/]*$//'`;
+	export c=`echo $i |sed 's/http:\/\//.\/\+/'|sed 's/[^\/]*$//'|cut -d'/' -f2`;
+	export b=`echo $i |sed 's/http:\/\//.\/\_/'|sed 's/[^\/]*$//'|cut -d'/' -f2`;
+#	echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+#	echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>$a";
+#	echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+	if test ! -d "$a" ; then
+		echo "create path $a";
+	mkdir -p "$a";
+	fi
+		cd "$a";
+	date>>~/.e;
+	echo "clear;mwget \"$i\";">>~/.e;
+	\wget -c  $i; 
+	cd ~/Movies/download/;
+	done
+#	mv $b $c;
+} # end mwget()
+
+goPm(){ # begin goPm()
+	rm -rf ~/Sites/doc;
+	cd ~/Sites/cgi-bin;
+	mkdir -p ../doc;chmod 755 ../doc;for i in album.cgi `find io -name "*pm" -print` ; do 
+		export a=`echo $i|sed 's!.cgi!!'`;
+	pod2html --title="$i" --infile=$i --outfile=./$a.html; 
+	mv ./$a.html ../doc;done
+		export b=`./album.cgi service=ver`;
+	cd ../doc;
+	echo "<center>album v$b</center><br><br><br>">index.html;
+	echo "<center>">>index.html;
+	for i in `ls *html` ; do echo "<a href='$i'>$i</a><br>">>../doc/index.html; done
+		echo "</center>">>index.html;
+} # end goPm()
+
+gogo(){ # begin gogo()
+	for i in `ls parser[1-4].pl`; do
+		export a="res.$$";
+	echo "$i">>time;echo -n "`date +%s`  ">>time;./$i>$a; date +%s>>time;
+	cat $a>>report
+		echo "-------------------">>report;
+	rm -f $a
+		done
+		cat time>>report
+		txt2pdf ./report
+		rm -f time
+} # end gogo()
+
+futa(){ # begin futa()
+	cd ~/Down*
+		for m in {60..90} ; do 
+			export ee=`printf "%03d" $m`
+				for i in {0..9} ; do 
+					for j in {1..3} ; do 
+						export y="wget -x -c http://toonstraffic.com/gally/futanaria/$ee/images/0$j.wmv";
+	$y;
+	export y="";
+	done
+		done
+		done
+
+} # end futa()
+
+# Creates iso
+mmkisofs(){
+	echo "mkisofs -r -J -joliet-long -allow-lowercase -allow-multidot -V \"`echo $1|sed s/\.iso//`\" -o $1 $2"
+		mkisofs -r -J -joliet-long -allow-lowercase -allow-multidot -V "`echo $1|sed s/\.iso//`" -o $1 $2
+}
+
+# test parameter echo
+uty(){ # begin uty()
+	echo "$2 $1";
+} # end uty()
+
+# Interaction with twiter
+twit(){ # begin twit()
+# Twitter status update bot by http://360percents.com
+# Author: Luka Pusic <pusic93@gmail.com>
+
+#REQUIRED PARAMS
+#username="user@email.com"
+	username="dorey_s"
+		password="kaxYOs3p"
+		tweet="$*" #must be less than 140 chars
+		cookieFileName="cookie.txt.$$";
+
+#EXTRA OPTIONS
+	uagent="Mozilla/5.0" #user agent (fake a browser)
+		sleeptime=0 #add pause between requests
+
+		if [ $(echo "${tweet}" | wc -c) -gt 140 ]; then
+			echo "[FAIL] Tweet must not be longer than 140 chars!" && exit 1
+				fi
+
+				touch "${cookieFileName}" #create a temp. cookie file
+
+#INITIAL PAGE
+				echo "[+] Fetching twitter.com..." && sleep $sleeptime
+				echo "${cookieFileName}"
+# we get file that initiate connection
+				initpage=`curl -s -b "${cookieFileName}" -c "${cookieFileName}" -L --sslv3 -A "$uagent" "https://mobile.twitter.com/session/new"`
+# we get the token from this file stored in initpage
+				token=`echo "$initpage" | grep "authenticity_token" | sed -e 's/.*value="//' | sed -e 's/" \/>.*//'`
+				echo "--->$token"
+
+#LOGIN
+				echo "[+] Submitting the login form..." && sleep $sleeptime
+# we login at the twitter page
+				loginpage=`curl -s -b "${cookieFileName}" -c "${cookieFileName}" -L --sslv3 -A "$uagent" -d "authenticity_token=$token&username=$username&password=$password" "https://mobile.twitter.com/session"`
+
+#HOME PAGE
+				echo "[+] Getting your twitter home page..." && sleep $sleeptime
+				homepage=`curl -s -b "${cookieFileName}" -c "${cookieFileName}" -L -A "$uagent" "http://mobile.twitter.com/"`
+
+#TWEET
+				echo "[+] Posting a new tweet..." && sleep $sleeptime
+				tweettoken=`echo "$homepage" | grep "authenticity_token" | sed -e 's/.*value="//' | sed -e 's/" \/>.*//' | tail -n 1`
+				echo "oooo)$tweettoken"
+				update=`curl -s -b "${cookieFileName}" -c "${cookieFileName}" -L -A "$uagent" -d "authenticity_token=$tweettoken&tweet[text]=$tweet&tweet[display_coordinates]=false" "http://mobile.twitter.com/"`
+
+#LOGOUT
+				echo "[+] Logging out..."
+				logout=`curl -s -b "${cookieFileName}" -c "${cookieFileName}" -L -A "$uagent" "http://mobile.twitter.com/session/destroy"`
+
+				rm "${cookieFileName}"
+} # end twit()
+
+# transform file *.pdf to *.pdf but file file na contains spaces it replaces them with _ character
+trans(){
+	for i in `ls *pdf|sed 's! !_!g'`; do export u=`echo $i|sed 's!_! !g'`;echo "$u --> $i"; mv "$u" $i;done
+}
+
+# text file to pdf command line
+tf2p(){
+	[[ "$1" =~ ((test[0-9]).sh) ]] ; if [[ ${BASH_REMATCH[*]} -gt 0 ]] ; then cat  ${BASH_REMATCH[1]} | text2pdf -o ${BASH_REMATCH[2]}.pdf && echo "${BASH_REMATCH[1]} -> ${BASH_REMATCH[2]}.pdf" ; else echo "$1 not found"; fi
+}
+
+# Creates from pod the corresponding html documentation
+docPerl6(){
+	export p=`pwd`;
+	export v='/Users/sdo/Documents/Projects/Perl6';
+	cd $v;
+	mkdir -p /Users/sdo/Sites/Perl6/Pod/{course,specs};
+	for i in `find . -name "*pod" -print`; do
+		export oo="$HOME/Sites/Perl6/`echo $i|sed 's/[^/]*pod$//'`";
+	if test ! -d "$oo" ; then mkdir -p $oo; fi
+		export e="$HOME/Sites/Perl6/`echo $i|sed 's!\.pod$!\.html!'`";
+	echo "$i  - $e";
+	perl -MPod::Simple::HTML -e Pod::Simple::HTML::go $i $e;
+	done
+		cd $p;
+}
+
+# Cleans documentation html perl pod
+cleandocPerl6(){
+	export p=`pwd`;
+	cd /Users/sdo/Documents/Projects/Perl6;
+	mkdir -p /Users/sdo/Sites/Perl6/Pod/{course,specs};
+	find . -name "*html" -exec rm -f {} \; -print
+		cd $p;
+}
+
+# Create repository
+crepo(){
+	git init
+		git config --global  user.name "sdo"
+		git config --global  user.email "shark.b@laposte.net"
+		git pull git@github.com:doreys/Script-cgi-to-browse-pod-file.git 
+}
+
+# Commit gantt program from local to distant git directory
+gantt(){
+#	planner
+	rm -f ~sdo/Documents/Projects/LGV/.git/index.lock ~sdo/Documents/Projects/LGV/.git/COMMIT_EDITMSG
+
+		cp ~/Sites/Project/LGV/mapr/Gantt/*planner /Users/sdo/Documents/Projects/MAOP/LGV
+																			 cp ~/Sites/Project/LGV/mapr/Gantt/*html /Users/sdo/Documents/Projects/MAOP/LGV
+																			 cd /Users/sdo/Documents/Projects/MAOP/LGV
+																			 git commit .
+																			 git push
+																			 cd -
+																			 }
+
+# clean usb files on usb key located in /Volumes/....
+mcusb(){ 
+#cd /Volumes
+export aaa=`ls /Volumes/|grep -v "Macintosh HD"|sed 's! !___MY___WHITE!g'|sort -u`
+for i in $aaa ; do 
+export o=`echo $i|sed 's!___MY___WHITE! !g'`
+find "/Volumes/$o" -name ".*" -exec rm -rf {} \; -print
+done
+#cd -
+}
+
+# Commit index.cgi to local and distant repository
+gitind(){
+cp -p ~/Sites/index.cgi ~/Documents/Projects/Script-cgi-to-browse-pod-file/.;
+cd ~/Documents/Projects/Script-cgi-to-browse-pod-file/
+git commit index.cgi
+cd -
+}
+
+
+
+#function mountAndroid { hdiutil attach ~/android.dmg -mountpoint /Volumes/android; }
+
+
+# Creates an iso file
+mcdisofs(){
+for i in `ls |grep "nanar4\{1,9\}"|grep -v iso|sed 's!/!!'`; do if test  ! -f "$i.iso" ; then mmkisofs $i.iso $i;fi; done
+}
+
+# my album of pictures push a specifig file to distant repo and, local repo: go to cgi script that contains .cgi files copy 
+# in a directory the files for loal git directory that push it to network
+maop(){
+export p=$1;
+
+if test ! -n "$p"; then 
+pushd `pwd`;
+cd ~/Sites/cgi-bin/;
+if test ! -e "$p"; then 
+cp $p ~/Documents/Projects/MAOP/V1/src/cgi-bin/;
+cd ~/Documents/Projects/MAOP/V1/src/cgi-bin/;
+git commit $p;
+popd;
+else
+echo "$0 <file name>";
+fi
+fi
+}
+
+# Some operation with Cordova: go to directory, 
+# remove cordova directory for android, create a new platform for android, then go to directory that contains buil program for android
+cordop(){
+cd ~/Sites/Cordova/hello
+cordova platform rm android
+cordova platform add android
+cd platforms/android/
+./cordova/build 
+}
+
+# Launch Planner
+#mplanner(){
+#export pa=`pwd`;
+#export MD=`date "+%Y-%m-%d %H:%M:%S"`
+#export MDY=`date "+%Y"`
+#cd ~/Documents/My-Proj/LGV
+#		git pull  >~/.mytrash 2>&1;
+#	open -W -a Planner
+#		git commit -m "Planner year $MDY" *  >~/.mytrash 2>&1; 
+#	cd ..;git push >~/.mytrash 2>&1;
+#	 git push;git pull;
+#	cp -p ~/Documents/My-Proj/LGV/* ~/Sites/Project/LGV/mapr/Gantt
+#																	cd $pa
+#																	rm -f ~/.mytrash
+#																	}
+
+# Launch Planner
+mplanner(){
+  export pa=`pwd`;
+  export MD=`date "+%Y-%m-%d %H:%M:%S"`
+  export MDY=`date "+%Y"`
+  cd ~/Documents/My-Proj/LGV
+  git pull  >~/.mytrash 2>&1;
+  open -W -a Planner
+  git commit -m "Planner year $MDY" *  >~/.mytrash 2>&1;
+  cd ..;git push >~/.mytrash 2>&1;
+  git push;git pull;
+  cp -p ~/Documents/My-Proj/LGV/* ~/Sites/Project/LGV/mapr/Gantt
+  cp -p ~/Documents/My-Proj/LGV/*.html ~/Downloads/MySchedule/
+  cp -p ~/Documents/My-Proj/LGV/*.planner ~/Downloads/MySchedule/
+  cd ~/Downloads/MySchedule/
+  git commit -m "Planner year $MDY" *  >~/.mytrash 2>&1;
+  git push >~/.mytrash 2>&1;
+  git push;git pull;
+  cd $pa
+  rm -f ~/.mytrash
+}
+
+
+# Download from youtube videos param 2 is youtube url and, put them in a specific directory param 1
+mdl(){
+cd ~/Downloads;
+#mkdir u;cd u;
+#rmdir ../u;
+export a=$1;mkdir -p $a;cd $a
+youtube-dl -i $2
+}
+
+# Perlbrew was used
+# Install package: instpac package
+# Install package one at a time
+instpac(){
+echo "$1" | perlbrew exec --force --with perl-5.30.1 cpanm
+}
+
+# Use of tmux: terminal multiplexer
+mtmux(){
+# http://codingjunkie.net/kafka-tmux/
+
+cd ~/Perl/v2
+tmux new-session -s kafka-work -d
+
+
+#split the second half in half again
+tmux split-window -v
+
+#split screen in have horizontally
+#tmux split-window -v
+
+#split the top window in half vertically
+#tmux split-window -h -t 0
+
+#split the new half top window in half horizontally
+#tmux split-window -v
+
+#cd into kafka directory
+tmux send-keys -t 0 "vi ./parser.pl ./rules.abnf"  C-m
+
+#tmux send-keys -t 1 "vi ./rules.abnf"  C-m
+
+tmux attach -t kafka-work
+}
+
+# Copy a README.pod file to a directory and, then go to that directory
+gopod(){
+cp ~/Perl/v2/README.pod /Users/sdo/Documents/MyProjectAlb/V2/Data base/Studies/abnf/src/v1
+cd /Users/sdo/Documents/MyProjectAlb/V2/Data base/Studies/abnf/src/v1
+}
+
+# Transform text to pdf
+text2pdf(){
+# http://unix.stackexchange.com/questions/17406/how-to-convert-txt-to-pdf
+txt2pdf  -f"Courier" -s10 -c216 -v12 -L -A4 $1 > $1.pdf 
+}
+
+# Use brew 
+mformat(){
+sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 $1
+}
+
+# vi modified: add header if *.pm6 *.p6 *pl6
+# to to use export memory to optimise script
+vi_old(){
+#	echo $@
+
+		for i in $@
+			do
+#echo "++++++++>$i";
+
+				echo "$i" | awk -v pn="$i" -v user="$USER" '\
+					\
+					BEGIN{\
+						"date +%Y-%m-%d_%H:%M:%S" | getline date; \
+					}\
+			\
+				/\.(p6|pl6|t|pm6)$/ \
+				{\
+#			print "MIGHT CREATE @@@@@@>" a "    " date;\
+					print $1
+					if (system("test ! -f " pn) == 0){ \
+#print "---BAG DEN------->"\
+
+						if(match($1,/\.(p6|pl6|t)$/)){\
+							system("echo \"#!/usr/bin/env perl6  \">" pn) ;\
+								system("echo \"\">>" pn) ;\
+								system("echo \"use v6 ; \">>" pn) ;\
+								system("echo \"\">>" pn) ;\
+								system("echo \"# Book: Think Perl 6 (pdf v0.5.3 May 2018)\">>" pn) ;\
+						}\
+						else {\
+							system("echo \"# Book: Think Perl 6 (pdf v0.5.3 August 2017)\">" pn) ;\
+						}\
+						system("echo \"# Program:\" " pn ">>" pn) ;\
+							system("echo \"# User:\" " user ">>" pn) ;\
+							system("echo \"# Date:\" " date ">>" pn) ;\
+							system("echo \"\">>" pn) ;\
+							if(match($1,/\.(pm6)$/)){\
+								split(pn,a,"\.pm6");
+								system("echo \"unit module \" " a[1] "\":ver<0.0.0.0>:auth<Sebastien Dorey - SDO (sebastien.dorey@laposte.net)> ;\" >>" pn) ;\
+							}\
+						system("chmod 700 " pn);\
+#print "---END DEN------->"\
+					}
+				}'
+			done
+				/usr/bin/vi -o $@
+}
+
+# cleans usb key (given one)
+cvols(){
+	sudo sh -c "find /Volumes/UNTITLED/ -name  \".[_STL]*\" -exec rm -rf {} \; ; find /Volumes/UNTITLED/ -name \".fs*\" -exec rm -rf {} \; ; touch /Volumes/UNTITLED/ok";
+}
+
+# Launch office calc
+soo(){
+	/Applications/LibreOffice.app/Contents/MacOS/soffice --calc \
+		--accept="socket,host=localhost,port=2002;urp;StarOffice.ServiceManager"
+}
+
+#  allow to load several files at once in vi remove ./ at the begining of the file if it exists
+#vi(){
+#	export cmd="";
+#	for i in $@; do 
+#		export u="`echo $i|sed 's/\.\///'`";
+#		export cmd="$cmd $u";
+#	done; 
+#	vim -o $cmd
+#}
+
+export export RED='\033[0;31m'
+export export GREEN='\033[0;32m'
+export NC='\033[0m'
+
+# tool to deal with the calculus web site option
+# copy id from id13*.php witch are the reference 
+# to use it need to be in the Calculus directory
+myid(){
+	if [ -f "../Calculus.Old/id$1_m.htm" -a $1 -gt 13 ]; then
+#echo "file exists"
+		for i in `ls id13*php|grep -v \_m|grep -v \_l`; do
+			export a=`echo $i|sed s/13/$1/`
+				cp -i $i  $a
+				done;
+
+	cp -i ../Calculus.Old/id$1_m.htm id$1_m.php
+		cp -i ../Calculus.Old/id$1_l.htm id$1_l.php
+	else
+		printf "${RED}impossible to create id$1*.php${NC}\n"
+			fi
+}
+
+# blur picture
+myblur(){
+	export meol=`ls "$@"|cat -e|sed 's/\ \$$/MY\_EOL/g'`;
+	export msp=`echo $meol|sed 's/\ /MY\_SPACE/g'`;
+	export ms=`echo $msp|sed 's/MY\_EOL[\$]\{0,1\}/\ /g'`;
+	export msu=`echo $ms|sed 's/\$$//g'`;
+	for i in `echo $msu|sed 's/\$MY_SPACE/\ /g'`; do
+		export mns=`echo $i|sed 's/[\$]\{0,1\}MY\_SPACE/\ /g'`;
+	echo "$mns";
+	export nn="blured-$mns";
+	export nngs="gs-$mns";
+	convert "$mns" -blur 0x3.0 "$nn" 
+		convert "$nn" -colorspace Gray "$nngs"
+		echo "#----------------------------";
+	cp -p "$nngs" $destdir;
+	rm -f "$nngs" "$nn" 
+		done;
+}
+
+# blur vide
+myvblur(){
+	export meol=`ls "$@"|cat -e|sed 's/\ \$$/MY\_EOL/g'`;
+	export msp=`echo $meol|sed 's/\ /MY\_SPACE/g'`;
+	export ms=`echo $msp|sed 's/MY\_EOL[\$]\{0,1\}/\ /g'`;
+	export msu=`echo $ms|sed 's/\$$//g'`;
+	echo mkdir -f $destdir;
+	mkdir -p $destdir;
+	for i in `echo $msu|sed 's/\$MY_SPACE/\ /g'`; do
+		export mns=`echo $i|sed 's/[\$]\{0,1\}MY\_SPACE/\ /g'`;
+	echo "$mns";
+	export bw=`echo bw-$mns|sed 's/avi$/mp4/'`;
+	export nn=`echo blured-$mns|sed 's/avi$/mp4/'`;
+	export nngs=`echo gs-$mns|sed 's/avi$/mp4/'`;
+	echo "$bw";
+	echo "$nn";
+	export ext=`echo $mns|grep -i "avi$"`;
+	export size="${#ext}";
+	echo $size;
+	if test $size -ge 0 ; then
+		ffmpeg -i "$mns" -pix_fmt yuv420p -strict -2 "avi-mp4_$mns.mp4";
+	echo "avi detected $mns";
+	export mns="avi-mp4_$mns.mp4";
+	echo "$mns";
+	fi
+# Transfo BW
+		ffmpeg -i "$mns" -vf hue=s=0  "$bw" ;
+# Transfo blur
+	ffmpeg -i "$bw"  -filter_complex "[0:v]boxblur=luma_radius=10:chroma_radius=10:luma_power=1[blurred]" -map "[blurred]" "$nn";
+#echo "#----------------------------";
+	cp -p "$nn" $destdir;
+	rm -f "$nngs" "$nn"  "avi-mp4_$mns.mp4" "$bw" ;
+	done;
+}
+
+# b&w picture
+mybw(){
+#echo "#----------------------------";
+#echo "$@";
+	export meol=`ls "$@"|cat -e|sed 's/\ \$$/MY\_EOL/g'`;
+#echo $meol;
+	export msp=`echo $meol|sed 's/\ /MY\_SPACE/g'`;
+#echo $msp;
+	export ms=`echo $msp|sed 's/MY\_EOL[\$]\{0,1\}/\ /g'`;
+	export msu=`echo $ms|sed 's/\$$//g'`;
+#echo $msu;
+	for i in `echo $msu|sed 's/\$MY_SPACE/\ /g'`; do
+#j=`echo $i|sed s/MY_SPACE/\ /g`;
+#echo -n "=>$i";
+		export mns=`echo $i|sed 's/[\$]\{0,1\}MY\_SPACE/\ /g'`;
+#echo " ->$mns";
+	convert "$mns" -monochrome  "bw-$mns"
+		echo "$i -> bw-$mns";
+	echo "#----------------------------";
+	done;
+}
+
+transfBW_Blur(){
+	echo "`echo $$;`";
+	mkdir -p $destdir;
+	export ext_img="*gif *jpg *png";
+	export ext_vid="*mp4 *avi";
+	for i in `find . -type d -print` ; do
+		echo $i;
+	pwd;
+	cd $i;
+	export fmy=`ls $ext_img`;
+	export s="${#fmy}";
+	if test $s -gt 0 ; then
+		myblur $ext_img 
+			fi
+			export fmy=`ls $ext_vid`;
+	export s="${#fmy}";
+	if test $s -gt 0 ; then
+		myvblur $ext_vid 
+			fi
+			pwd;
+	cd - ;
+	pwd;
+	done
+}
+
+#tests send mail n^n times
+mytestmail(){
+	export m=$1; # mail 
+		export a=$2; # number
+		export n="$(($a*$a))";
+	export f=0;
+
+	export ta=10;
+	for (( c=1; c<=$a; c++ ))
+		do
+			echo "first $c/$a"
+				for (( u=1; u<=$a; u++ ))
+					do
+						((f++));
+					echo "${f}/${n}	second $u/$a"
+						echo "regarde s'il y a bien le compte: ${a}**${a} = $n ---> ${f}/${n} <br>matrice carr&eacute; $c/$a $u/$a<br>As tu bien re&ccedil;u $u poil(s) de cul sur $n poil(s) de cul(s)  `date`"| mail -s"`date;hostname;`" $m
+						sleep 5;
+					done;
+					done;
+}
+
+# copy from rep to cgi-bin some files in ~Sites
+mycopy-rep-cgi(){ # Begin mycopy-rep-cgi()
+	cd ~/Documents/My-Proj/V1/Sites/cgi-bin;
+	git pull;
+	for i in `ls album.cgi g3ogle.cgi maop.cgi `; do # Begin for i in `ls album.cgi g3ogle.cgi maop.cgi `; do 
+		export src=~/Documents/My-Proj/V1/Sites/cgi-bin/$i; 
+	export dst=~/Sites/cgi-bin/$i; 
+
+	if [ $src -nt  $dst ] ; then # Begin if [ $src -nt  $dst ] ; then 
+		ls -al $src $dst
+			cp $src $dst
+			fi # End if [ $src -nt  $dst ] ; then 
+
+			done # End for i in `ls album.cgi g3ogle.cgi maop.cgi `; do 
+} # End mycopy-rep-cgi()
+
+# resize video *.mp4 to 5 minutes $$-myout*.mp4
+my_ffmep(){ # Begin my_ffmep()
+	export myin="$1";
+	echo proc="echo $(($$))";
+	ffmpeg-bar -ss 00:00:00.000 -i ${myin} -vf "drawtext=text='XX':x=1920:y=1070:fontsize=24:fontcolor=black:box=1:boxcolor=black@0.5: boxborderw=5" -to 00:04:59.973 $$-myout${myin} 
+} # End my_ffmep()
+
+# We redefine lp as mylp with specific options. We had probless to printout file with .html extenions and contents.
+# Hence we bypass by creating a file as pdf and, then printout for watevever file (it ias to be text ...).
+mylp(){
+# Standard options check https://stuff.mit.edu/afs/athena/astaff/project/opssrc/cups/cups-1.4.4/doc/help/options.html
+# https://www.cups.org/doc/man-lpoptions.html
+# options used are:  lpoptions -p HP_OfficeJet_Pro_6970 -o sides=two-sided-long-edge -o blackplot -o number-up=1
+	for w in "$@" ; do 
+# We check if we have extension .pdf int file name. If not we create same file name with the .pdf extension (case insensitive)
+		export sol=$(export u=$(echo "$w" |grep -iv '\.pdf$'|sed 's/\(.*\)/\1.pdf/');[ ! -z "$u" ] && echo "$u" || echo "$w");
+
+# We check if original file name exist ($w) we create a file 
+	[ -f "$w" ] && ( 
+			echo "Printing $w";
+			( [ ! -f "$sol" ] ) && ( 
+				echo "$w exists but $sol not" ;  
+				txt2pdf -A3 $w > $sol;
+# Soluce found to print
+				lp -o fit-to-page -o media=A3 -o portrait $sol ;
+				rm -f $w.pdf ;
+				) || (
+					echo "$w exists and, $sol too" ;
+					lp -o fit-to-page -o media=A3 -o portrait $sol ;
+					rm -f $w.pdf ;
+					) 
+			) || echo "$w doesn't exist"
+
+		done; 
+}
+
+
+# Super copy with synchronisation (rsync)
+function scopy(){
+   src="$1";                             # We get first parameter that is source (path)
+   dst="$2";                             # We get second parameter that is destination (path)
+   cd $src; # We are in the source directory
+   cleanTemp; # We make some cleaning temp file
+   myTxtFile="$(echo "${src}"|sed 's/^.*\/\([^\/]\{1,\}\)$/\1/').txt";
+   #echo "---->${myTxtFile}<----";
+   #return;
+   vimd="${src}/$3";                     # Ask to update vimdoc before starting
+   #echo -n "--->$src/";                  # We print sourcec path
+   echo "ooooo>${vimd}<ooooo";
+   if [ -d "$src/" ] ; then              # We check if source is a directory
+      echo " ${Green}ok${Color_Off}.";   # Source directory exists
+   else                                  # case if source is not a directory
+      echo " ${Red}not ok${Color_Off}."; # Source directory doesn't exist
+      return -1;                         # We exit function
+   fi
+   echo -n "--->$dst/";                  # We print destination path
+   if [ -d "$dst" ] ; then               # We check if destination is a directory
+      echo " ${Green}ok${Color_Off}.";   # Destination directory exists
+   else
+      echo " ${Red}not ok${Color_Off}."; # Destination directory doesn't exist
+      return -1;                         # We exit function
+   fi
+   echo "before";
+   if [[ -d "$vimd" ]] ; then # We check if directory where doc is valid
+      echo "We go into ${vimd}";
+      cd $vimd; # We go in directory
+                  # and we update doc
+      vimdoc2md -y -s ${myTxtFile} -d README.md  -u -m -mp ../man/man1
+      cp README.md ..; # Coppy in $vimd once updated or created
+      #echo "after cp README.md ..;";
+      #return;
+      #   echo "After return;";
+      #   echo "Update all subdirt
+      #   return;
+   fi
+   cd ${src};
+   cpgit; # update in sub dirs these files ./README.md ./README.pod ./CC-BY-NC-3.0.md ./.gitignore
+   echo "------------------------------------------------------";
+   echo "---------------GenDoc---------------------------------";
+   #	genDocMdFromVimHelp "$src";
+   echo "------------------------------------------------------";
+   rsync -uav --exclude  "git" $src/* $dst; # Remote sync, is a command-line
+                           # tool for synchronizing files and directories locally
+                           # # from $src (source) to $dst (destination)
+                           # -a synchronizes the directories recursively.
+                           #    Keeping the ownership of users and groups,
+                           #    permissions, symlinks and timestamps.
+                           # -u skip files that are newer on the receiver.
+                           # -v verbose.
+   rsync -uav --exclude  ".git" $src/.* $dst; # Remote sync, is a command-line
+                           # tool for synchronizing files and directories locally
+                           # # from $src (source) to $dst (destination)
+                           # -a synchronizes the directories recursively.
+                           #    Keeping the ownership of users and groups,
+                           #    permissions, symlinks and timestamps.
+                           # -u skip files that are newer on the receiver.
+                           # -v verbose.
+   cd $dst; # We go to destination directory
+   cleanTemp; # We make some cleaning temp file
+   #cpgit; # Copy recursively files s.a ./README.md ./README.pod ./CC-BY-NC-3.0.md ./.gitignore
+   #	echo "cp ${docdst} ${dst}/doc/README.md"
+   #	cp ${docdst} ${dst}/doc/README.md
+   pwd;
+   echo "Need now to use git if needed\!";
+   #echo "We are in ${Green}$(pwd)${Color_Off}!";
+}
+
+
+#function lock(){
+	#osascript -e 'tell application "Finder" to sleep'
+#}
+
+# make some cleanings
+function sweep(){
+	#cd $HOME;
+	#cd -; 
+	brew cleanup; 
+	find $HOME -iname  "*lightning*talk*" ! -path ./Downloads/\*  -exec rm -rf {} \; -print ; 
+	find $HOME -name ".metadata" -exec rm -rf {} \; -print; 
+	find $HOME -name ".xv*"  -exec rm -rf {} \; -print; 
+	find $HOME -name ".*sw*" -exec rm -f {} \; -print; 
+	find $HOME -name ".DS_Store" -exec rm -f {} \; -print; 
+	find $HOME -name ".localized" -exec rm -rf {} \; -print; 
+	find $HOME -name "._*" -exec rm -rf {} \; -print; 
+}
+
+# Used when taging MAOP Version
+maoptagVersion(){
+   # Usage:
+   #        maoptagVersion "comment"
+   #        maoptagVersion
+
+   export oldpwd=$(pwd);
+   cd /Users/sdo/Downloads/MyMAOP/V1/Sites/cgi-bin;
+   export ALBUM_VERSION="$(grep Version ./album.cgi|cut -d':' -f2|sed 's/\ \{1,\}//g')";
+   echo "---->$ALBUM_VERSION";
+   sed '1,30s/\(my \$VERSION=\"\).\{1,\}$/\1'"$ALBUM_VERSION"'\";/' ./album.cgi>&./album.cgi.tmp
+   mv album.cgi.tmp album.cgi
+   if [[ $# > 0 ]] ; then
+      echo "Future comment $1";
+      git tag -a v${ALBUM_VERSION} -m "$1 (current version ${ALBUM_VERSION})."
+   else
+      git tag -a v${ALBUM_VERSION} -m "current version ${ALBUM_VERSION}."
+   fi
+   cd ${oldpwd}
+}
+
+start(){
+	if [ -f $HOME/\ .myalias ]; then
+		mv $HOME/\ .myalias $HOME/.myalias ;
+	fi
+	source ~/.myalias  ~/.profile
+}
+
+# MAOP gets saved data from trip (only days +1 (more than one day) 1 (exactly one day) -1 (less than one day)
+maopBackupDateAlbumAlpha2Beta(){
+   # usage: backupDateMaop n where n can be 0 where 0 is today -760 is 760 days ago
+	echo $SHELL;
+
+   export oldpwd=$(pwd);
+   cd /Users/sdo/Sites/cgi-bin
+
+	# If no param detected
+   if [[ $# -eq 0 ]] ; then
+		pwd;
+      echo "nothin";
+      export mti=0;
+      find ./album -type f -mtime ${mti} -print0 | tar cvHzf files.tar.gz --files-from=- --null --exclude=\*backup\*
+   else
+		# Param(s) are detected
+		if [[ "$1" > "$2" ; then
+			echo "$param ${Red}NOT OK${Color_Off}" ;
+			echo "error ! maopBackupDateAlbumAlpha2Beta [d1 d2]";
+			echo "where d1<d2 and have format \"YYYY-MM-DD [HH:MM:SS]\""; 
+			return;
+		fi
+		
+		# Validate date format
+
+		for param in "$@"; do
+			echo "zsh param: ${Yellow}${param}${Color_Off}";
+			echo "${Red}${RE}${Color_Off}";
+			date -j -f "%Y%m%d" $param +"%d/%m/%Y" > .stdout.txt 2> .stderr.txt; 
+			echo $?; 
+
+			if [[ $param =~ ${RE} ]]; then
+				echo "$param ${Green}OK${Color_Off}" ;
+			else
+				echo "$param ${Red}NOT OK${Color_Off}" ;
+				echo "error ! maopBackupDateAlbumAlpha2Beta [d1 d2]";
+				echo "where d1<d2 and have format \"YYYY-MM-DD [HH:MM:SS]\""; 
+				return;
+			fi
+			echo "========";
+			rm -f stdout.txt stderr.txt
+		done
+
+		return ;
+
+      if [[ $# -eq 2 ]] ; then
+			pwd;
+	      echo "better than nothin";
+	      export mti=$1;
+	      find ./album -type f -newermt "$1" ! -newermt "$2" -print0 | tar cvHzf files.tar.gz --files-from=- --null --exclude=\*backup\*
+      else
+      	echo "error ! maopBackupDateAlbumAlpha2Beta [d1 d2]";
+			echo "where d1<d2 and have format \"YYYY-MM-DD [HH:MM:SS]\""; 
+
+      fi
+   fi
+   sshpass -p "${BETAPASSWD}" ssh sdo@beta "tar -C /Users/sdo/Sites/cgi-bin -xz -f-" < files.tar.gz
+   cd ${oldpwd}
+}
